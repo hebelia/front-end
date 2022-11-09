@@ -4,62 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Proyecto Integrador</title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/88f4b6eb7c.js" crossorigin="anonymous"></script>
     <!-- assets -->
     <link rel="stylesheet" href="assets/css/style.css"
-    <title>Index</title>
-
 
 </head>
 
 <body>
 
-<!-- navbar -->
-<section>
-<nav class="navbar bg-light">
+<header>
+<!-- navbar edit -->
+<nav class="navbar navbar-expand-lg bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="assets/img/LOGO ARG PROG.png" alt="Argentina Programa" class="d-inline-block align-text-top"> 
+    <!--  argentina programa logo-->
+        <a class="navbar-brand" href="#">
+            <img src="assets/img/LOGO ARG PROG.png" alt="Argentina Programa" width="250">    
+            <!-- Navbar text with an inline element -->
+            <!-- <span class="navbar-text">Argentina Programa #YoProgramo</span>     -->
+        </a>
+        
 
-        <!-- Navbar text with an inline element -->
-        <span class="navbar-text">
-            Argentina Programa #YoProgramo
-        </span>
-      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        
+        <!-- social links inside navbar -->
+        <ul class="navbar-nav">
+
+            <li>  <!-- navbar login button -->
+                <form class="container-fluid justify-content-start">
+                    <button type="button" class="btn btn-dark">Login</button>
+                    <!--    <button class="btn btn-sm btn-outline-secondary" type="button">Smaller button</button>    -->
+                 </form>
+            </li>
+            <li class="nav-item">
+                <!-- <a class="nav-link active" aria-current="page" href="#">Home</a> -->
+                <a href="https://www.instagram.com/hebe.lia/" target="_blank"><i class="fa-brands fa-instagram"></i> </a>
+            </li>
+            <li class="nav-item">
+                <a href="https://github.com/hebelia" target="_blank"><i class="fa-brands fa-github"></i> </a>
+            </li>
+            <li class="nav-item">
+                <a href="https://www.linkedin.com/in/hebe-lia-romeu-0a5343234/" target="_blank"><i class="fa-brands fa-linkedin"></i> </a>
+             </li>
+
+            <!-- <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+            </li> -->
+
+        </ul>
+      </div>
+          
     </div>
-
-    <!-- social links inside navbar -->
-    <div class="container-fluid"> 
-        <i class="fa-brands fa-linkedin"></i> <i class="fa-brands fa-instagram"></i> <i class="fa-brands fa-github"></i>
-    </div>
+  </nav>
+</header>
 
 
 
-    <!-- navbar login button -->
-    <form class="container-fluid justify-content-start">
-        <button class="btn btn-outline-success me-2" type="button">Login</button>
-        <!-- <button class="btn btn-sm btn-outline-secondary" type="button">Smaller button</button> -->
-    </form>
 
 
-</nav>
-</section>
+
+
+
+
+
+
 
 
 
 <section>
-    <!-- boostrap logo -->
-    <i class="fa-brands fa-bootstrap" ></i>
+    <p style="color:cyan"> ABOUT ME </p>
 </section>
-
-
-
-
-<section></section>
 
 <section></section>
 <section></section>
@@ -83,6 +103,19 @@
 
 
 
+<p class ="float-end mb-1">
+    <a href="#">Back to top </a>
+</p> <!-- == $0 -->
+
 </body>
 
 </html>
+
+
+<!-- boostrap logo
+
+<section>
+    <i class="fa-brands fa-bootstrap" ></i>
+</section> 
+-->
+
