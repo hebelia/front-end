@@ -24,6 +24,7 @@ body{
     color: white;;
 }
 
+
 #container{
 
 }
@@ -87,6 +88,21 @@ h6 span{
     color: #ffffff;
     box-shadow: 0 8px 24px 0 rgba(255,235,167,.2);
   }
+
+
+  .btn a {
+
+    height: 100%;
+  font-size: 2rem;
+
+  }
+  a i{
+    color: #ffffff;
+  }
+  a i:hover{
+    color: #009188;
+  }
+
   .btn:active,
   .btn:focus{  
     background-color: #ffffff;
@@ -98,6 +114,11 @@ h6 span{
     color: #009188;
     box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
   }
+ .btn i:hover{  
+    background-color: #ffffff;
+    color: #009188;
+  }
+
   .logo{  
     height: 55px;
     background-color:transparent;

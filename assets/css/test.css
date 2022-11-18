@@ -4,46 +4,130 @@
 
 
 body{
-    font-family: 'Inconsolata', monospace;
+  font-family: 'Inconsolata', monospace;
+    background-color: #818181;
+    
+}
+.container{
+  padding: 0;
+  margin: 0;
+
 }
 
 
 /* The sidebar menu */
+ .col-1 {
+  height: 100%;
+  position:fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+align-content: center;
+padding: 0%;
+}
+
+.col-1 div {
+  color: #009188; 
+  text-decoration: none; 
+  text-align: center;
+  width: 10rem;
+  background-color: #f1f1f1;
+  margin: 30%;
+  text-align: center;
+  line-height: 10rem;
+  font-size: 10rem;
+}
+
+
+.flex-container {
+  height: 100%;
+  position:fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+align-content: center;
+
+}
+.flex-container div {
+  color: #009188; 
+  text-decoration: none; 
+  text-align: center;
+  width: 10rem;
+  background-color: #f1f1f1;
+  margin: 1rem;
+  text-align: center;
+  line-height: 10rem;
+  font-size: 10rem;
+}
+
+.flex-container a {
+  color: #009188; 
+  text-decoration: none; 
+  text-align: center;
+  text-align: center;
+  font-size: 100%;
+}
+
+
 .sidenav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
     height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 5%; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
+    width: 10%; /* Set the width of the sidebar */
+  /* Fixed Sidebar (stay in place on scroll) */
+    z-index: auto; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: black; /* Black */
+    background-color: transparent; /* Black */
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
+    padding: 0;
 
   }
   
   /* The navigation menu links */
-  .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
+  .sidenav a {  
+    color: #009188; 
+    text-decoration: none; 
+    text-align: center;
+    width: 10rem;
+
+    margin: 1rem;
+    text-align: center;
+    line-height: 10rem;
+    font-size: 3rem; 
+    display: flexbox;
   }
   
   /* When you mouse over the navigation links, change their color */
   .sidenav a:hover {
     color: #f1f1f1;
   }
+
+  
+  .sidenav i:hover {
+    color: cyan;
+    
+  }
+
+  .fa-brands {
+    width: fit-content;
+  }
+
   
   /* Style page content */
   .main {
     margin-left: 10%; /* Same as the width of the sidebar */
-    padding: 0px 10px;
+    padding: 5%
   }
+
   
   /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+
+
+
+
