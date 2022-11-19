@@ -18,16 +18,63 @@ font-family: 'Ubuntu', sans-serif;    */
 
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
 
-body{
-    font-family: 'Inconsolata', monospace;
-	background-color: #1f2029;
-    color: white;;
+
+/* changing how padding is calculated to make it within?? */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* custom properties */
+:root{
+  --ff-primary : 'Inconsolata', sans-serif;
+  --ff-secondary : 'Inconsolata', monospace;
+
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  --clr-light: #fff;
+  --clr-dark:#1f2029;
+  --clr-accent:#009188;
+  --fs-h1:3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+
+}
+
+@media(min-width: 800px){
+  :root{
+    --fs-h1: 4.5rem;
+    --fs-h2:3.75rem;
+    --fs-h3:1.5rem;
+    --fs-body:1.125rem;
+  }
+}
+/* --------------------------- */
+
+
+/* general styles */
+body {
+  background-color: var(--clr-dark);
+  color: var( --clr-light);
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body); 
+  line-height: 1.6;
+}
+section {
+  padding: 2em 2em;
+}
+img{
+  display: block;
+  max-width: 100%;
 }
 
 
-#container{
 
-}
+
+/* ---------end---------- */
 
 
 a {
@@ -63,7 +110,7 @@ h6 span{
 }
 
 .btn{  
-    border-radius: 4px;
+    border-radius: 2rem; /* before it was 4px */
     height: 44px;
     font-size: 13px;
     font-weight: 600;
@@ -119,8 +166,10 @@ h6 span{
     color: #009188;
   }
 
+  /* navbar */
+
   .logo{  
-    height: 55px;
+    height: 75px;
     background-color:transparent;
   }
 
@@ -136,3 +185,325 @@ h6 span{
     color: transparent;
     box-shadow: 0 8px 24px 0 rgba(255,235,167,.2);
   }
+
+
+
+/* ------------------------------------------ */
+
+strong{
+  font-weight: var(--fw-bold);
+
+}
+/* typography --- maybe check de margin***** */
+h1,
+h2,
+h3 {
+  line-height: 1;
+  margin: 0;
+}
+h1{ font-size: var(--fs-h1)}
+h2{ font-size: var(--fs-h2)}
+h3{ font-size: var(--fs-h3)}
+
+.icon-body {
+  color: var(--clr-accent);
+}
+
+.section__title{
+  margin-bottom: .25em;
+}
+
+.section__title--intro {
+  font-weight: var(--fw-reg);
+}
+
+.section__subtitle{
+  margin: 0;
+  font-size: var(--fs-h3);
+
+}
+.section__subtitle--intro,
+.section__subtitle--about{
+  background-color: var(--clr-accent);
+  font-family: var(--ff-primary);
+  margin-bottom: 1em;
+}
+
+
+
+/* page menu settings */
+.flex-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+.menu-item{
+  margin: 1rem;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 3rem;
+  transition: 0.5s;
+}
+.menu-item a{
+  color: var( --clr-light);
+  text-decoration: none;
+  
+}
+.menu-item span{
+  color: var(--clr-accent);
+}
+.menu-item:hover{
+  box-shadow: 0 8px 24px 0 rgba(255,235,167,.2);
+  box-shadow: #fff;
+  transform: scale(1.05);
+}
+
+/* ------------------- */
+
+
+/* intro */
+.intro {
+  position: relative;
+}
+
+@media (min-width:600px) {
+  .intro{
+    display: grid;
+    grid-template-areas:
+    "img title"
+    "img subtitle";
+  
+    grid-template-columns: min-content max-content; 
+  }
+.intro__img{
+  grid-area: img;
+  min-width: 250px;
+}
+
+
+}
+
+
+/* CUSTOM */
+
+.introduction {
+  display: flex;
+  flex-direction:column;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 50% 1fr ;
+  justify-content: space-between;
+  
+}
+
+.left{
+display: flex;
+flex-direction: column;
+
+justify-content: center;
+flex-wrap: wrap;
+
+}
+.right{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: ;
+  margin: 1%;
+  border-style: solid;
+  border-color: #009188;
+  border-left: none;
+  border-bottom: none;
+  
+}
+.right i:hover{
+  transform: scale(1.5);
+
+}
+.intro__img{
+padding: 5%;
+transition: 2s;
+
+}
+.intro__img:hover{
+  transform: scale(1.1);
+}
+
+
+.section__subtitle--intro{
+  padding-left: 3rem;
+  padding-right: 1rem;
+  border-radius: 3rem;
+
+
+}
+.section__subtitle--about{
+  height: .20em;
+  border-radius: 2em;
+
+}
+.about-me__body{
+  padding-left: 5em;
+  padding-right: 2.5em;
+
+}
+/* experience */
+
+
+.job{
+
+  padding: 1em;
+  margin: 2%;
+  background-color: #2a2b38;
+  border-radius: 10px;
+  border-width: 1em;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+
+  display: flex;
+  flex-grow: 1;
+
+  justify-content: center;
+  padding: 1em;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  transition: 2s;
+}
+.job:hover{
+
+}
+.job h2 {
+  padding: 4%;
+  justify-content:
+}
+.job h3,
+.job p{
+  padding: 2%;
+
+}
+
+.job:hover{
+  transform: scale(1.1);
+  border-bottom: solid;
+  justify-content: center;
+}
+
+
+/* education */
+.education{
+
+  padding: 1em;
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+}
+.institution{
+  color: #009188;
+}
+.course{
+  padding: 1em;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  transition: 2s;
+}
+.course:hover{
+  transform: scale(1.1);
+  border-bottom: solid;
+  justify-content: center;
+}
+
+
+.education h3,
+.eduaction p{
+  padding: 2%;
+
+}
+/* skills */
+
+
+.skills{
+
+  padding: 1em;
+  margin: 2%;
+  background-color: #2a2b38;
+  border-radius: 10px;
+  border-width: 1em;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+
+  
+}
+.skills h2 {
+  padding: 4%;
+  justify-content:
+}
+.skills h3,
+.skills p{
+  padding: 2%;
+
+}
+
+/* projects */
+.project{
+
+  padding: 1em;
+  margin: 2%;
+  background-color: #2a2b38;
+  border-radius: 10px;
+  border-width: 1em;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 8px 10px 0 white;
+  transition: 2s;
+  
+}
+.project:hover{
+  transform: scale(1.1);
+  box-shadow: none;
+}
+.project h2 {
+  padding: 4%;
+  justify-content:
+}
+.project h3,
+.project p{
+  padding: 2%;
+
+}
+
+/* project-date is used for all dates in every category */
+.project__date{
+  display: flex;
+  flex-direction: row-reverse;
+  font-style: italic;
+  color: rgb(177, 174, 174);
+  }
+
+.about-me__footer,
+.my-experience__footer,
+.my-education__footer,
+.my-skills__footer,
+.my-projects__footer{
+  padding: 2em;
+display: flex;
+flex-direction: row-reverse;
+
+  /* change opacity of the footers */
+}
