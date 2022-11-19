@@ -174,6 +174,7 @@ h6 span{
   }
 
   .navbar-toggler{  
+    margin: 2%;
     border-radius: 4px;
     height: 44px;
     -webkit-transition : all 200ms linear;
@@ -310,7 +311,7 @@ flex-wrap: wrap;
 .right{
   display: flex;
   flex-direction: column;
-  margin-bottom: ;
+
   margin: 1%;
   border-style: solid;
   border-color: #009188;
@@ -373,12 +374,9 @@ transition: 2s;
   flex-direction: row;
   transition: 2s;
 }
-.job:hover{
 
-}
 .job h2 {
   padding: 4%;
-  justify-content:
 }
 .job h3,
 .job p{
@@ -446,7 +444,6 @@ transition: 2s;
 }
 .skills h2 {
   padding: 4%;
-  justify-content:
 }
 .skills h3,
 .skills p{
@@ -480,7 +477,6 @@ transition: 2s;
 }
 .project h2 {
   padding: 4%;
-  justify-content:
 }
 .project h3,
 .project p{
