@@ -9,6 +9,7 @@
 *::after {
   box-sizing: border-box;
 }
+
 /* custom properties */
 :root{
   --ff-primary : 'Inconsolata', sans-serif;
