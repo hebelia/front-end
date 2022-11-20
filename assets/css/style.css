@@ -57,6 +57,7 @@ font-family: 'Ubuntu', sans-serif;    */
 
 
 /* general styles */
+
 body {
   background-color: var(--clr-dark);
   color: var( --clr-light);
@@ -71,9 +72,8 @@ section {
 img{
   display: block;
   max-width: 100%;
+
 }
-
-
 
 
 /* ---------end---------- */
@@ -267,6 +267,22 @@ h3{ font-size: var(--fs-h3)}
 
 /* ------------------- */
 
+/* banner settings */
+
+.banner img{
+  transition: 2s; 
+ box-shadow: #fff;
+
+
+}
+.banner img:hover{
+
+box-shadow: 0 8px 24px 0 rgba(255,235,167,.2);
+box-shadow: #fff;
+transform: scale(1.05);
+
+}
+
 
 /* intro */
 .intro {
@@ -300,7 +316,7 @@ h3{ font-size: var(--fs-h3)}
   display: grid;
   grid-template-columns: 50% 1fr ;
   justify-content: space-between;
-  
+
 }
 
 .left{
