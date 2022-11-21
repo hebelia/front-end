@@ -13,8 +13,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { Page404Component } from './components/page404/page404.component';
 
 // checkear despues
-// import{ index-component} from '.components/index/index.component';
-// import {error-page} from '.components./error-page/error-page.component';
+
 
 
 const routes: Routes = [
@@ -33,7 +32,7 @@ const routes: Routes = [
 {path: 'skills',component: SkillsComponent},
 {path: 'projects',component: ProjectsComponent},
 
-  // la ultima ruta debe ser la de error (la importancia del orden)
+//   la ultima ruta debe ser la de error (la importancia del orden)
    {path: '**', component : Page404Component },
 
 ];
