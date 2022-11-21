@@ -1,1 +1,70 @@
-<p>navbar works!</p>
+<nav class="navbar navbar-expand-lg bg-transparent">
+  <div class="container-fluid">
+    <a><img class="logo" src="assets/img/logo.png" alt="logoArgProg" /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <!-- i had to leave this here cause otherwise the login and logout button go to the left -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"></li>
+      </ul>
+      <div
+        class="d-grid gap-2 d-md-flex justify-content-center flex-row-reverse"
+      >
+        <!-- MAKE THIS TOGGLE A MODAL SOMEHOW -->
+        <button
+          class="btn btn-primary"
+          type="button"
+          data-bs-target="modal"
+          data-bs-toggle="loginModal"
+        >
+          <!-- change toggle modal to ...????????? -->
+          Iniciar Sesión
+        </button>
+        <button class="btn btn-primary" type="button">Cerrar Sesión</button>
+        <button class="btn btn-primary" type="button">
+          <a
+            style="color: #009188; text-decoration: none; text-align: center"
+            href="https://www.linkedin.com/in/hebe-lia-romeu-0a5343234/"
+            alt="linkedin"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </button>
+        <button class="btn btn btn-primary" type="button">
+          <a
+            style="color: #009188; text-decoration: none; text-align: center"
+            href="https://github.com/hebelia"
+            target="_blank"
+            ><i class="fa-brands fa-github-alt"></i
+          ></a>
+        </button>
+        <button class="btn btn btn-primary" type="button">
+          <a
+            style="color: #009188; text-decoration: none; text-align: center"
+            href="https://codepen.io/hebelia"
+            target="_blank"
+            ><i class="fa-brands fa-codepen"></i>
+          </a>
+        </button>
+        <button class="btn btn btn-primary" type="button">
+          <a
+            style="color: #009188; text-decoration: none; text-align: center"
+            href="https://www.instagram.com/hebe.lia/"
+            target="_blank"
+            ><i class="fa-brands fa-instagram"></i>
+          </a>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>

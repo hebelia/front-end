@@ -12,6 +12,14 @@ import { MyExperienceComponent } from './components/my-experience/my-experience.
 import { MyEducationComponent } from './components/my-education/my-education.component';
 import { MySkillsComponent } from './components/my-skills/my-skills.component';
 import { MyProjectsComponent } from './components/my-projects/my-projects.component';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { Page404Component } from './components/page404/page404.component';
+import { AboutComponent } from './components/about/about.component';
+import { EducationComponent } from './components/education/education.component';
+import { ExperienceComponent } from './components/experience/experience.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { SkillsComponent } from './components/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +32,15 @@ import { MyProjectsComponent } from './components/my-projects/my-projects.compon
     MyExperienceComponent,
     MyEducationComponent,
     MySkillsComponent,
-    MyProjectsComponent
+    MyProjectsComponent,
+    ErrorPageComponent,
+    NavigationComponent,
+    Page404Component,
+    AboutComponent,
+    EducationComponent,
+    ExperienceComponent,
+    ProjectsComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,
