@@ -4,39 +4,22 @@
 =======================*/
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
 
+.container {
+    height: 100vh;
+    font-family: 'Incosolata', monospace; 
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
-.page_404{ 
-    padding:40px 0; 
-    background:#2a2b38; 
-    font-family: 'Inconsolata', monospace;
-}
-
-.page_404  img{ width:100%;}
-
-.four_zero_four_bg{
- 
- background-image: url(./../../../assets/img/error.gif);
-    height: 400px;
-    background-position: center;
- }
- 
- 
- .four_zero_four_bg h1{
- font-size:80px;
- }
- 
-.four_zero_four_bg h3{
-	font-size:80px;
-}
-			 
-.link_404{			 
-	color: #2a2b38!important;
-    padding: 10px 20px;
-    background: #39ac31;
-    margin: 20px 0;
-    display: inline-block;
-}
-
-.contant_box_404{ 
-    margin-top:-50px;
+    }
+    h1{
+       justify-content: center;
+    }
+.img {
+transform: scale(1.5);
+    
+    object-fit: cover;
+    transition: 3s;
 }

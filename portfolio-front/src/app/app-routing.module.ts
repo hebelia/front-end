@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 // si estan correctamente creados deben generarse los imports de los distintos componentes
+import{IndexComponent} from './components/index/index.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { BannerComponent } from './components/banner/banner.component';
@@ -12,7 +13,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { Page404Component } from './components/page404/page404.component';
-
+import{LoginComponent} from './components/login/login.component';
 // checkear despues
 
 
@@ -21,7 +22,7 @@ const routes: Routes = [
 
 // ruta de inicio : entre comillas sin nada
 
-  // {path: '', component : index-component},
+{path: '', component : IndexComponent},
 
 {path: 'navbar', component: NavbarComponent  },
 {path: 'navigation', component: NavigationComponent },
@@ -33,6 +34,10 @@ const routes: Routes = [
 {path: 'skills',component: SkillsComponent},
 {path: 'projects',component: ProjectsComponent},
 {path: 'footer', component: FooterComponent},
+
+
+
+{path: 'login', component: LoginComponent},
 
 //   la ultima ruta debe ser la de error (la importancia del orden)
 {path: '**', component : Page404Component },

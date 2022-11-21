@@ -7,7 +7,7 @@
 
 
 
-/* changing how padding is calculated to make it within?? */
+/* changing how padding is calculated */
 *,
 *::before,
 *::after {
@@ -63,7 +63,7 @@ img{
 }
 
 
-/* ---------end---------- */
+/* ------------------ */
 
 
 a {
@@ -99,7 +99,7 @@ h6 span{
 }
 
 .btn{  
-    border-radius: 2rem; /* before it was 4px */
+    border-radius: 2rem; /* alt  4px */
     height: 44px;
     font-size: 13px;
     font-weight: 600;
