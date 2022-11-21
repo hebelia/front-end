@@ -14,6 +14,7 @@ import { EducationComponent } from './components/education/education.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { Page404Component } from './components/page404/page404.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { Page404Component } from './components/page404/page404.component';
     EducationComponent,
     SkillsComponent,
     ProjectsComponent,
-    Page404Component
+    Page404Component,
+    FooterComponent
 
 
   ],

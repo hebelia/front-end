@@ -10,6 +10,7 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { EducationComponent } from './components/education/education.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { Page404Component } from './components/page404/page404.component';
 
 // checkear despues
@@ -31,9 +32,10 @@ const routes: Routes = [
 {path: 'education', component: EducationComponent },
 {path: 'skills',component: SkillsComponent},
 {path: 'projects',component: ProjectsComponent},
+{path: 'footer', component: FooterComponent},
 
 //   la ultima ruta debe ser la de error (la importancia del orden)
-   {path: '**', component : Page404Component },
+{path: '**', component : Page404Component },
 
 ];
 
