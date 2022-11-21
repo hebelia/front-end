@@ -3,7 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 // si estan correctamente creados deben generarse los imports de los distintos componentes
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { BannerComponent } from './components/banner/banner.component';
+import { IntroductionComponent } from './components/introduction/introduction.component';
+import { AboutComponent } from './components/about/about.component';
+import { ExperienceComponent } from './components/experience/experience.component';
+import { EducationComponent } from './components/education/education.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 import { Page404Component } from './components/page404/page404.component';
+
 // checkear despues
 // import{ index-component} from '.components/index/index.component';
 // import {error-page} from '.components./error-page/error-page.component';
