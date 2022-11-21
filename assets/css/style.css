@@ -279,7 +279,15 @@ h3{ font-size: var(--fs-h3)}
  box-shadow: #fff;
 
 
+
+
 }
+.banner .col-1{
+position:absolute;
+top:50%;
+
+}
+
 .banner img:hover{
 
 box-shadow: 0 8px 24px 0 rgba(255,235,167,.2);

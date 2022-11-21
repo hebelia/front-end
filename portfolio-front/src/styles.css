@@ -159,6 +159,32 @@ h6 span{
     color: #009188;
   }
 
+
+  .edit-btn{
+    border-radius: 1rem;
+    padding: 1rem;
+    width:10%;
+    display: flex;
+    flex-direction: row-reverse;
+    font-style: italic;
+    color: rgb(255, 255, 255);
+    box-shadow: #fff;
+    background-color: rgb(55, 133, 113);
+  }
+  .del-btn{
+    border-radius: 1rem;
+    padding: 1rem;
+    width:10%;
+    display: flex;
+    flex-direction: row-reverse;
+    font-style: italic;
+    color: rgb(255, 255, 255);
+    box-shadow: #fff;
+    background-color: rgb(160, 57, 57);
+  }
+
+  /* ------------------------------------ */
+
   /* navbar */
 
   .logo{  
@@ -258,13 +284,21 @@ h3{ font-size: var(--fs-h3)}
 /* ------------------- */
 
 /* banner settings */
-
+.banner{
+  display: flex;
+}
 .banner img{
   transition: 2s; 
  box-shadow: #fff;
-
+size: 150%
 
 }
+.banner .col-1{
+
+position: absolute;
+
+}
+  
 .banner img:hover{
 
 box-shadow: 0 8px 24px 0 rgba(255,235,167,.2);
@@ -275,12 +309,13 @@ transform: scale(1.05);
 
 
 /* intro */
-.intro {
+.introduction {
+  display: flex;
   position: relative;
 }
 
-@media (min-width:600px) {
-  .intro{
+/* @media (min-width:600px) {
+  .introduction{
     display: grid;
     grid-template-areas:
     "img title"
@@ -294,10 +329,7 @@ transform: scale(1.05);
 }
 
 
-}
-
-
-/* CUSTOM */
+} */
 
 .introduction {
   display: flex;
@@ -349,16 +381,35 @@ transition: 2s;
 
 
 }
+/* about me */
+.about-me{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
 .section__subtitle--about{
   height: .20em;
   border-radius: 2em;
 
 }
+
 .about-me__body{
-  padding-left: 5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  padding-left: 2.5em;
   padding-right: 2.5em;
 
 }
+.about-me .com-1{
+  position: absolute;
+}
+
+
+
+
 /* experience */
 
 
