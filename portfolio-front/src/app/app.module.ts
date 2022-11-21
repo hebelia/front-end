@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 // created components imports 
+import { IndexComponent } from './components/index/index.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { BannerComponent } from './components/banner/banner.component';
@@ -13,16 +14,24 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { EducationComponent } from './components/education/education.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
-import { Page404Component } from './components/page404/page404.component';
 import { FooterComponent } from './components/footer/footer.component';
+
+
+
+// ver en que orden ponerlos?
 import { LoginComponent } from './components/login/login.component';
-import { IndexComponent } from './components/index/index.component';
+
+import { LogoutComponent } from './components/logout/logout.component';
+
+// final
+import { Page404Component } from './components/page404/page404.component';
 
 @NgModule({
   declarations: [
     AppComponent,
 
     // imported components
+    IndexComponent,
     NavbarComponent,
     NavigationComponent,
     BannerComponent,
@@ -32,10 +41,15 @@ import { IndexComponent } from './components/index/index.component';
     EducationComponent,
     SkillsComponent,
     ProjectsComponent,
-    Page404Component,
     FooterComponent,
+
+
+
+    // review orden 
     LoginComponent,
-    IndexComponent
+    LogoutComponent,
+// comp final
+    Page404Component,
 
 
   ],
