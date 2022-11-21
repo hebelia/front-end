@@ -12,8 +12,12 @@ import { EducationComponent } from './components/education/education.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { Page404Component } from './components/page404/page404.component';
+
 import{LoginComponent} from './components/login/login.component';
+import { LogoutComponent } from './components/logout/logout.component';
+// comp final 
+import { Page404Component } from './components/page404/page404.component';
+
 // checkear despues
 
 
@@ -38,8 +42,9 @@ const routes: Routes = [
 
 
 {path: 'login', component: LoginComponent},
+{path: 'logout', component: LogoutComponent},
 
-//   la ultima ruta debe ser la de error (la importancia del orden)
+//   la ultima ruta debe ser la de error  !orden)
 {path: '**', component : Page404Component },
 
 ];
