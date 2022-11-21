@@ -25,6 +25,7 @@ import { LogoutComponent } from './components/logout/logout.component';
 
 // final
 import { Page404Component } from './components/page404/page404.component';
+import { LoginmodalComponent } from './modals/loginmodal/loginmodal.component';
 
 @NgModule({
   declarations: [
@@ -44,12 +45,12 @@ import { Page404Component } from './components/page404/page404.component';
     FooterComponent,
 
 
-
     // review orden 
     LoginComponent,
     LogoutComponent,
 // comp final
     Page404Component,
+LoginmodalComponent,
 
 
   ],

@@ -253,6 +253,9 @@ h3{ font-size: var(--fs-h3)}
   border-radius: 3rem;
   transition: 0.5s;
 }
+
+
+
 .menu-item a{
   color: var( --clr-light);
   text-decoration: none;
