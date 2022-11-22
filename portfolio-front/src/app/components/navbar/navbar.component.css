@@ -2,13 +2,14 @@
   /* navbar */
 
   .logo{  
-    height: 75px;
+    height: 100%;
     background-color:transparent;
+    padding-right: 5%;
   }
 
   .navbar-toggler{  
     margin: 2%;
-    border-radius: 4px;
+    border-radius: 2rem;
     height: 44px;
     -webkit-transition : all 200ms linear;
     transition: all 200ms linear;
@@ -19,5 +20,6 @@
     color: transparent;
     box-shadow: 0 8px 24px 0 rgba(255,235,167,.2);
   }
+  
 
 

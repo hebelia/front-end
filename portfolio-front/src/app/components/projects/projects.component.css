@@ -20,6 +20,7 @@
   .project:hover{
     transform: scale(1.1);
     box-shadow: none;
+    
   }
   .project h2 {
     padding: 4%;

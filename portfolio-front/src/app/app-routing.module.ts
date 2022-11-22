@@ -13,8 +13,12 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FooterComponent } from './components/footer/footer.component';
 
+
 import{LoginComponent} from './components/login/login.component';
 import { LogoutComponent } from './components/logout/logout.component';
+
+// review
+import {LoginmodalComponent} from './modals/loginmodal/loginmodal.component';
 // comp final 
 import { Page404Component } from './components/page404/page404.component';
 
@@ -28,21 +32,12 @@ const routes: Routes = [
 
 {path: '', component : IndexComponent},
 
-{path: 'navbar', component: NavbarComponent  },
-{path: 'navigation', component: NavigationComponent },
-{path: 'banner', component: BannerComponent }, 
-{path: 'introduction', component: IntroductionComponent },
-{path: 'about', component: AboutComponent },
-{path:'experience', component: ExperienceComponent},
-{path: 'education', component: EducationComponent },
-{path: 'skills',component: SkillsComponent},
-{path: 'projects',component: ProjectsComponent},
-{path: 'footer', component: FooterComponent},
 
 
 
-{path: 'login', component: LoginComponent},
-{path: 'logout', component: LogoutComponent},
+
+// review
+{path: 'loginmodal', component: LoginmodalComponent},
 
 //   la ultima ruta debe ser la de error  !orden)
 {path: '**', component : Page404Component },

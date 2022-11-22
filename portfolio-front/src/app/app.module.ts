@@ -50,7 +50,7 @@ import { LoginmodalComponent } from './modals/loginmodal/loginmodal.component';
     LogoutComponent,
 // comp final
     Page404Component,
-LoginmodalComponent,
+    LoginmodalComponent,
 
 
   ],
