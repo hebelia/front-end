@@ -1,0 +1,23 @@
+
+  /* navbar */
+
+  .logo{  
+    height: 75px;
+    background-color:transparent;
+  }
+
+  .navbar-toggler{  
+    margin: 2%;
+    border-radius: 4px;
+    height: 44px;
+    -webkit-transition : all 200ms linear;
+    transition: all 200ms linear;
+    padding: 0 30px;
+    -ms-flex-pack: center;
+    border: none;
+    background-color: #009188;
+    color: transparent;
+    box-shadow: 0 8px 24px 0 rgba(255,235,167,.2);
+  }
+
+

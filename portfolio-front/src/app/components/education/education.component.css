@@ -1,0 +1,29 @@
+.education{
+
+    padding: 1em;
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+  }
+  .institution{
+    color: #009188;
+  }
+  .course{
+    padding: 1em;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    transition: 2s;
+  }
+  .course:hover{
+    transform: scale(1.1);
+    border-bottom: solid;
+    justify-content: center;
+  }
+  
+  
+  .education h3,
+  .eduaction p{
+    padding: 2%;
+  
+  }

@@ -1,0 +1,23 @@
+/* banner settings */
+.banner{
+    display: flex;
+  }
+  .banner img{
+    transition: 2s; 
+   box-shadow: #fff;
+  size: 150%
+  
+  }
+  .banner .col-1{
+  
+  position: absolute;
+  
+  }
+    
+  .banner img:hover{
+  
+  box-shadow: 0 8px 24px 0 rgba(255,235,167,.2);
+  box-shadow: #fff;
+  transform: scale(1.05);
+  
+  }
