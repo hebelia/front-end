@@ -3,11 +3,25 @@
     <img class="card-img" src="/assets/img/a4.png" alt="banner" />
   </div>
   <div class="col-1 admin-btn">
-    <button type="button" class="btn edit-btn">
-        <i class="fa-solid fa-wand-magic-sparkles"></i>
+    <!-- edit -modal trigger button -->
+    <button
+      type="button"
+      class="btn edit-btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#editbanner"
+    >
+      <i class="fa-solid fa-wand-magic-sparkles"></i>
     </button>
-    <button type="button" class="btn del-btn">
+
+
+    <!--del- modal trigger button -->
+
+    <button type="button" class="btn del-btn"data-bs-toggle="modal"
+    data-bs-target="#delete">
       <i class="fa-solid fa-trash-can"></i>
     </button>
   </div>
 </section>
+
+<app-editbanner></app-editbanner>
+<app-delete></app-delete>

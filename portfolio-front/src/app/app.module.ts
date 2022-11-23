@@ -23,9 +23,14 @@ import { LoginComponent } from './components/login/login.component';
 
 import { LogoutComponent } from './components/logout/logout.component';
 
+
+import { LoginmodalComponent } from './modals/loginmodal/loginmodal.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { EditbannerComponent } from './modals/editbanner/editbanner.component';
 // final
 import { Page404Component } from './components/page404/page404.component';
-import { LoginmodalComponent } from './modals/loginmodal/loginmodal.component';
+import { DeleteComponent } from './modals/delete/delete.component';
+import { EditpfpComponent } from './modals/editpfp/editpfp.component';
 
 @NgModule({
   declarations: [
@@ -48,12 +53,18 @@ import { LoginmodalComponent } from './modals/loginmodal/loginmodal.component';
     // review orden 
     LoginComponent,
     LogoutComponent,
-// comp final
-    Page404Component,
-    LoginmodalComponent,
 
+    LoginmodalComponent,
+    DashboardComponent,
+    EditbannerComponent,
+    DeleteComponent,
+// comp final
+Page404Component,
+EditpfpComponent,
 
   ],
+
+
   imports: [
     BrowserModule,
     AppRoutingModule

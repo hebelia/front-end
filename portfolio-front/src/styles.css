@@ -184,6 +184,10 @@ h6 span{
     background-color: rgb(160, 57, 57);
   }
 
+  .btn-close{
+    color: #fff;
+  }
+
 /* ------------------------------------------ */
 
 strong{
@@ -223,7 +227,13 @@ h3{ font-size: var(--fs-h3)}
   margin-bottom: 1em;
 }
 
-
+/* modals */
+.modal-content{
+  border-width: 0.1%;
+  border-style: solid;
+  border-color: var(--clr-border);
+  background-color: #1f2029;
+}
 
 
 
