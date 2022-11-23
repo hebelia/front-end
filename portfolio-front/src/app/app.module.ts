@@ -31,6 +31,12 @@ import { EditbannerComponent } from './modals/editbanner/editbanner.component';
 import { Page404Component } from './components/page404/page404.component';
 import { DeleteComponent } from './modals/delete/delete.component';
 import { EditpfpComponent } from './modals/editpfp/editpfp.component';
+import { EditskillComponent } from './modals/editskill/editskill.component';
+import { EditaboutComponent } from './modals/editabout/editabout.component';
+import { EditprojectComponent } from './modals/editproject/editproject.component';
+import { EditcourseComponent } from './modals/editcourse/editcourse.component';
+import { EditjobComponent } from './modals/editjob/editjob.component';
+
 
 @NgModule({
   declarations: [
@@ -61,6 +67,12 @@ import { EditpfpComponent } from './modals/editpfp/editpfp.component';
 // comp final
 Page404Component,
 EditpfpComponent,
+EditskillComponent,
+EditaboutComponent,
+EditprojectComponent,
+EditcourseComponent,
+EditjobComponent,
+
 
   ],
 

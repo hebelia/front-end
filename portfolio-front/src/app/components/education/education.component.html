@@ -1,6 +1,17 @@
+<!-- COMPLETAR CON FOR QUE AGREGUE UN BOTON DE EDICION EN CADA ARRAY DEL JSON -->
 <section class="my-education" id="education">
   <h2 class="section__title section__title--education">
     <strong> &lt; formación académica &gt; </strong>
+    <!-- add button -->
+    <button
+      type="button"
+      class="btn add-btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#editcourse"
+    >
+      <i class="fa-solid fa-plus"></i>
+    </button>
+    <!-- --- -->
   </h2>
   <div class="education">
     <div class="course">
@@ -10,20 +21,36 @@
 
         <p class="institution">nombre de la institucion</p>
         <p class="project__date">fecha o duracion de la educacion</p>
-        <!-- modal con seleccion de la fecha de inicio y finalizacion? -->
+
       </h3>
-      <!-- edit button -->
+      <!-- modal -->
       <div class="col-1 admin-btn">
-        <button type="button" class="btn edit-btn">
+        <!-- edit -modal trigger button -->
+        <button
+          type="button"
+          class="btn edit-btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#editcourse"
+        >
           <i class="fa-solid fa-wand-magic-sparkles"></i>
         </button>
-        <button type="button" class="btn del-btn">
+
+        <!--del- modal trigger button -->
+
+        <button
+          type="button"
+          class="btn del-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#delete"
+        >
           <i class="fa-solid fa-trash-can"></i>
         </button>
       </div>
+      <!-- ------- -->
     </div>
 
     <!-- titulo 1 -->
+
 
     <div class="course">
       <i class="fa-solid fa-bookmark icon-body"></i>
@@ -68,3 +95,5 @@
     <h2>&lt; / <i class="fa-solid fa-user-graduate icon-body"></i> &gt;</h2>
   </div>
 </section>
+<app-editcourse></app-editcourse>
+<app-delete></app-delete>

@@ -1,27 +1,53 @@
 <section class="my-projects" id="projects">
   <h2 class="section__title section__title--projects">
     <strong> &lt; mis proyectos &gt; </strong>
+        <!-- add button -->
+        <button
+        type="button"
+        class="btn add-btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#editproject"
+      >
+        <i class="fa-solid fa-plus"></i>
+      </button>
+      <!-- --- -->
   </h2>
   <div class="projects flex-container">
     <div class="project">
       <div class="button-icon">
         <h2><i class="fa-regular fa-folder icon-body"></i></h2>
         <!-- button div -->
-        <div class="col-1 admin-btn">
-          <button type="button" class="btn edit-btn">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-          </button>
-          <button type="button" class="btn del-btn">
-            <i class="fa-solid fa-trash-can"></i>
-          </button>
-        </div>
+      <!-- modal -->
+      <div class="col-1 admin-btn">
+        <!-- edit -modal trigger button -->
+        <button
+          type="button"
+          class="btn edit-btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#editproject"
+        >
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </button>
+
+        <!--del- modal trigger button -->
+
+        <button
+          type="button"
+          class="btn del-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#delete"
+        >
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
       </div>
+      <!-- ------- -->
+    </div>
 
       <h3>
         Proyecto1
 
         <p>descripcion proyecto 1</p>
-        <p class="project__date">fecha proyecto 1</p>
+        <p class="project__date">fecha de comienzo / fecha de finalizacion</p>
       </h3>
     </div>
     <!-- proyecto 1-->
@@ -49,3 +75,7 @@
     <h2>&lt; / <i class="fa-solid fa-list-check icon-body"></i> &gt;</h2>
   </div>
 </section>
+
+
+<app-editproject></app-editproject>
+<app-delete></app-delete>

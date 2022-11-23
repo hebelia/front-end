@@ -29,7 +29,7 @@
   .section__title--intro {
     font-weight: var(--fw-reg);
   }
-  
+
   .left{
   display: flex;
   flex-direction: column;

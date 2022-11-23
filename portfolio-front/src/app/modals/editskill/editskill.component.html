@@ -1,0 +1,45 @@
+<div class="modal" tabindex="-1" id="editskill">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- header -->
+      <div class="modal-header">
+        <h3 class="modal-title">
+          &lt; ingrese nombre y valor de la habilidad &gt;
+        </h3>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <!-- body -->
+      <div class="input-group mb-3">
+        <!-- <span class="input-group-text" id="skill-name"></span> -->
+        <input
+          type="text"
+          class="form-control"
+          placeholder="nombre habilidad"
+          aria-label="skill-name"
+          aria-describedby="skill-name"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <input
+          type="number"
+          class="form-control"
+          aria-label="percentage number"
+          placeholder="porcentaje de dominio de la habilidad"
+        />
+        <span class="input-group-text">%</span>
+      </div>
+      <!-- footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          cerrar
+        </button>
+        <button type="button" class="btn btn-primary">guardar cambios</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,71 @@
+<div class="modal" tabindex="-1" id="editproject">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- header -->
+      <div class="modal-header">
+        <h3 class="modal-title">
+          &lt; ingrese nombre y datos del proyecto &gt;
+        </h3>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <!-- body -->
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="project-url">link de github</span>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="url del proyecto"
+          aria-label="project-url"
+          aria-describedby="project-url"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="nombre del proyecto"
+          aria-label="project-title"
+          aria-describedby="project-title"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">fecha de inicio del proyecto</span>
+        <input
+          type="date"
+          class="form-control"
+          placeholder="fecha de duracion del proyecto"
+          aria-label="project-start"
+          aria-describedby="project-start"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">fecha de finalizacion del proyecto</span>
+        <input
+          type="date"
+          class="form-control"
+          placeholder="fecha de duracion del proyecto"
+          aria-label="project-end"
+          aria-describedby="project-end"
+        />
+      </div>
+
+      <div class="input-group">
+        <span class="input-group-text">descripcion del proyecto</span>
+        <textarea class="form-control" aria-label="With textarea"></textarea>
+      </div>
+
+      <!-- footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          cerrar
+        </button>
+        <button type="button" class="btn btn-primary">guardar cambios</button>
+      </div>
+    </div>
+  </div>
+</div>

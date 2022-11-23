@@ -1,27 +1,50 @@
 <div class="modal" tabindex="-1" id="editpfp">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title">&lt; seleccione nueva foto de perfil &gt;</h3>
-          <button
-            type="button"
-            class="btn-close btn-close-white"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- header -->
+        <h3 class="modal-title">&lt; editar perfil &gt;</h3>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <!-- contenido -->
+        <!-- nombre -->
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="nombre y apellido"
+            aria-label="profile-name"
+            aria-describedby="profile-name"
+          />
         </div>
-        <div class="modal-body">
-          <div class="input-group mb-3">
-            <label class="input-group-text" for="inputGroupPfp">subir</label>
-            <input type="file" class="form-control" id="inputGroupPfp" />
-          </div>
+        <!-- titulo del perfil -->
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="título"
+            aria-label="profile-title"
+            aria-describedby="profile-title"
+          />
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-            cerrar
-          </button>
-          <button type="button" class="btn btn-primary">guardar cambios</button>
+        <div class="input-group mb-3">
+          <span class="input-group-text">imagen de perfil</span>
+          <input type="file" class="form-control" id="inputGroupPfp" />
         </div>
+      </div>
+      <!-- footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          cerrar
+        </button>
+        <button type="button" class="btn btn-primary">guardar cambios</button>
       </div>
     </div>
   </div>
+</div>

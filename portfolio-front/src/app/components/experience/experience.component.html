@@ -1,6 +1,16 @@
 <section class="my-experience" id="experience">
   <h2 class="section__title section__title--experience">
     <strong> &lt; experiencia &gt; </strong>
+        <!-- add button -->
+        <button
+        type="button"
+        class="btn add-btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#editjob"
+      >
+        <i class="fa-solid fa-plus"></i>
+      </button>
+      <!-- --- -->
   </h2>
   <div class="experience">
     <div class="job">
@@ -8,17 +18,34 @@
         <span><i class="fa-solid fa-at icon-body"></i></span> Trabajo 1
       </h3>
 
-      <p>descripcion trabajo 1</p>
-      <p class="project__date">fecha trabajo 1</p>
+      <p>titulo del puesto // UN PIPE
+        descripcion trabajo 1 // OTRO PIPE </p>
+      <p class="project__date">fecha inicio / fehca fin</p>
 
+      <!-- modal -->
       <div class="col-1 admin-btn">
-        <button type="button" class="btn edit-btn">
+        <!-- edit -modal trigger button -->
+        <button
+          type="button"
+          class="btn edit-btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#editjob"
+        >
           <i class="fa-solid fa-wand-magic-sparkles"></i>
         </button>
-        <button type="button" class="btn del-btn">
+
+        <!--del- modal trigger button -->
+
+        <button
+          type="button"
+          class="btn del-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#delete"
+        >
           <i class="fa-solid fa-trash-can"></i>
         </button>
       </div>
+      <!-- ------- -->
     </div>
 
     <!-- trabajo 1-->
@@ -46,3 +73,6 @@
     <h2>&lt; / <i class="fa-solid fa-briefcase icon-body"></i> &gt;</h2>
   </div>
 </section>
+
+<app-editjob></app-editjob>
+<app-delete></app-delete>

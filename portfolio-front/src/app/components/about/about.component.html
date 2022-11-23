@@ -5,25 +5,30 @@
   <p class="section__subtitle section__subtitle--about"></p>
   <div class="about-me__body">
     <!-- componente de about-me -->
-    <div class="col-7  p-1">
-      <p class="p-1"> ...............................................................................................................
-      ........................................................</p>
+    <div class="col-7 p-1">
+      <p class="p-1">
+        ...............................................................................................................
+        ........................................................
+      </p>
     </div>
-    
-  <!-- change -->
-  <div class="col-1 admin-btn">
-    <button type="button" class="btn edit-btn">
+
+    <div class="col-1 admin-btn">
+
+      <button
+        type="button"
+        class="btn edit-btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#editabout"
+      >
         <i class="fa-solid fa-wand-magic-sparkles"></i>
-    </button>
-    <button type="button" class="btn del-btn">
-      <i class="fa-solid fa-trash-can"></i>
-    </button>
+      </button>
+    </div>
   </div>
-  </div>
-
-
 
   <div class="about-me__footer">
     <h2>&lt; / <i class="fa-solid fa-circle-info icon-body"></i> &gt;</h2>
   </div>
 </section>
+
+<app-editabout></app-editabout>
+

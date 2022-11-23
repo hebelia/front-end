@@ -96,6 +96,9 @@ h6 span{
   text-transform: uppercase;
   font-weight: 700;
 }
+p{
+  word-wrap: break-word;  
+}
 
 .btn{  
     border-radius: 2rem; /* alt  4px */
@@ -159,26 +162,31 @@ h6 span{
     color: #009188;
   }
 
-
+.add-btn{
+  border-radius: 1rem;
+  padding: 1rem;
+  width:5%;
+  height: 0.1rem;
+  font-style: italic;
+  color: rgb(255, 255, 255);
+  box-shadow: #fff;
+  background-color: var(--clr-accent);
+}
   .edit-btn{
     border-radius: 1rem;
     padding: 1rem;
-    width:10%;
-    display: flex;
-    flex-direction: row-reverse;
-    font-style: italic;
+    width:5%;
+    height: 0.1rem;
     color: rgb(255, 255, 255);
     box-shadow: #fff;
     background-color: rgb(55, 133, 113);
   }
   .del-btn{
-
     border-radius: 1rem;
     padding: 1rem;
     width:10%;
-    display: flex;
-    flex-direction: row-reverse;
-    font-style: italic;
+    width:5%;
+    height: 0.1rem;
     color: rgb(255, 255, 255);
     box-shadow: #fff;
     background-color: rgb(160, 57, 57);

@@ -3,28 +3,53 @@
 <section class="my-skills" id="skills">
   <h2 class="section__title section__title--skills">
     <strong> &lt; mis habilidades &gt; </strong>
+    <!-- add button -->
+    <button
+      type="button"
+      class="btn add-btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#editskill"
+    >
+      <i class="fa-solid fa-plus"></i>
+    </button>
+    <!-- --- -->
   </h2>
 
   <div class="skills">
-
+    <!-- skill 1 -->
     <div class="skill">
-      <div class="skill__percentage">
-      
-      </div>
-      <!-- admin button -->
+      <div class="skill__percentage"></div>
+      <!-- modal -->
       <div class="col-1 admin-btn">
-        <button type="button" class="btn edit-btn">
+        <!-- edit -modal trigger button -->
+        <button
+          type="button"
+          class="btn edit-btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#editskill"
+        >
           <i class="fa-solid fa-wand-magic-sparkles"></i>
         </button>
-        <button type="button" class="btn del-btn">
+
+        <!--del- modal trigger button -->
+
+        <button
+          type="button"
+          class="btn del-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#delete"
+        >
           <i class="fa-solid fa-trash-can"></i>
         </button>
       </div>
+      <!-- ------- -->
     </div>
-    <!-- ---- -->
+    <!-- end skill 1 -->
   </div>
 
   <div class="my-skills__footer">
     <h2>&lt; / <i class="fa-solid fa-shapes icon-body"></i> &gt;</h2>
   </div>
 </section>
+<app-editskill></app-editskill>
+<app-delete></app-delete>
