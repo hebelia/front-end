@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 // si estan correctamente creados deben generarse los imports de los distintos componentes
 import{IndexComponent} from './components/index/index.component';
 
+
 // review
 import {LoginmodalComponent} from './modals/loginmodal/loginmodal.component';
 // comp final 
