@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 // services
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // created components imports 
 import { AppComponent } from './app.component';
@@ -77,7 +77,8 @@ import { EditjobComponent } from './modals/editjob/editjob.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
     
   ],
   providers: [],
