@@ -1,7 +1,7 @@
 {
     "name":"Hebe Lia Romeu",
-    "titile":"Full stack developer junior",
-    "pfp":"../assets/img/pfp.png",
+    "title":"Full stack developer junior",
+    "pfp":"../assets/img/pfp.jpg",
     "about": "lore ipsium",
     "banner": "../assets/img/a4.png",
     "license": "",
@@ -10,9 +10,26 @@
     "socials":[
         {
             "id":1,
-            "url": "",
-            "alt":"",
-            "icon":""
+            "url": "https://github.com/hebelia",
+            "icon":"fa-brands fa-github-alt"
+
+        },
+        {
+            "id":2,
+            "url": "https://www.linkedin.com/in/hebe-lia-romeu-0a5343234/",
+            "icon":"fa-brands fa-linkedin"
+
+        },
+        {
+            "id":3,
+            "url": "https://codepen.io/hebeli",
+            "icon":"fa-brands fa-codepen"
+
+        },       
+        {
+            "id":4,
+            "url": "https://www.instagram.com/hebe.lia/",
+            "icon":"fa-brands fa-instagram"
 
         }
     ],
