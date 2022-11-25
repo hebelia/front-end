@@ -19,7 +19,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FooterComponent } from './components/footer/footer.component';
 // review
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+
 // ---
 
 import { LoginComponent } from './components/login/login.component';
@@ -69,7 +69,7 @@ import { EditjobComponent } from './modals/editjob/editjob.component';
     EditcourseComponent,
     EditjobComponent,
 // quitar despues
-    DashboardComponent,
+
   ],
 
 
