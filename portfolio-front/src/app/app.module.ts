@@ -80,6 +80,7 @@ EditjobComponent,
   imports: [
     BrowserModule,
     AppRoutingModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

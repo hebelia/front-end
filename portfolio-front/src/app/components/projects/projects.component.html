@@ -1,81 +1,69 @@
 <section class="my-projects" id="projects">
   <h2 class="section__title section__title--projects">
     <strong> &lt; mis proyectos &gt; </strong>
-        <!-- add button -->
-        <button
-        type="button"
-        class="btn add-btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#editproject"
-      >
-        <i class="fa-solid fa-plus"></i>
-      </button>
-      <!-- --- -->
+    <!-- add button -->
+    <button
+      type="button"
+      class="btn add-btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#editproject"
+    >
+      <i class="fa-solid fa-plus"></i>
+    </button>
+    <!-- --- -->
   </h2>
   <div class="projects flex-container">
-    <div class="project">
+    <!-- start project -->
+    <div class="project" *ngFor="let project of projects">
+      <!-- url -->
       <div class="button-icon">
-        <h2><i class="fa-regular fa-folder icon-body"></i></h2>
-        <!-- button div -->
-      <!-- modal -->
-      <div class="col-1 admin-btn">
-        <!-- edit -modal trigger button -->
-        <button
-          type="button"
-          class="btn edit-btn btn-primary"
-          data-bs-toggle="modal"
-          data-bs-target="#editproject"
-        >
-          <i class="fa-solid fa-wand-magic-sparkles"></i>
-        </button>
+        <h2>
+          <i class="fa-regular fa-folder icon-body">
+            <a [href]="project.url" [alt]="project.alt" target="_blank"></a>
+          </i>
+        </h2>
+        <!-- modal -->
+        <div class="col-1 admin-btn">
+          <!-- edit -modal trigger button -->
+          <button
+            type="button"
+            class="btn edit-btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#editproject"
+          >
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </button>
 
-        <!--del- modal trigger button -->
+          <!--del- modal trigger button -->
 
-        <button
-          type="button"
-          class="btn del-btn"
-          data-bs-toggle="modal"
-          data-bs-target="#delete"
-        >
-          <i class="fa-solid fa-trash-can"></i>
-        </button>
+          <button
+            type="button"
+            class="btn del-btn"
+            data-bs-toggle="modal"
+            data-bs-target="#delete"
+          >
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </div>
+        <!-- ------- -->
       </div>
-      <!-- ------- -->
-    </div>
+      <!-- project body -->
+      <h3>
+        {{ project.title }}
 
-      <h3>
-        Proyecto1
-
-        <p>descripcion proyecto 1</p>
-        <p class="project__date">fecha de comienzo / fecha de finalizacion</p>
+        <p>{{ project.description }}</p>
+        <p class="project__date">
+          {{ project.start }} / {{ project.end }}
+        </p>
       </h3>
     </div>
-    <!-- proyecto 1-->
-    <div class="project">
-      <h2><i class="fa-regular fa-folder icon-body"></i></h2>
-      <h3>
-        Proyecto2
-        <p>descripcion proyecto 2</p>
-        <p class="project__date">fecha proyecto 2</p>
-      </h3>
-    </div>
-    <!-- proyecto 2-->
-    <div class="project">
-      <h2><i class="fa-regular fa-folder icon-body"></i></h2>
-      <h3>
-        Proyecto3
-        <p>descripcion proyecto 3</p>
-        <p class="project__date">fecha proyecto 3</p>
-      </h3>
-    </div>
-    <!-- proyecto 3-->
+    <!-- end project -->
   </div>
 
   <div class="my-projects__footer">
     <h2>&lt; / <i class="fa-solid fa-list-check icon-body"></i> &gt;</h2>
   </div>
 </section>
-
 
 <app-editproject></app-editproject>
 <app-delete></app-delete>

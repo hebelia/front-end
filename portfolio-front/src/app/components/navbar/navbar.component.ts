@@ -1,31 +1,33 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
 
-  // crear variables por ej:
+ export class NavbarComponent {
+  //  esto va adentro deimplements OnInit
 
-  // redes:any;
-  //   visible: boolean =false;
+//   // crear variables por ej:
 
-
-  // constructor(private datos: DatosService) { }
-
-// data y redes variables 
-// ngOnInit():void {
-//   this.datos.getDatos().subscribe(data =>{
-//     this.redes = data.redes;
-//   })
-// }
+//   socials:any;
+//     show: boolean =false;
 
 
-// la funcion no retorna nada por el :void
-// make-visible():void{
-//   this.visible=!this.visible;
+// //   constructor(private data: DataService) { }
+
+// // // data y redes variables 
+// // ngOnInit():void {
+// //   this.data.getData().subscribe(info =>{
+// //     this.socials = info.socials;
+// //   })
+// // }
+
+// // funcion para que se muestre o se esconda
+// // la funcion no retorna nada por el :void
+// visible():void{
+//   this.show=!this.show;
 //    }
 
 
