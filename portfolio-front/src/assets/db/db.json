@@ -7,7 +7,7 @@
     "license": "",
 
 
-    "social":[
+    "socials":[
         {
             "id":1,
             "url": "",
@@ -57,7 +57,6 @@
         {
             "id":1,
             "url": "",
-            "alt": "",
             "title": "Domador de camellos",
             "description": "sdfsdfs",
             "start":"",

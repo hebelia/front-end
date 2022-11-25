@@ -4,8 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
-import { AppComponent } from './app.component';
+
 // created components imports 
+import { AppComponent } from './app.component';
 import { IndexComponent } from './components/index/index.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
@@ -17,25 +18,18 @@ import { EducationComponent } from './components/education/education.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FooterComponent } from './components/footer/footer.component';
-
+// review
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+// ---
 
-// ver en que orden ponerlos?
 import { LoginComponent } from './components/login/login.component';
 
 import { LogoutComponent } from './components/logout/logout.component';
-// final
+
 import { Page404Component } from './components/page404/page404.component';
 
-
-
-
-
-
 import { LoginmodalComponent } from './modals/loginmodal/loginmodal.component';
-
 import { EditbannerComponent } from './modals/editbanner/editbanner.component';
-
 import { DeleteComponent } from './modals/delete/delete.component';
 import { EditpfpComponent } from './modals/editpfp/editpfp.component';
 import { EditskillComponent } from './modals/editskill/editskill.component';

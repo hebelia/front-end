@@ -18,11 +18,10 @@
     <div class="course" *ngFor="let course of education">
       <i class="fa-solid fa-bookmark icon-body"></i>
       <h3 class="titulo">
-        {{course.title}}
+        {{ course.title }}
 
-        <p class="institution">{{course.institution}}</p>
-        <p class="project__date">{{course.start}} / {{course.end}} </p>
-
+        <p class="institution">{{ course.institution }}</p>
+        <p class="project__date">{{ course.start }} / {{ course.end }}</p>
       </h3>
       <!-- modal -->
       <div class="col-1 admin-btn">
