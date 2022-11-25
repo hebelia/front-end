@@ -1,0 +1,88 @@
+{
+    "name":"Hebe Lia Romeu",
+    "titile":"Full stack developer junior",
+    "pfp":"../assets/img/pfp.png",
+    "about": "lore ipsium",
+    "banner": "../assets/img/a4.png",
+    "license": "",
+
+
+    "social":[
+        {
+            "id":1,
+            "url": "",
+            "alt":"",
+            "icon":""
+
+        }
+    ],
+
+    "education":[
+        {
+            "id":1,
+            "title": "Domador de camellos",
+            "institution": "sdfsdfs",
+            "start":"",
+            "end":""
+        },
+        {
+            "id":2,
+            "title": "Domador de camellos",
+            "institution": "sdfsdfs",
+            "start":"",
+            "end":""
+        }
+    ],
+    
+    "experience":[
+        {
+            "id":1,
+            "place":"",
+            "title": "Domador de camellos",
+            "description": "sdfsdfs",
+            "start":"",
+            "end":""
+        },
+        {
+            "id":2,
+            "place":"",
+            "title": "Domador de camellos",
+            "description": "sdfsdfs",
+            "start":"",
+            "end":""
+        }
+    ],
+
+    "projects":[
+        {
+            "id":1,
+            "url": "",
+            "alt": "",
+            "title": "Domador de camellos",
+            "description": "sdfsdfs",
+            "start":"",
+            "end":""
+        
+        },
+        {
+            "id":2,
+            "url": "",
+            "alt": "",
+            "title": "Domador de camellos",
+            "description": "sdfsdfs",
+            "start":"",
+            "end":""
+        
+        }
+        
+    ],
+    
+    "skills":[
+        {
+            "id":1,
+            "name":"",
+            "percentage": ""
+        }
+    ]
+}
+    

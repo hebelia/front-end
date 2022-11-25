@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+// services
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 // created components imports 
 import { IndexComponent } from './components/index/index.component';
@@ -16,19 +18,24 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FooterComponent } from './components/footer/footer.component';
 
-
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 // ver en que orden ponerlos?
 import { LoginComponent } from './components/login/login.component';
 
 import { LogoutComponent } from './components/logout/logout.component';
+// final
+import { Page404Component } from './components/page404/page404.component';
+
+
+
+
 
 
 import { LoginmodalComponent } from './modals/loginmodal/loginmodal.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+
 import { EditbannerComponent } from './modals/editbanner/editbanner.component';
-// final
-import { Page404Component } from './components/page404/page404.component';
+
 import { DeleteComponent } from './modals/delete/delete.component';
 import { EditpfpComponent } from './modals/editpfp/editpfp.component';
 import { EditskillComponent } from './modals/editskill/editskill.component';
@@ -54,32 +61,29 @@ import { EditjobComponent } from './modals/editjob/editjob.component';
     SkillsComponent,
     ProjectsComponent,
     FooterComponent,
-
-
-    // review orden 
+    Page404Component,
     LoginComponent,
     LogoutComponent,
-
+    // modals
     LoginmodalComponent,
-    DashboardComponent,
     EditbannerComponent,
     DeleteComponent,
-// comp final
-Page404Component,
-EditpfpComponent,
-EditskillComponent,
-EditaboutComponent,
-EditprojectComponent,
-EditcourseComponent,
-EditjobComponent,
-
-
+    EditpfpComponent,
+    EditskillComponent,
+    EditaboutComponent,
+    EditprojectComponent,
+    EditcourseComponent,
+    EditjobComponent,
+// quitar despues
+    DashboardComponent,
   ],
 
 
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
     
   ],
   providers: [],
