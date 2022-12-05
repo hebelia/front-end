@@ -1,30 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+
 @Component({
-  selector: 'app-editabout',
-  templateUrl: './editabout.component.html',
-  styleUrls: ['./editabout.component.css']
+  selector: 'app-addproject',
+  templateUrl: './addproject.component.html',
+  styleUrls: ['./addproject.component.css']
 })
-export class EditaboutComponent implements OnInit{
-  
+export class AddprojectComponent implements OnInit{
+
   form: FormGroup;
-  
+
   constructor(private formBuilder: FormBuilder){ 
-  
+
     this.form= this.formBuilder.group({
-  
+
       
     })
   }
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
   ngOnInit() {}
-  
+
   onSubmit(event: Event){
     // detiene la propagacion o ejecucion del submit
     event.preventDefault;
@@ -37,5 +38,4 @@ export class EditaboutComponent implements OnInit{
     }
   }
   
-  
-  }
+}

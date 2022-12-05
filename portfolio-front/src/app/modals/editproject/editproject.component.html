@@ -1,3 +1,4 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit($event)">
 <div class="modal" tabindex="-1" id="editproject">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -64,8 +65,9 @@
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           cerrar
         </button>
-        <button type="button" class="btn btn-primary">guardar cambios</button>
+        <input type="submit" class="btn btn-primary" value="guardar cambios" />
       </div>
     </div>
   </div>
 </div>
+</form>

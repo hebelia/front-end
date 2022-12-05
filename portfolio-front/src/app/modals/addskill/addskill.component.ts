@@ -5,11 +5,11 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 // import {SkillService }from 'src/app/services/skill.service';
 
 @Component({
-  selector: 'app-editskill',
-  templateUrl: './editskill.component.html',
-  styleUrls: ['./editskill.component.css']
+  selector: 'app-addskill',
+  templateUrl: './addskill.component.html',
+  styleUrls: ['./addskill.component.css']
 })
-export class EditskillComponent implements OnInit{
+export class AddskillComponent implements OnInit {
 
 // form: FormGroup;
 // skill: '';

@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+
+
 @Component({
-  selector: 'app-editabout',
-  templateUrl: './editabout.component.html',
-  styleUrls: ['./editabout.component.css']
+  selector: 'app-addjob',
+  templateUrl: './addjob.component.html',
+  styleUrls: ['./addjob.component.css']
 })
-export class EditaboutComponent implements OnInit{
+export class AddjobComponent implements OnInit{
   
   form: FormGroup;
   
@@ -39,3 +41,4 @@ export class EditaboutComponent implements OnInit{
   
   
   }
+  

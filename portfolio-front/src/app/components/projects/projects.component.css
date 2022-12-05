@@ -1,3 +1,7 @@
+.projects{
+  display: flex;
+  flex-direction: grid;
+}
 .project{
 
     padding: 1em;
@@ -13,7 +17,7 @@
     flex-grow: 1;
     flex-direction: column;
     justify-content: center;
-    box-shadow: 0 8px 10px 0 white;
+    box-shadow: 0 8px 10px 0 rgb(150, 148, 148);
     transition: 2s;
     
   }

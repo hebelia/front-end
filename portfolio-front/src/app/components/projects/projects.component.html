@@ -6,13 +6,13 @@
       type="button"
       class="btn add-btn btn-primary"
       data-bs-toggle="modal"
-      data-bs-target="#editproject"
+      data-bs-target="#addproject"
     >
       <i class="fa-solid fa-plus"></i>
     </button>
     <!-- --- -->
   </h2>
-  <div class="projects flex-container">
+  <div class="projects flex-container ">
     <!-- start project -->
     <div class="project" *ngFor="let project of projects">
       <!-- url -->
@@ -36,12 +36,7 @@
 
           <!--del- modal trigger button -->
 
-          <button
-            type="button"
-            class="btn del-btn"
-            data-bs-toggle="modal"
-            data-bs-target="#delete"
-          >
+          <button type="button" class="btn del-btn">
             <i class="fa-solid fa-trash-can"></i>
           </button>
         </div>
@@ -64,4 +59,4 @@
 </section>
 
 <app-editproject></app-editproject>
-<app-delete></app-delete>
+<app-addproject></app-addproject>

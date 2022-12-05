@@ -41,10 +41,25 @@
   .right{
     display: flex;
     flex-direction: column;
-  
+
+  }
+  .intro__img{
+      
     margin: 1%;
     border-style: solid;
     border-color: #009188;
+    border-left: none;
+    border-bottom: none;
+    padding: 5%;
+    transition: 2s;
+  }
+  .intro__img:hover{
+    transform: scale(1.1);
+    
+    margin: 1%;
+    border-style: solid;
+    border-color: white;
+
     border-left: none;
     border-bottom: none;
   }
@@ -55,24 +70,20 @@
   
     justify-content: center;
     padding: 1em;
-    display: flex;
     flex-grow: 1;
     flex-direction: row;
-    justify-content: space-between;
   
+  
+  }
+  .right i{
+    transition: 1s;
   }
   .right i:hover{
-    transform: scale(1.5);
+    transform: scale(1.35);
   
   }
-  .intro__img{
-  padding: 5%;
-  transition: 2s;
-  
-  }
-  .intro__img:hover{
-    transform: scale(1.1);
-  }
+
+
   
   
   .section__subtitle--intro{

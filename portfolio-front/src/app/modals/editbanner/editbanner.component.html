@@ -1,27 +1,39 @@
-<div class="modal" tabindex="-1" id="editbanner">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title">&lt; seleccione nueva imagen de portada &gt;</h3>
-        <button
-          type="button"
-          class="btn-close btn-close-white"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="modal-body">
-        <div class="input-group mb-3">
-          <label class="input-group-text" for="inputGroupBanner">subir</label>
-          <input type="file" class="form-control" id="inputGroupBanner" />
+<form [formGroup]="form" (ngSubmit)="onSubmit($event)">
+  <div class="modal" tabindex="-1" id="editbanner">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">
+            &lt; seleccione nueva imagen de portada &gt;
+          </h3>
+          <button
+            type="button"
+            class="btn-close btn-close-white"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-          cerrar
-        </button>
-        <button type="button" class="btn btn-primary">guardar cambios</button>
+        <div class="modal-body">
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupBanner">subir</label>
+            <input type="file" class="form-control" id="inputGroupBanner" />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            cerrar
+          </button>
+          <input
+            type="submit"
+            class="btn btn-primary"
+            value="guardar cambios"
+          />
+        </div>
       </div>
     </div>
   </div>
-</div>
+</form>

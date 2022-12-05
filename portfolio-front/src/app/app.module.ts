@@ -19,7 +19,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FooterComponent } from './components/footer/footer.component';
 // review
-
+import { NgCircleProgressModule } from 'ng-circle-progress';
 // ---
 
 import { LoginComponent } from './components/login/login.component';
@@ -30,13 +30,19 @@ import { Page404Component } from './components/page404/page404.component';
 
 import { LoginmodalComponent } from './modals/loginmodal/loginmodal.component';
 import { EditbannerComponent } from './modals/editbanner/editbanner.component';
-import { DeleteComponent } from './modals/delete/delete.component';
+
 import { EditpfpComponent } from './modals/editpfp/editpfp.component';
 import { EditskillComponent } from './modals/editskill/editskill.component';
 import { EditaboutComponent } from './modals/editabout/editabout.component';
 import { EditprojectComponent } from './modals/editproject/editproject.component';
 import { EditcourseComponent } from './modals/editcourse/editcourse.component';
 import { EditjobComponent } from './modals/editjob/editjob.component';
+import { AddjobComponent } from './modals/addjob/addjob.component';
+import { AddskillComponent } from './modals/addskill/addskill.component';
+import { LogComponent } from './modals/log/log.component';
+import { RegisterComponent } from './modals/register/register.component';
+import { AddcourseComponent } from './modals/addcourse/addcourse.component';
+import { AddprojectComponent } from './modals/addproject/addproject.component';
 
 
 @NgModule({
@@ -61,13 +67,21 @@ import { EditjobComponent } from './modals/editjob/editjob.component';
     // modals
     LoginmodalComponent,
     EditbannerComponent,
-    DeleteComponent,
     EditpfpComponent,
     EditskillComponent,
     EditaboutComponent,
     EditprojectComponent,
     EditcourseComponent,
     EditjobComponent,
+    AddjobComponent,
+    AddskillComponent,
+    LogComponent,
+    RegisterComponent,
+    AddcourseComponent,
+    AddprojectComponent
+    
+
+
 // quitar despues
 
   ],
@@ -78,9 +92,33 @@ import { EditjobComponent } from './modals/editjob/editjob.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
-    
+    ReactiveFormsModule,
+
+    NgCircleProgressModule.forRoot({
+      "backgroundPadding": 2,
+      "radius": 38,
+      "space": -2,
+      "maxPercent": 100,
+      "unitsColor": "#919191",
+      "outerStrokeWidth": 2,
+      "outerStrokeColor": "#20eee0",
+      "innerStrokeColor": "#f3f4f7",
+      "innerStrokeWidth": 2,
+      
+      "titleColor": "#ffffff",
+      "subtitleColor": "#ffffff",
+      "subtitleFontSize": "20",
+      "animationDuration": 300,
+      "showSubtitle": false,
+      "showUnits": false,
+      "showBackground": false,
+      "clockwise": false,
+      "responsive": true})
+
+
+
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })

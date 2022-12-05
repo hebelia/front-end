@@ -1,0 +1,76 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit($event)">
+    <div class="modal" tabindex="-1" id="addcourse">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- header -->
+          <div class="modal-header">
+            <h3 class="modal-title">
+              &lt; ingrese nombre y datos del título &gt;
+            </h3>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <!-- body -->
+  
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="nombre del titulo"
+              aria-label="course-title"
+              aria-describedby="course-title"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="nombre de la institucion donde se realizo"
+              aria-label="course-institution"
+              aria-describedby="course-institution"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text">fecha de inicio</span>
+            <input
+              type="date"
+              class="form-control"
+              placeholder="fecha de duracion del proyecto"
+              aria-label="course-start"
+              aria-describedby="course-start"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text">fecha de finalizacion </span>
+            <input
+              type="date"
+              class="form-control"
+              placeholder="fecha de duracion del proyecto"
+              aria-label="course-end"
+              aria-describedby="course-end"
+            />
+          </div>
+          <!-- footer -->
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              cerrar
+            </button>
+            <input
+              type="submit"
+              class="btn btn-primary"
+              value="guardar cambios"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  

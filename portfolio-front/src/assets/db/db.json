@@ -96,8 +96,27 @@
     "skills":[
         {
             "id":1,
-            "name":"",
-            "percentage": ""
+            "name":"Hola",
+            "percentage":100
+        },
+        {
+            "id":1,
+            "name":"Hola",
+            "percentage":100
+        },
+        {
+            "id":1,
+            "name":"Hola",
+            "percentage":100
+        },
+        {
+            "id":1,
+            "name":"Hola",
+            "percentage":100
+        },{
+            "id":1,
+            "name":"Henlo",
+            "percentage":100
         }
     ]
 }

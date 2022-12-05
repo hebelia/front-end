@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+
 @Component({
-  selector: 'app-editabout',
-  templateUrl: './editabout.component.html',
-  styleUrls: ['./editabout.component.css']
+  selector: 'app-addcourse',
+  templateUrl: './addcourse.component.html',
+  styleUrls: ['./addcourse.component.css']
 })
-export class EditaboutComponent implements OnInit{
+export class AddcourseComponent implements OnInit{
   
   form: FormGroup;
   
@@ -39,3 +40,4 @@ export class EditaboutComponent implements OnInit{
   
   
   }
+  

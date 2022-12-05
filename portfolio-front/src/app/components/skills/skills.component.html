@@ -1,5 +1,3 @@
-<!-- completarrrrrrrrrrrrrrrrrrr -->
-
 <section class="my-skills" id="skills">
   <h2 class="section__title section__title--skills">
     <strong> &lt; mis habilidades &gt; </strong>
@@ -8,18 +6,30 @@
       type="button"
       class="btn add-btn btn-primary"
       data-bs-toggle="modal"
-      data-bs-target="#editskill"
+      data-bs-target="#addskill"
     >
       <i class="fa-solid fa-plus"></i>
     </button>
     <!-- --- -->
   </h2>
 
-  <div class="skills">
+  <div class="skills  flex-container ">
     <!-- skill 1 -->
     <div class="skill" *ngFor="let skill of skills">
-      <div class="skill__percentage">
-        
+      <div class=" skill__percentage">
+        <circle-progress
+          [percent]="skill.percentage"
+          [radius]="100"
+          [outerStrokeWidth]="16"
+          [innerStrokeWidth]="8"
+          [outerStrokeColor]="'#04beb2'"
+          [innerStrokeColor]="'#fff'"
+          [animation]="true"
+          [title]="skill.name"
+          [animationDuration]="1500"
+          [animateTitle]="skill.name"
+          [titleColor]="'#fff'"
+        ></circle-progress>
       </div>
 
       <!-- modal -->
@@ -36,12 +46,7 @@
 
         <!--del- modal trigger button -->
 
-        <button
-          type="button"
-          class="btn del-btn"
-          data-bs-toggle="modal"
-          data-bs-target="#delete"
-        >
+        <button type="button" class="btn del-btn">
           <i class="fa-solid fa-trash-can"></i>
         </button>
       </div>
@@ -55,4 +60,4 @@
   </div>
 </section>
 <app-editskill></app-editskill>
-<app-delete></app-delete>
+<app-addskill></app-addskill>

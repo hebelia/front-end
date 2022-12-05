@@ -209,6 +209,10 @@ h3 {
   line-height: 1;
   margin: 0;
 }
+h4 {
+  line-height: 1;
+  margin: 0;
+}
 h1{ font-size: var(--fs-h1)}
 h2{ font-size: var(--fs-h2)}
 h3{ font-size: var(--fs-h3)}
@@ -218,7 +222,9 @@ h3{ font-size: var(--fs-h3)}
 }
 
 .section__title{
-  margin-bottom: .25em;
+  margin-bottom: 0.9em;
+  display: flex;
+  justify-content: space-between;
 }
 
 
@@ -263,4 +269,14 @@ display: flex;
 flex-direction: row-reverse;
 
   /* change opacity of the footers */
+}
+.error{
+  color: rgb(160, 57, 57);
+}
+
+.border-danger{
+  border-color: rgb(160, 57, 57);
+}
+.border-good{
+  border-color: rgb(1, 160, 1);
 }

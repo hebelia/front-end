@@ -1,28 +1,26 @@
 <section class="my-experience" id="experience">
   <h2 class="section__title section__title--experience">
     <strong> &lt; experiencia &gt; </strong>
-        <!-- add button -->
-        <button
-        type="button"
-        class="btn add-btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#editjob"
-      >
-        <i class="fa-solid fa-plus"></i>
-      </button>
-      <!-- --- -->
+    <!-- add button -->
+    <button
+      type="button"
+      class="btn add-btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#addjob"
+    >
+      <i class="fa-solid fa-plus"></i>
+    </button>
+    <!-- --- -->
   </h2>
   <div class="experience">
-
-    
     <div class="job" *ngFor="let job of experience">
       <h3>
-        <span><i class="fa-solid fa-at icon-body"></i></span> {{job.place}}
+        <span><i class="fa-solid fa-at icon-body"></i></span> {{ job.place }}
       </h3>
-      <h4>{{job.title}}</h4>
+      <h4>{{ job.title }}</h4>
 
-      <p>{{job.description}}</p>
-      <p class="project__date">{{job.start}} / {{job.end}}</p>
+      <p>{{ job.description }}</p>
+      <p class="project__date">{{ job.start }} / {{ job.end }}</p>
 
       <!-- modal -->
       <div class="col-1 admin-btn">
@@ -38,19 +36,13 @@
 
         <!--del- modal trigger button -->
 
-        <button
-          type="button"
-          class="btn del-btn"
-          data-bs-toggle="modal"
-          data-bs-target="#delete"
-        >
+        <button type="button" class="btn del-btn">
           <i class="fa-solid fa-trash-can"></i>
         </button>
       </div>
       <!-- ------- -->
     </div>
-<!-- ----------------- -->
-
+    <!-- ----------------- -->
   </div>
   <div class="my-experience__footer">
     <h2>&lt; / <i class="fa-solid fa-briefcase icon-body"></i> &gt;</h2>
@@ -58,4 +50,4 @@
 </section>
 
 <app-editjob></app-editjob>
-<app-delete></app-delete>
+<app-addjob></app-addjob>
