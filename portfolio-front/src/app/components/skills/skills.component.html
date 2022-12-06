@@ -13,22 +13,24 @@
     <!-- --- -->
   </h2>
 
-  <div class="skills  flex-container ">
+  <div class="skills flex-container">
     <!-- skill 1 -->
     <div class="skill" *ngFor="let skill of skills">
-      <div class=" skill__percentage">
+      <div class="skill__percentage">
         <circle-progress
           [percent]="skill.percentage"
           [radius]="100"
           [outerStrokeWidth]="16"
           [innerStrokeWidth]="8"
-          [outerStrokeColor]="'#04beb2'"
+          [outerStrokeColor]="'#009188'"
           [innerStrokeColor]="'#fff'"
           [animation]="true"
           [title]="skill.name"
           [animationDuration]="1500"
-          [animateTitle]="skill.name"
           [titleColor]="'#fff'"
+          [subtitle]="skill.percentage"
+          [subtitleColor]="'#fff'"
+          [animateSubtitle]="true"
         ></circle-progress>
       </div>
 

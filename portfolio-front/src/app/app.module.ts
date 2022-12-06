@@ -101,7 +101,7 @@ import { AddprojectComponent } from './modals/addproject/addproject.component';
       "maxPercent": 100,
       "unitsColor": "#919191",
       "outerStrokeWidth": 2,
-      "outerStrokeColor": "#20eee0",
+      "outerStrokeColor": "#009188",
       "innerStrokeColor": "#f3f4f7",
       "innerStrokeWidth": 2,
       
