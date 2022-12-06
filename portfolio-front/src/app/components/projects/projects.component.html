@@ -12,16 +12,17 @@
     </button>
     <!-- --- -->
   </h2>
-  <div class="projects flex-container ">
+  <div class="projects flex-container">
     <!-- start project -->
     <div class="project" *ngFor="let project of projects">
       <!-- url -->
       <div class="button-icon">
         <h2>
-          <i class="fa-regular fa-folder icon-body">
-            <a [href]="project.url" alt="link del proyecto" target="_blank"></a>
-          </i>
+          <a [href]="project.url" alt="project url" target="_blank">
+            <i class="fa-regular fa-folder icon-body"></i
+          ></a>
         </h2>
+
         <!-- modal -->
         <div class="col-1 admin-btn">
           <!-- edit -modal trigger button -->

@@ -22,7 +22,7 @@
         },
         {
             "id":3,
-            "url": "https://codepen.io/hebeli",
+            "url": "https://codepen.io/hebelia/",
             "icon":"fa-brands fa-codepen"
 
         },       
@@ -73,7 +73,7 @@
     "projects":[
         {
             "id":1,
-            "url": "",
+            "url": "https://github.com/hebelia/front-end",
             "title": "Domador de camellos",
             "description": "sdfsdfs",
             "start":"",
