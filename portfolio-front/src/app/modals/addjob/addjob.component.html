@@ -1,11 +1,11 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit($event)">
-    <div class="modal" tabindex="-1" id="addjob">
+  <div class="modal" tabindex="-1" id="addjob">
     <div class="modal-dialog">
       <div class="modal-content">
         <!-- header -->
         <div class="modal-header">
           <h3 class="modal-title">
-            &lt; ingrese nombre y datos del proyecto &gt;
+            &lt; ingrese nombre y datos del nuevo proyecto &gt;
           </h3>
           <button
             type="button"
@@ -15,7 +15,7 @@
           ></button>
         </div>
         <!-- body -->
-  
+
         <div class="input-group mb-3">
           <input
             type="text"
@@ -23,6 +23,7 @@
             placeholder="lugar de trabajo"
             aria-label="workplace"
             aria-describedby="workplace"
+            formControlName="place"
           />
         </div>
         <div class="input-group mb-3">
@@ -32,14 +33,19 @@
             placeholder="titulo del trabajo"
             aria-label="job-title"
             aria-describedby="job-title"
+            formControlName="title"
           />
         </div>
-  
+
         <div class="input-group mb-3">
           <span class="input-group-text">descripcion del trabajo</span>
-          <textarea class="form-control" aria-label="With textarea"></textarea>
+          <textarea
+            class="form-control"
+            aria-label="With textarea"
+            formControlName="place"
+          ></textarea>
         </div>
-  
+
         <div class="input-group mb-3">
           <span class="input-group-text">fecha de inicio</span>
           <input
@@ -48,6 +54,7 @@
             placeholder="fecha de duracion del proyecto"
             aria-label="job-start"
             aria-describedby="job-start"
+            formControlName="start"
           />
         </div>
         <div class="input-group mb-3">
@@ -58,17 +65,26 @@
             placeholder="fecha de duracion del proyecto"
             aria-label="job-end"
             aria-describedby="job-end"
+            formControlName="end"
           />
         </div>
-  
+
         <!-- footer -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
             cerrar
           </button>
-          <input type="submit" class="btn btn-primary" value="guardar cambios">
+          <input
+            type="submit"
+            class="btn btn-primary"
+            value="guardar cambios"
+          />
         </div>
       </div>
     </div>
   </div>
-  </form>
+</form>

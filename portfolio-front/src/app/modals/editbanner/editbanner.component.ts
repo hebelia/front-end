@@ -8,20 +8,22 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./editbanner.component.css']
 })
 export class EditbannerComponent implements OnInit{
-  
   form: FormGroup;
   
   constructor(private formBuilder: FormBuilder){ 
   
     this.form= this.formBuilder.group({
-  
-      
+      banner: ['',[Validators.required]],      
     })
   }
-  
-  
-  
-  
+  get Banner(){
+    return this.form.get("banner")
+  }
+  get BannerValid(){
+
+    return this.Banner?.touched && !this.Banner.valid;
+
+  }
   
   
   ngOnInit() {}
@@ -35,6 +37,7 @@ export class EditbannerComponent implements OnInit{
       alert("El formulario ha sido enviado con exito!")
     }else{
       this.form.markAllAsTouched();
+      alert("Se produjo un error al enviar el formulario! Revise los datos ingresados.")
     }
   }
   

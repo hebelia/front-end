@@ -49,6 +49,7 @@ onSubmit(event: Event){
     alert("El formulario ha sido enviado con exito!")
   }else{
     this.form.markAllAsTouched();
+    alert("Se produjo un error al enviar el formulario! Revise los datos ingresados.")
   }
 }
 

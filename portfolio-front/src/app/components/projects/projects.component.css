@@ -39,5 +39,18 @@
     flex-grow: 1;
     flex-direction: row;
     justify-content: space-between;
+
+    
+  }
+  .button-icon i{
+    transition: 1s;
   }
   
+  .button-icon i:hover{
+    padding: 0.5em;
+    color: white;
+    background-color: #009188;;
+    border-radius: 1em;
+    transition: 1.5s;
+    box-shadow: 2px 2px 2px 2px rgb(150, 148, 148);
+  }

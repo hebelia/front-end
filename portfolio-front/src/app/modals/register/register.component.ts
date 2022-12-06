@@ -10,7 +10,10 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class RegisterComponent implements OnInit {
 
   form: FormGroup;
-
+  
+  password: string= '';
+  email: string= '';
+  name: string= '';
 
   constructor(private formBuilder: FormBuilder){ 
 
@@ -67,6 +70,7 @@ onSubmit(event: Event){
     alert("El formulario ha sido enviado con exito!")
   }else{
     this.form.markAllAsTouched();
+    alert("Se produjo un error al enviar el formulario! Revise los datos ingresados.")
   }
 }
 

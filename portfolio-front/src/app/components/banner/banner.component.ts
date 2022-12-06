@@ -7,7 +7,7 @@ import { ServiceService } from 'src/app/services/service.service';
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent implements OnInit {
-
+// que sea url por el momento
   banner: string="";
 
   constructor(private data: ServiceService) { }

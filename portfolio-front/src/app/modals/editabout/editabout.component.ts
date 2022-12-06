@@ -13,14 +13,17 @@ export class EditaboutComponent implements OnInit{
   constructor(private formBuilder: FormBuilder){ 
   
     this.form= this.formBuilder.group({
-  
-      
+      about: ['',[Validators.required]],      
     })
   }
-  
-  
-  
-  
+  get About(){
+    return this.form.get("about")
+  }
+  get AboutValid(){
+
+    return this.About?.touched && !this.About.valid;
+
+  }
   
   
   ngOnInit() {}
@@ -34,6 +37,7 @@ export class EditaboutComponent implements OnInit{
       alert("El formulario ha sido enviado con exito!")
     }else{
       this.form.markAllAsTouched();
+      alert("Se produjo un error al enviar el formulario! Revise los datos ingresados.")
     }
   }
   

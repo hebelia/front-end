@@ -26,6 +26,8 @@ ngOnInit():void {
   })
 }
 
+
+
 // funcion para que se muestre o se esconda
 // la funcion no retorna nada por el :void
 visible():void{

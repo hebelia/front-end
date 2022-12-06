@@ -1,5 +1,5 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit($event)">
-  <div class="modal" tabindex="-1" id="editcourse">
+  <div class="modal" tabindex="-1" id="addcourse">
     <div class="modal-dialog">
       <div class="modal-content">
         <!-- header -->
@@ -23,6 +23,7 @@
             placeholder="nombre del titulo"
             aria-label="course-title"
             aria-describedby="course-title"
+            formControlName="title"
           />
         </div>
         <div class="input-group mb-3">
@@ -32,6 +33,7 @@
             placeholder="nombre de la institucion donde se realizo"
             aria-label="course-institution"
             aria-describedby="course-institution"
+            formControlName="institution"
           />
         </div>
         <div class="input-group mb-3">
@@ -42,6 +44,7 @@
             placeholder="fecha de duracion del proyecto"
             aria-label="course-start"
             aria-describedby="course-start"
+            formControlName="start"
           />
         </div>
         <div class="input-group mb-3">
@@ -52,6 +55,7 @@
             placeholder="fecha de duracion del proyecto"
             aria-label="course-end"
             aria-describedby="course-end"
+            formControlName="end"
           />
         </div>
         <!-- footer -->

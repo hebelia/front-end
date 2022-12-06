@@ -9,7 +9,6 @@ import { ServiceService } from 'src/app/services/service.service';
 export class IntroductionComponent implements OnInit{
 
   name:string='';
-  
   title:string='';
   pfp:any;
   
