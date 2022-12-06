@@ -16,7 +16,6 @@
         </div>
         <!-- body -->
         <div class="input-group mb-3">
-          <!-- <span class="input-group-text" id="skill-name"></span> -->
           <input
             type="text"
             class="form-control"
@@ -26,6 +25,14 @@
             formControlName="name"
           />
         </div>
+        <!-- logica dato -->
+        <div *ngIf="Name?.errors && Name?.touched">
+          <p *ngIf="Name?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
         <div class="input-group mb-3">
           <input
             type="number"
@@ -36,6 +43,19 @@
           />
           <span class="input-group-text">%</span>
         </div>
+        <!-- logica dato -->
+        <div *ngIf="Percentage?.errors && Percentage?.touched">
+          <p *ngIf="Percentage?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+
+          <p *ngIf="Percentage?.errors?.['Max']" class="error">
+            El valor exede el maximo.
+          </p>
+        </div>
+        <br />
+
+        <!--  -->
         <!-- footer -->
         <div class="modal-footer">
           <button

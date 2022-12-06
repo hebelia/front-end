@@ -8,25 +8,54 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./editpfp.component.css']
 })
 export class EditpfpComponent implements OnInit{
+
   form: FormGroup;
   
   constructor(private formBuilder: FormBuilder){ 
   
     this.form= this.formBuilder.group({
-      about: ['',[Validators.required]],      
+
+      name:['',[Validators.required]],
+      title:['',[Validators.required]],
+      pfp: ['',[Validators.required]],
+
+      
     })
   }
-  get About(){
-    return this.form.get("about")
-  }
-  get AboutValid(){
-
-    return this.About?.touched && !this.About.valid;
-
-  }
-  
   
   ngOnInit() {}
+
+// methods
+  
+
+  get Title(){
+    return this.form.get("title")
+  }
+  get Name(){
+    return this.form.get("name")
+  }
+  get Pfp(){
+    return this.form.get("pfp")
+  }
+
+ 
+  get TitleValid(){
+
+    return this.Title?.touched && !this.Title.valid;
+
+  }
+  get NameValid(){
+
+    return this.Name?.touched && !this.Name.valid;
+
+  }
+  get PfpValid(){
+
+    return this.Pfp?.touched && !this.Pfp.valid;
+
+  }
+
+
   
   onSubmit(event: Event){
     // detiene la propagacion o ejecucion del submit
@@ -43,3 +72,4 @@ export class EditpfpComponent implements OnInit{
   
   
   }
+  

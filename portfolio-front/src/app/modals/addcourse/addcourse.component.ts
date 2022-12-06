@@ -15,7 +15,6 @@ export class AddcourseComponent implements OnInit{
   
     this.form= this.formBuilder.group({
 
-      place: ['',[Validators.required]],
       title:['',[Validators.required]],
       institution:['',[Validators.required]],
       start: ['',[Validators.required]],

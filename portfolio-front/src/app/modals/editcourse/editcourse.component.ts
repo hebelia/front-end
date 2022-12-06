@@ -13,8 +13,7 @@ export class EditcourseComponent implements OnInit{
   constructor(private formBuilder: FormBuilder){ 
   
     this.form= this.formBuilder.group({
-
-      place: ['',[Validators.required]],
+      
       title:['',[Validators.required]],
       institution:['',[Validators.required]],
       start: ['',[Validators.required]],

@@ -22,8 +22,17 @@
               placeholder="nombre y apellido"
               aria-label="profile-name"
               aria-describedby="profile-name"
+              formControlName="name"
             />
           </div>
+          <!-- logica dato -->
+          <div *ngIf="Name?.errors && Name?.touched">
+            <p *ngIf="Name?.hasError('required')" class="error">
+              El dato es requerido.
+            </p>
+          </div>
+          <br />
+          <!--  -->
           <!-- titulo del perfil -->
           <div class="input-group mb-3">
             <input
@@ -32,12 +41,34 @@
               placeholder="título"
               aria-label="profile-title"
               aria-describedby="profile-title"
+              formControlName="title"
             />
           </div>
+          <!-- logica dato -->
+          <div *ngIf="Title?.errors && Title?.touched">
+            <p *ngIf="Title?.hasError('required')" class="error">
+              El dato es requerido.
+            </p>
+          </div>
+          <br />
+          <!--  -->
           <div class="input-group mb-3">
             <span class="input-group-text">imagen de perfil</span>
-            <input type="file" class="form-control" id="inputGroupPfp" />
+            <input
+              type="file"
+              class="form-control"
+              id="inputGroupPfp"
+              formControlName="pfp"
+            />
           </div>
+          <!-- logica dato -->
+          <div *ngIf="Pfp?.errors && Pfp?.touched">
+            <p *ngIf="Pfp?.hasError('required')" class="error">
+              El dato es requerido.
+            </p>
+          </div>
+          <br />
+          <!--  -->
         </div>
         <!-- footer -->
         <div class="modal-footer">

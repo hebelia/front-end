@@ -22,7 +22,14 @@
               formControlName="about"
             ></textarea>
           </div>
-
+          <!-- logica dato -->
+          <div *ngIf="About?.errors && About?.touched">
+            <p *ngIf="About?.hasError('required')" class="error">
+              El dato es requerido.
+            </p>
+          </div>
+          <br />
+          <!--  -->
           <!-- footer -->
           <div class="modal-footer">
             <button

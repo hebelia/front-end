@@ -1,4 +1,3 @@
-
 <form [formGroup]="form" (ngSubmit)="onSubmit($event)">
   <div class="modal" tabindex="-1" id="addjob">
     <div class="modal-dialog">
@@ -27,6 +26,14 @@
             formControlName="place"
           />
         </div>
+        <!-- logica dato -->
+        <div *ngIf="Place?.errors && Place?.touched">
+          <p *ngIf="Place?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
         <div class="input-group mb-3">
           <input
             type="text"
@@ -37,6 +44,14 @@
             formControlName="title"
           />
         </div>
+        <!-- logica dato -->
+        <div *ngIf="Title?.errors && Title?.touched">
+          <p *ngIf="Title?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
 
         <div class="input-group mb-3">
           <span class="input-group-text">descripcion del trabajo</span>
@@ -46,6 +61,14 @@
             formControlName="place"
           ></textarea>
         </div>
+        <!-- logica dato -->
+        <div *ngIf="Place?.errors && Place?.touched">
+          <p *ngIf="Place?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
 
         <div class="input-group mb-3">
           <span class="input-group-text">fecha de inicio</span>
@@ -58,6 +81,14 @@
             formControlName="start"
           />
         </div>
+        <!-- logica dato -->
+        <div *ngIf="Start?.errors && Start?.touched">
+          <p *ngIf="Start?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
         <div class="input-group mb-3">
           <span class="input-group-text">fecha de finalizacion</span>
           <input
@@ -69,6 +100,14 @@
             formControlName="end"
           />
         </div>
+        <!-- logica dato -->
+        <div *ngIf="End?.errors && End?.touched">
+          <p *ngIf="End?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
 
         <!-- footer -->
         <div class="modal-footer">

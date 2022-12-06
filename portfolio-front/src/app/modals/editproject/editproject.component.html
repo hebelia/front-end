@@ -26,6 +26,14 @@
             formControlName="url"
           />
         </div>
+        <!-- logica dato -->
+        <div *ngIf="Url?.errors && Url?.touched">
+          <p *ngIf="Url?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
         <div class="input-group mb-3">
           <input
             type="text"
@@ -36,6 +44,14 @@
             formControlName="title"
           />
         </div>
+        <!-- logica dato -->
+        <div *ngIf="Title?.errors && Title?.touched">
+          <p *ngIf="Title?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
         <div class="input-group mb-3">
           <span class="input-group-text">fecha de inicio del proyecto</span>
           <input
@@ -47,6 +63,14 @@
             formControlName="start"
           />
         </div>
+        <!-- logica dato -->
+        <div *ngIf="Start?.errors && Start?.touched">
+          <p *ngIf="Start?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
         <div class="input-group mb-3">
           <span class="input-group-text"
             >fecha de finalizacion del proyecto</span
@@ -60,11 +84,27 @@
             formControlName="end"
           />
         </div>
+        <!-- logica dato -->
+        <div *ngIf="End?.errors && End?.touched">
+          <p *ngIf="End?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
 
         <div class="input-group">
           <span class="input-group-text">descripcion del proyecto</span>
           <textarea class="form-control" aria-label="With textarea"></textarea>
         </div>
+        <!-- logica dato -->
+        <div *ngIf="Description?.errors && Description?.touched">
+          <p *ngIf="Description?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
 
         <!-- footer -->
         <div class="modal-footer">
