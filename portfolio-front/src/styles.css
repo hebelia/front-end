@@ -25,6 +25,7 @@
   --clr-dark:#1f2029;
   --clr-accent:#009188;
 
+
   --fs-h1:3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
@@ -243,13 +244,18 @@ h3{ font-size: var(--fs-h3)}
 }
 
 /* modals */
-.modal-content{
-  border-width: 0.1%;
-  border-style: solid;
-  border-color: var(--clr-border);
-  background-color: #1f2029;
-}
 
+.modal-content{
+  padding: 1em;
+  border-width: 0.1%;
+
+  border-color: transparent;
+  background-color:var(--clr-dark)
+}
+.modal-header,
+.modal-footer{
+  border: none;
+}
 
 
 /* project-date is used for all dates in every category */
