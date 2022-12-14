@@ -1,18 +1,14 @@
 .socials{
     display:flex;
+    justify-content: center;
 
 }
-/* .social{
-    padding: 0 10px 0 10px;
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-}
-a{background-color: transparent;} */
-
-
 .btn{
-    padding: 2em;
+    padding: 1em;
+
+}
+.btn i{
+    display: flex;
 
 }
 

@@ -1,4 +1,9 @@
 /* completeeeeeeeeeee */
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+}
 .btn a{
     text-decoration: none;
     color: var(--clr-light)
@@ -6,7 +11,16 @@
 }
 .btn{
     text-decoration: none;
+    padding: 1em;
 }
-.btn a:hover{ 
-    color:var(--clr-accent)
+
+
+.btn i{
+    display: flex;
+
 }
+
+.license{
+    display: flex;
+    justify-content: center;
+  }

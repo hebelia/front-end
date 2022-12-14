@@ -20,6 +20,17 @@
     color: transparent;
     box-shadow: 0 8px 24px 0 rgba(255,235,167,.2);
   }
-  
-
+  .container-fluid{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .flex-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+.collapse{
+  justify-content: right;
+}
 
