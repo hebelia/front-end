@@ -38,7 +38,7 @@
     --fs-h1: 4.5rem;
     --fs-h2:3.75rem;
     --fs-h3:1.5rem;
-    --fs-body:1.125rem;
+    --fs-body:1.25rem;
   }
 }
 
@@ -80,8 +80,13 @@ a:hover {
 }
 p {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.7;
+  word-wrap: break-word;  
+    color: var( --clr-light);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body); 
+    line-height: 1.6;
+  
 }
 h1 span{
     padding: 0 20px;
@@ -96,10 +101,6 @@ h6 span{
   text-transform: uppercase;
   font-weight: 700;
 }
-p{
-  word-wrap: break-word;  
-}
-
 .btn{  
     border-radius: 2rem; /* alt  4px */
     height: 44px;

@@ -1,11 +1,19 @@
 /* banner settings */
 .banner{
     display: flex;
+    flex-grow: 1;
+    size: 100%;
+    padding:0;
   }
+
+
   .banner img{
+
+    display:flex;
+    flex-grow: 1;
     transition: 2s; 
-   box-shadow: #fff;
-  size: 150%
+    box-shadow: #fff;
+    size: 100%;
   
   }
   .banner .col-1{

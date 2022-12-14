@@ -43,6 +43,7 @@ import { LogComponent } from './modals/log/log.component';
 import { RegisterComponent } from './modals/register/register.component';
 import { AddcourseComponent } from './modals/addcourse/addcourse.component';
 import { AddprojectComponent } from './modals/addproject/addproject.component';
+import { SocialsComponent } from './components/socials/socials.component';
 
 
 @NgModule({
@@ -78,7 +79,8 @@ import { AddprojectComponent } from './modals/addproject/addproject.component';
     LogComponent,
     RegisterComponent,
     AddcourseComponent,
-    AddprojectComponent
+    AddprojectComponent,
+    SocialsComponent
     
 
 

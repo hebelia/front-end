@@ -21,33 +21,20 @@
       <div
         class="d-grid gap-2 d-md-flex justify-content-center flex-row-reverse"
       >
-
         <!-- login button component -->
 
         <!-- make it appear and disappear -->
         <!-- <app-login *ngIf="!visible"></app-login>
         <app-logout *ngIf="visible"></app-logout> -->
+
         <app-login></app-login>
         <app-logout></app-logout>
         <!-- social links -->
+        <app-socials></app-socials>
 
+        
 
-
- <div *ngFor="let social of socials">
-
-          <button class="btn btn-primary" type="button">
-            <a
-              style="color: #009188; text-decoration: none; text-align: center"
-              [href]="social.url"
-              alt="social.alt"
-              target="_blank"
-              ><i [ngClass]="social.icon"></i
-            ></a>
-          </button>
-        </div> 
-
-      <!-- fin socials -->
-       
+        <!-- fin socials -->
       </div>
     </div>
   </div>
