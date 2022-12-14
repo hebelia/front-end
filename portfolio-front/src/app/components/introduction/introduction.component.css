@@ -1,29 +1,17 @@
 /* -------introduction ------------- */
-
-/* @media (min-width:600px) {
-  .introduction{
-    display: grid;
-    grid-template-areas:
-    "img title"
-    "img subtitle";
-  
-    grid-template-columns: min-content max-content; 
-  }
-.intro__img{
-  grid-area: img;
-  min-width: 250px;
-}
-
-*/
-
 .introduction {
     display: flex;
     position: relative;
-    flex-direction:column;
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: 50% 1fr ;
-    justify-content: space-between;
+
+    padding: 1em;
+    margin: 2%;
+
+    flex-grow: 1;
+    flex-wrap: wrap;
+    flex-direction: grid;
+    justify-content: center;
+    transition: 2s;
+
   
   }
   .section__title--intro {
@@ -72,8 +60,6 @@
     padding: 1em;
     flex-grow: 1;
     flex-direction: row;
-  
-  
   }
   .right i{
     transition: 1s;
@@ -82,10 +68,6 @@
     transform: scale(1.35);
   
   }
-
-
-  
-  
   .section__subtitle--intro{
     padding-left: 3rem;
     padding-right: 1rem;
