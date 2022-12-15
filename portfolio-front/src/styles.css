@@ -150,7 +150,7 @@ h6 span{
     color: #009188;
   }
 
-
+  
   .btn:active,
   .btn:focus{  
     background-color: var(--clr-light);

@@ -46,7 +46,7 @@
     transition: 1s;
   }
   
-  .button-icon i:hover{
+  h2 i:hover{
     padding: 0.5em;
     color: white;
     background-color: #009188;;
