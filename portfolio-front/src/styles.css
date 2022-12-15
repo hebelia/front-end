@@ -31,15 +31,19 @@
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
   
-
+  --default:100%;
+  --border:none;
 }
 /* review */
-@media(min-width: 800px){
+@media(min-width: 965px){
   :root{
-    --fs-h1: 4.5rem;
-    --fs-h2:3.75rem;
+    /* --fs-h1: 3.5rem;
+    --fs-h2:2.75rem;
     --fs-h3:1.5rem;
-    --fs-body:1.25rem;
+    --fs-body:1.25rem; */
+
+    --default:50%;
+    --border:solid;
   }
 }
 
@@ -102,6 +106,7 @@ h6 span{
   text-transform: uppercase;
   font-weight: 700;
 }
+/* buttons */
 .btn{  
     border-radius: 2rem; /* alt  4px */
     height: 44px;
@@ -146,9 +151,7 @@ h6 span{
   }
 
 
-    /* active not working */
   .btn:active,
-
   .btn:focus{  
     background-color: var(--clr-light);
     color:#009188;
@@ -174,6 +177,7 @@ h6 span{
   box-shadow: #fff;
   background-color: var(--clr-accent);
 }
+
   .edit-btn{
     border-radius: 1rem;
     padding: 1rem;
@@ -182,6 +186,7 @@ h6 span{
     color: rgb(255, 255, 255);
     box-shadow: #fff;
     background-color: rgb(55, 133, 113);
+
   }
   .del-btn{
     border-radius: 1rem;
@@ -192,6 +197,7 @@ h6 span{
     color: rgb(255, 255, 255);
     box-shadow: #fff;
     background-color: rgb(160, 57, 57);
+
   }
 
   .btn-close{

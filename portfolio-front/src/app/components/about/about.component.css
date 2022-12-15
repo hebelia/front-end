@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 10px;
     
   }
   .section__subtitle--about{
@@ -21,7 +22,7 @@
   
   }
   .about-me p{
-    word-wrap: break-word;    /* IMPORTANTE */
+    word-wrap: break-word;    /* IMPORTANT */
   padding: 1em;
     font-size: 1em;
     font-weight: 300;

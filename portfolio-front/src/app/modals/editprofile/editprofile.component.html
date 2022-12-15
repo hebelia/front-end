@@ -1,0 +1,147 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit($event)">
+  <div class="modal" tabindex="-1" id="editprofile">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- header -->
+          <h3 class="modal-title">&lt; editar perfil &gt;</h3>
+          <button
+            type="button"
+            class="btn-close btn-close-white"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <!-- contenido -->
+          <!-- nombre -->
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="nombre y apellido"
+              aria-label="profile-name"
+              aria-describedby="profile-name"
+              formControlName="fullname"
+            />
+          </div>
+          <!-- logica dato -->
+          <div *ngIf="Fullname?.errors && Fullname?.touched">
+            <p *ngIf="Fullname?.hasError('required')" class="error">
+              El dato es requerido.
+            </p>
+          </div>
+          <br />
+          <!--  -->
+          <!-- titulo del perfil -->
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="título"
+              aria-label="profile-title"
+              aria-describedby="profile-title"
+              formControlName="title"
+            />
+          </div>
+          <!-- logica dato -->
+          <div *ngIf="Title?.errors && Title?.touched">
+            <p *ngIf="Title?.hasError('required')" class="error">
+              El dato es requerido.
+            </p>
+          </div>
+          <br />
+          <!--  -->
+          <div class="input-group mb-3">
+            <span class="input-group-text">imagen de perfil ⊳</span>
+            <input
+              type="file"
+              class="form-control"
+              id="inputGroupPfp"
+              formControlName="pfp"
+            />
+          </div>
+          <!-- logica dato -->
+          <div *ngIf="Pfp?.errors && Pfp?.touched">
+            <p *ngIf="Pfp?.hasError('required')" class="error">
+              El dato es requerido.
+            </p>
+          </div>
+          <br />
+          <!--  -->
+        </div>
+        <!-- about -->
+        <div class="input-group">
+          <span class="input-group-text">sobre mi ⊳</span>
+          <textarea
+            class="form-control"
+            aria-label="With textarea"
+            formControlName="about"
+          ></textarea>
+        </div>
+        <!-- logica dato -->
+        <div *ngIf="About?.errors && About?.touched">
+          <p *ngIf="About?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+
+        <!-- banner -->
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="inputGroupBanner">portada ⊳</label>
+          <input
+            type="file"
+            class="form-control"
+            id="inputGroupBanner"
+            formControlName="banner"
+          />
+        </div>
+        <!-- logica dato -->
+        <div *ngIf="Banner?.errors && Banner?.touched">
+          <p *ngIf="Banner?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+
+        <!-- license  -->
+
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="licencia"
+            aria-label="license"
+            aria-describedby="license"
+            formControlName="license"
+          />
+        </div>
+        <!-- logica dato -->
+        <div *ngIf="License?.errors && License?.touched">
+          <p *ngIf="License?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
+
+        <!-- footer -->
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            cerrar
+          </button>
+          <input
+            type="submit"
+            class="btn btn-primary"
+            value="guardar cambios"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

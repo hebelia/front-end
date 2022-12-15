@@ -45,6 +45,7 @@ import { AddcourseComponent } from './modals/addcourse/addcourse.component';
 import { AddprojectComponent } from './modals/addproject/addproject.component';
 import { SocialsComponent } from './components/socials/socials.component';
 import { EditsocialComponent } from './modals/editsocial/editsocial.component';
+import { EditprofileComponent } from './modals/editprofile/editprofile.component';
 
 
 @NgModule({
@@ -82,7 +83,8 @@ import { EditsocialComponent } from './modals/editsocial/editsocial.component';
     AddcourseComponent,
     AddprojectComponent,
     SocialsComponent,
-    EditsocialComponent
+    EditsocialComponent,
+    EditprofileComponent
     
 
 

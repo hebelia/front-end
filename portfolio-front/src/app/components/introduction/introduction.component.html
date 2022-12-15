@@ -1,9 +1,10 @@
-<section class="introduction" id="home">
+<section class="introduction" id="home" [ngStyle]="{'background-image': ' url(' + banner + ')'}">
+
   <!-- left side -->
-  <div class="left">
+  <div class="left" >
     <h1 class="section__title section__title--intro center">Hola, me llamo</h1>
     <h1 class="section__title section__title--intro center">
-      <strong>{{ name }}</strong>
+      <strong>{{ fullname }}</strong>
     </h1>
     <p class="section__subtitle section__subtitle--intro">
       <i>&lt; {{ title }} &gt;</i>
@@ -25,7 +26,7 @@
           type="button"
           class="btn edit-btn btn-primary"
           data-bs-toggle="modal"
-          data-bs-target="#editpfp"
+          data-bs-target="#editprofile"
         >
           <i class="fa-solid fa-wand-magic-sparkles"></i>
         </button>
@@ -35,6 +36,7 @@
 
     <!-- ICON -->
   </div>
+    <!-- <img [src]="banner" alt="banner" class="intro__banner" [ngStyle]="{'background-image': banner}" /> -->
 </section>
 
-<app-editpfp></app-editpfp>
+<app-editprofile></app-editprofile>
