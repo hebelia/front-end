@@ -21,19 +21,11 @@ import { FooterComponent } from './components/footer/footer.component';
 // review
 import { NgCircleProgressModule } from 'ng-circle-progress';
 // ---
-
 import { LoginComponent } from './components/login/login.component';
-
 import { LogoutComponent } from './components/logout/logout.component';
-
 import { Page404Component } from './components/page404/page404.component';
-
 import { LoginmodalComponent } from './modals/loginmodal/loginmodal.component';
-import { EditbannerComponent } from './modals/editbanner/editbanner.component';
-
-import { EditpfpComponent } from './modals/editpfp/editpfp.component';
 import { EditskillComponent } from './modals/editskill/editskill.component';
-import { EditaboutComponent } from './modals/editabout/editabout.component';
 import { EditprojectComponent } from './modals/editproject/editproject.component';
 import { EditcourseComponent } from './modals/editcourse/editcourse.component';
 import { EditjobComponent } from './modals/editjob/editjob.component';
@@ -69,10 +61,7 @@ import { EditprofileComponent } from './modals/editprofile/editprofile.component
     LogoutComponent,
     // modals
     LoginmodalComponent,
-    EditbannerComponent,
-    EditpfpComponent,
     EditskillComponent,
-    EditaboutComponent,
     EditprojectComponent,
     EditcourseComponent,
     EditjobComponent,
@@ -85,11 +74,6 @@ import { EditprofileComponent } from './modals/editprofile/editprofile.component
     SocialsComponent,
     EditsocialComponent,
     EditprofileComponent
-    
-
-
-// quitar despues
-
   ],
 
 
@@ -120,9 +104,6 @@ import { EditprofileComponent } from './modals/editprofile/editprofile.component
       "showBackground": false,
       "clockwise": false,
       "responsive": true})
-
-
-
   ],
   
   providers: [],

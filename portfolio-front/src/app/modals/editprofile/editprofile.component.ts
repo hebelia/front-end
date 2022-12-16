@@ -96,7 +96,5 @@ export class EditprofileComponent implements OnInit{
       alert("Se produjo un error al enviar el formulario! Revise los datos ingresados.")
     }
   }
-  
-  
   }
   
