@@ -10,7 +10,6 @@ import { AppComponent } from './app.component';
 import { IndexComponent } from './components/index/index.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
-import { BannerComponent } from './components/banner/banner.component';
 import { IntroductionComponent } from './components/introduction/introduction.component';
 import { AboutComponent } from './components/about/about.component';
 import { ExperienceComponent } from './components/experience/experience.component';
@@ -48,7 +47,6 @@ import { EditprofileComponent } from './modals/editprofile/editprofile.component
     IndexComponent,
     NavbarComponent,
     NavigationComponent,
-    BannerComponent,
     IntroductionComponent,
     AboutComponent,
     ExperienceComponent,

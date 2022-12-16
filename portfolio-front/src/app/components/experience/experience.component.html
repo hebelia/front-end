@@ -20,7 +20,10 @@
       <h4>{{ job.title }}</h4>
 
       <p>{{ job.description }}</p>
-      <p class="project__date">{{ job.start }} / {{ job.end }}</p>
+      <p class="project__date">
+        {{ job.start | date : "dd-MM-yyy" }} /
+        {{ job.end | date : "dd-MM-yyy" }}
+      </p>
 
       <!-- modal -->
       <div class="col-1 admin-btn">

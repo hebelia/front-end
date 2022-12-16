@@ -21,7 +21,7 @@
         {{ course.title }}
 
         <p class="institution">{{ course.institution }}</p>
-        <p class="project__date">{{ course.start }} / {{ course.end }}</p>
+        <p class="project__date">{{ course.start | date:"dd-MM-yyy"}} / {{ course.end | date:"dd-MM-yyy" }}</p>
       </h3>
       <!-- modal -->
       <div class="col-1 admin-btn">
