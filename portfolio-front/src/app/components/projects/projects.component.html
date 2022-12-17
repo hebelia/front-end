@@ -24,6 +24,7 @@
         </h2>
 
         <!-- modal -->
+                  <!-- agregar *ngIf con funcion para cambiar visibilidad si esta logeado -->
         <div class="col-1 admin-btn">
           <!-- edit -modal trigger button -->
           <button
@@ -35,11 +36,15 @@
             <i class="fa-solid fa-wand-magic-sparkles"></i>
           </button>
 
-          <!--del- modal trigger button -->
+          <!--delete trigger button -->
+          <!-- agregar *ngIf con funcion para cambiar visibilidad si esta logeado -->
 
-          <button type="button" class="btn del-btn">
+          
+          <button type="submit" class="btn del-btn" (click)="deleteProjectById(project.id)">
             <i class="fa-solid fa-trash-can"></i>
           </button>
+
+
         </div>
         <!-- ------- -->
       </div>
@@ -48,7 +53,10 @@
         {{ project.title }}
 
         <p>{{ project.description }}</p>
-        <p class="project__date">{{ project.start }} / {{ project.end }}</p>
+        <p class="project__date">
+          {{ project.start | date : "dd-MM-yyy" }} /
+          {{ project.end | date : "dd-MM-yyy" }}
+        </p>
       </h3>
     </div>
     <!-- end project -->

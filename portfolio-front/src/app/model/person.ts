@@ -1,6 +1,6 @@
 export class Person {
 
-    id!: number;
+    id?: number;
     fullname : string;
     title : string;
     pfp : string;
@@ -9,7 +9,7 @@ export class Person {
     license : string;
 
 
-    constructor(id: number, fullname: string, title: string, pfp:string,about: string,banner:string, license: string) {
+    constructor(fullname: string, title: string, pfp:string,about: string,banner:string, license: string) {
         this.fullname = fullname;
         this.title = title;
         this.pfp = pfp;

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-import { ServiceService } from 'src/app/services/service.service';
-
+import { Person } from 'src/app/model/person';
+import { PersonService } from 'src/app/services/person.service';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -9,14 +8,21 @@ import { ServiceService } from 'src/app/services/service.service';
 })
 export class AboutComponent  implements OnInit{
 
-  about:string='';
-  
-  constructor(private data:ServiceService){}
+people: Person[]=[];
 
-  ngOnInit():void{
-      this.data.getService().subscribe( info =>{
-        this.about =info.about;
-      })
-  }
+constructor (private sPerson: PersonService){
+
+}
+// methods -> services
+list():void{
+  this.sPerson.list().subscribe(info => {this.people=info});
+}
+
+// viewPerson(id:number):void{
+// }
+
+ngOnInit(): void {
+  this.list();
+}
 
 }
