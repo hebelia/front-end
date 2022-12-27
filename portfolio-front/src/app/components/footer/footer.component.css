@@ -1,19 +1,25 @@
 /* completeeeeeeeeeee */
 
 .footer{
+  color: var(--clr-light);
     display: flex;
     justify-content: space-between;
 }
+.license{
+ flex-grow: 1;
+
+}
+p{
+  font-size: 0.7rem;
+  line-height: normal;
+  padding-top: 3%;
+}
+
 .btn a{
     text-decoration: none;
     color: var(--clr-light)
 
 }
-/* .btn{
-    text-decoration: none;
-    padding: .5em;
-} */
-
 
 .btn i{
     display: flex;

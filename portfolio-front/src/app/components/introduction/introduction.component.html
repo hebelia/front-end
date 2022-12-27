@@ -1,20 +1,20 @@
-<section class="introduction" id="home" [ngStyle]="{'background-image': ' url(' + banner + ')'}">
+<section *ngFor="let person of people" class="introduction" id="home" [ngStyle]="{'background-image': ' url(' + person.banner + ')'}">
 
   <!-- left side -->
   <div class="left" >
     <h1 class="section__title section__title--intro center">Hola, me llamo</h1>
     <h1 class="section__title section__title--intro center">
-      <strong>{{ fullname }}</strong>
+      <strong>{{ person.fullname }}</strong>
     </h1>
     <p class="section__subtitle section__subtitle--intro">
-      <i>&lt; {{ title }} &gt;</i>
+      <i>&lt; {{ person.title }} &gt;</i>
     </p>
   </div>
   <!-- profile picture -->
 
   <!-- right side -->
   <div class="right">
-    <img [src]="pfp" alt="pfp" class="intro__img" />
+    <img [src]="person.pfp" alt="pfp" class="intro__img" />
     <div class="right-bottom">
       <h1>
         <i class="fa-solid fa-laptop-code icon-body introduction__icon"></i>
@@ -36,7 +36,7 @@
 
     <!-- ICON -->
   </div>
-    <!-- <img [src]="banner" alt="banner" class="intro__banner" [ngStyle]="{'background-image': banner}" /> -->
+
 </section>
 
 <app-editprofile></app-editprofile>

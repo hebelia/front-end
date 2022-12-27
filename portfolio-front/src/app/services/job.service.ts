@@ -7,7 +7,7 @@ import { Job } from '../model/job';
   providedIn: 'root'
 })
 export class JobService {
-  url='http://localhost:8080/person/'
+  url='http://localhost:8080/job/'
 
   constructor(private httpClient:HttpClient) { }
 

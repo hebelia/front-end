@@ -8,7 +8,7 @@ import { Social } from '../model/social';
 })
 export class SocialService {
  
-  url='http://localhost:8080/person/'
+  url='http://localhost:8080/social/'
 
   constructor(private httpClient:HttpClient) { }
 

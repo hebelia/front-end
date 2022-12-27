@@ -23,6 +23,10 @@
             aria-label="social-url"
             aria-describedby="social-url"
             formControlName="url"
+            [ngClass]="{
+              'border-danger': Url.errors && Url.touched,
+              'border-good': !Url.errors && Url.touched
+            }"
           />
         </div>
         <!-- logica dato -->
@@ -41,6 +45,10 @@
             placeholder="clase del icono (fontawesome)"
             aria-describedby="social-icon"
             formControlName="icon"
+            [ngClass]="{
+              'border-danger': Icon.errors && Icon.touched,
+              'border-good': !Icon.errors && Icon.touched
+            }"
           />
         </div>
         <!-- logica dato -->
@@ -69,6 +77,7 @@
             type="submit"
             class="btn btn-primary"
             value="guardar cambios"
+            (click)="refresh()"
           />
         </div>
       </div>

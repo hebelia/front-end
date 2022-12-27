@@ -33,6 +33,7 @@
   
   --default:100%;
   --border:none;
+  /* crear variables nuevas para tamaño de margen segun tamaño de la pantalla */
 }
 /* review */
 @media(min-width: 965px){

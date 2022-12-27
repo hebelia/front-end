@@ -1,4 +1,4 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit($event)">
+<form [formGroup]="form" (ngSubmit)="onSubmit($event)" name="editcourse">
   <div class="modal" tabindex="-1" id="editcourse">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -15,7 +15,7 @@
           ></button>
         </div>
         <!-- body -->
-
+        <input type="hidden" formControlName="id" id="id" />
         <div class="input-group mb-3">
           <input
             type="text"
@@ -24,6 +24,10 @@
             aria-label="course-title"
             aria-describedby="course-title"
             formControlName="title"
+            [ngClass]="{
+              'border-danger': Title.errors && Title.touched,
+              'border-good': !Title.errors && Title.touched
+            }"
           />
         </div>
         <!-- logica dato -->
@@ -42,11 +46,15 @@
             aria-label="course-institution"
             aria-describedby="course-institution"
             formControlName="institution"
+            [ngClass]="{
+              'border-danger': Institution.errors && Institution.touched,
+              'border-good': !Institution.errors && Institution.touched
+            }"
           />
         </div>
         <!-- logica dato -->
         <div *ngIf="Institution?.errors && Institution?.touched">
-          <p *ngIf="Institution?.hasError('required')" class="error">
+          <p class="error">
             El dato es requerido.
           </p>
         </div>
@@ -61,6 +69,10 @@
             aria-label="course-start"
             aria-describedby="course-start"
             formControlName="start"
+            [ngClass]="{
+              'border-danger': Start.errors && Start.touched,
+              'border-good': !Start.errors && Start.touched
+            }"
           />
         </div>
         <!-- logica dato -->
@@ -80,6 +92,10 @@
             aria-label="course-end"
             aria-describedby="course-end"
             formControlName="end"
+            [ngClass]="{
+              'border-danger': End.errors && End.touched,
+              'border-good': !End.errors && End.touched
+            }"
           />
         </div>
         <!-- logica dato -->
@@ -103,6 +119,7 @@
             type="submit"
             class="btn btn-primary"
             value="guardar cambios"
+            (click)="refresh()"
           />
         </div>
       </div>

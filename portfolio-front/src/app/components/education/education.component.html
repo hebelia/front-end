@@ -1,4 +1,3 @@
-<!-- COMPLETAR CON FOR QUE AGREGUE UN BOTON DE EDICION EN CADA ARRAY DEL JSON -->
 <section class="my-education" id="education">
   <h2 class="section__title section__title--education">
     <strong> &lt; formación académica &gt; </strong>
@@ -15,32 +14,46 @@
   </h2>
   <div class="education">
     <!-- bucle? -->
+   
     <div class="course" *ngFor="let course of education">
-      <i class="fa-solid fa-bookmark icon-body"></i>
-      <h3 class="titulo">
-        {{ course.title }}
 
-        <p class="institution">{{ course.institution }}</p>
-        <p class="project__date">{{ course.start | date:"dd-MM-yyy"}} / {{ course.end | date:"dd-MM-yyy" }}</p>
-      </h3>
-      <!-- modal -->
-      <div class="col-1 admin-btn">
-        <!-- edit -modal trigger button -->
-        <button
-          type="button"
-          class="btn edit-btn btn-primary"
-          data-bs-toggle="modal"
-          data-bs-target="#editcourse"
-        >
-          <i class="fa-solid fa-wand-magic-sparkles"></i>
-        </button>
+      <h2><i class="fa-solid fa-bookmark icon-body"></i></h2>
+      <div class="title-ins">
+        <h3 class="title">{{ course.title }}</h3>
+        
 
-        <!--del- modal trigger button -->
-
-        <button type="button" class="btn del-btn">
-          <i class="fa-solid fa-trash-can"></i>
-        </button>
+        <h3 class="institution">{{ course.institution }}</h3>
       </div>
+
+        <div class="date-buttons">
+          <p class="project__date">{{ course.start | date:"dd-MM-yyy"}} / {{ course.end | date:"dd-MM-yyy" }}</p>
+          <div class="col-1 admin-btn">
+            <!-- edit -modal trigger button -->
+            <button
+              type="button"
+              class="btn edit-btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#editcourse"
+            >
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </button>
+    
+            <!--del- modal trigger button -->
+    
+            <button
+            type="submit"
+            class="btn del-btn"
+            data-bs-toggle="modal"
+            data-bs-target="#delete"
+            (click)="delete(course.id)"
+          >
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+          </div>
+        </div>
+
+      <!-- modal -->
+
       <!-- ------- -->
     </div>
     <!-- fin -->

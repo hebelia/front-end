@@ -24,6 +24,10 @@
             aria-label="workplace"
             aria-describedby="workplace"
             formControlName="place"
+            [ngClass]="{
+              'border-danger': Place.errors && Place.touched,
+              'border-good': !Place.errors && Place.touched
+            }"
           />
         </div>
         <!-- logica dato -->
@@ -42,6 +46,10 @@
             aria-label="job-title"
             aria-describedby="job-title"
             formControlName="title"
+            [ngClass]="{
+              'border-danger': Title.errors && Title.touched,
+              'border-good': !Title.errors && Title.touched
+            }"
           />
         </div>
         <!-- logica dato -->
@@ -58,12 +66,16 @@
           <textarea
             class="form-control"
             aria-label="With textarea"
-            formControlName="place"
+            formControlName="description"
+            [ngClass]="{
+              'border-danger': Description.errors && Description.touched,
+              'border-good': !Description.errors && Description.touched
+            }"
           ></textarea>
         </div>
         <!-- logica dato -->
-        <div *ngIf="Place?.errors && Place?.touched">
-          <p *ngIf="Place?.hasError('required')" class="error">
+        <div *ngIf="Description?.errors && Description?.touched">
+          <p *ngIf="Description?.hasError('required')" class="error">
             El dato es requerido.
           </p>
         </div>
@@ -79,6 +91,10 @@
             aria-label="job-start"
             aria-describedby="job-start"
             formControlName="start"
+            [ngClass]="{
+              'border-danger': Start.errors && Start.touched,
+              'border-good': !Start.errors && Start.touched
+            }"
           />
         </div>
         <!-- logica dato -->
@@ -98,6 +114,10 @@
             aria-label="job-end"
             aria-describedby="job-end"
             formControlName="end"
+            [ngClass]="{
+              'border-danger': End.errors && End.touched,
+              'border-good': !End.errors && End.touched
+            }"
           />
         </div>
         <!-- logica dato -->
@@ -122,6 +142,7 @@
             type="submit"
             class="btn btn-primary"
             value="guardar cambios"
+            (click)="refresh()"
           />
         </div>
       </div>

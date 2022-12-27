@@ -1,23 +1,38 @@
-import{Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Course } from 'src/app/model/course';
+import { CourseService } from 'src/app/services/course.service';
 
-import { ServiceService } from 'src/app/services/service.service';
 @Component({
   selector: 'app-education',
   templateUrl: './education.component.html',
-  styleUrls: ['./education.component.css']
+  styleUrls: ['./education.component.css'],
 })
-export class EducationComponent implements OnInit{
+export class EducationComponent implements OnInit {
+  education: Course[] = [];
 
+  constructor(private sCourse: CourseService) {}
+  // methods -> services
+  list(): void {
+    this.sCourse.list().subscribe((info) => {
+      this.education = info;
+    });
+  }
 
-  education:any;
+  refresh() {
+    window.location.reload();
+  }
 
+  delete(id: any): void {
+    if (id) {
+      this.sCourse.deleteCourse(id).subscribe((info) => {
+        alert('Datos eliminados');
+        this.list();
+        this.refresh();
+      });
+    }
+  }
 
-  constructor(private data: ServiceService) { }
-
-
-ngOnInit():void {
-  this.data.getService().subscribe(info =>{
-    this.education = info.education;
-  })
-}
+  ngOnInit(): void {
+    this.list();
+  }
 }

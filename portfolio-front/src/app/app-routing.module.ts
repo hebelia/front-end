@@ -6,25 +6,30 @@ import{IndexComponent} from './components/index/index.component';
 
 // review
 import {LoginmodalComponent} from './modals/loginmodal/loginmodal.component';
+
+import { EditprojectComponent } from './modals/editproject/editproject.component';
+import { EditskillComponent } from './modals/editskill/editskill.component';
+import { EditprofileComponent } from './modals/editprofile/editprofile.component';
+import { EditjobComponent } from './modals/editjob/editjob.component';
+import { EditcourseComponent } from './modals/editcourse/editcourse.component';
 // comp final 
 import { Page404Component } from './components/page404/page404.component';
 
-// checkear despues
 
 
 
 const routes: Routes = [
 
 // ruta de inicio : entre comillas sin nada
-
 {path: '', component : IndexComponent},
 
-
-
-
-
 // review
-{path: 'loginmodal', component: LoginmodalComponent},
+// {path: 'loginmodal', component: LoginmodalComponent},
+// {path: 'editprofile/:id', canActivate:[GuardGuard], component: EditprofileComponent},
+// {path: 'editjob/:id', canActivate: [GuardGuard],  component: EditjobComponent},
+// {path: 'editcourse/:id', canActivate: [GuardGuard], component: EditcourseComponent},
+// {path: 'editskill/:id', canActivate: [GuardGuard], component: EditskillComponent},
+// {path: 'editproject/:id', canActivate: [GuardGuard], component: EditprojectComponent},
 
 //   la ultima ruta debe ser la de error  !orden)
 {path: '**', component : Page404Component },

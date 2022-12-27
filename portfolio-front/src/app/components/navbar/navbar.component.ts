@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Social } from 'src/app/model/social';
 
-import { ServiceService } from 'src/app/services/service.service';
+
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -9,29 +11,11 @@ import { ServiceService } from 'src/app/services/service.service';
 
  export class NavbarComponent implements OnInit{
 
+  socials:Social[]=[]
 
-//   // crear variables por ej:
+  ngOnInit(): void {
 
+  }
 
-  show: boolean =false;
-  socials:any;
+ }
 
-
-  constructor(private data: ServiceService) { }
-
-// data y redes variables 
-ngOnInit():void {
-  this.data.getService().subscribe(info =>{
-    this.socials = info.socials;
-  })
-}
-
-
-
-// funcion para que se muestre o se esconda
-// la funcion no retorna nada por el :void
-visible():void{
-  this.show=!this.show;
-   }
-
-}

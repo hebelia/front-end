@@ -22,8 +22,6 @@ export class EditprofileComponent implements OnInit{
       about:['',[Validators.required]],
       banner:['',[Validators.required]],
       license:['',[Validators.required]],
-
-      
     })
   }
   
@@ -31,7 +29,6 @@ export class EditprofileComponent implements OnInit{
 
 // methods
   
-
   get Title(){
     return this.form.get("title")
   }
@@ -90,6 +87,7 @@ export class EditprofileComponent implements OnInit{
     if(this.form.valid){
       // llamar al servicio para enviar datos al server
       // logica extra
+      // AGREGAR LLAMADA AL EDIT O AGREGAR ETC
       alert("El formulario ha sido enviado con exito!")
     }else{
       this.form.markAllAsTouched();

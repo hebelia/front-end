@@ -28,10 +28,10 @@
           [title]="skill.name"
           [animationDuration]="1500"
           [titleColor]="'#fff'"
-          [subtitle]="skill.percentage"
           [subtitleColor]="'#fff'"
           [animateSubtitle]="true"
         ></circle-progress>
+        <!-- [subtitle]="skill.percentage" -->
       </div>
 
       <!-- modal -->
@@ -48,7 +48,13 @@
 
         <!--del- modal trigger button -->
 
-        <button type="button" class="btn del-btn">
+        <button
+          type="submit"
+          class="btn del-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#delete"
+          (click)="delete(skill.id)"
+        >
           <i class="fa-solid fa-trash-can"></i>
         </button>
       </div>

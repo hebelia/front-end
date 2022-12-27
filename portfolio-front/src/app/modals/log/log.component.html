@@ -1,61 +1,59 @@
-
-  <!-- form 1 -->
-  <form [formGroup]="form" (ngSubmit)="onSubmit($event)">
-    <!-- maybe add action and method? -->
-    <div class="center-wrap">
-      <div class="section text-center">
-        <h4 class="mb-4 pb-3">Iniciar Sesión</h4>
-        <!-- campo 1 -->
-        <div class="form-group">
-          <input
-            type="email"
-            name="logemail"
-            class="form-style"
-            placeholder="email"
-            id="logemail"
-            autocomplete="off"
-            formControlName="email"
-          />
-          <i class="input-icon uil uil-at"></i>
-        </div>
-        <!-- logica email -->
-        <div *ngIf="Mail?.errors && Mail?.touched">
-          <p *ngIf="Mail?.hasError('required')" class="error">
-            El e-mail es requerido.
-          </p>
-          <p *ngIf="Mail?.hasError('email')" class="error">
-            El formato del e-mail debe ser válido.
-          </p>
-        </div>
-        <br />
-        <!--  -->
-        <!-- campo 2 -->
-        <div class="form-group mt-2">
-          <input
-            type="password"
-            formControlName="password"
-            class="form-style"
-            placeholder="contraseña"
-            id="logpass"
-            autocomplete="off"
-            formControlName="password"
-          />
-          <i class="input-icon uil uil-lock-alt"></i>
-        </div>
-        <!-- logica pw -->
-        <div *ngIf="Password?.errors && Password?.touched">
-          <p *ngIf="Password?.hasError('required')" class="error">
-            La contraseña es requerida.
-          </p>
-          <p *ngIf="Password?.errors?.['minLength']" class="error">
-            La contraseña debe ser de 8 o más caracteres.
-          </p>
-        </div>
-        <br />
-        <!--  -->
-        <input class="btn mt-4" type="submit" value="Continuar" /><br />
+<!-- form 1 -->
+<form [formGroup]="form" (ngSubmit)="onSubmit($event)">
+  <!-- maybe add action and method? -->
+  <div class="center-wrap">
+    <div class="section text-center">
+      <h4 class="mb-4 pb-3">Iniciar Sesión</h4>
+      <!-- campo 1 -->
+      <div class="form-group">
+        <input
+          type="email"
+          name="logemail"
+          class="form-style"
+          placeholder="email"
+          id="logemail"
+          autocomplete="off"
+          formControlName="email"
+        />
+        <i class="input-icon uil uil-at"></i>
       </div>
+      <!-- logica email -->
+      <div *ngIf="Mail?.errors && Mail?.touched">
+        <p *ngIf="Mail?.hasError('required')" class="error">
+          El e-mail es requerido.
+        </p>
+        <p *ngIf="Mail?.hasError('email')" class="error">
+          El formato del e-mail debe ser válido.
+        </p>
+      </div>
+      <br />
+      <!--  -->
+      <!-- campo 2 -->
+      <div class="form-group mt-2">
+        <input
+          type="password"
+          formControlName="password"
+          class="form-style"
+          placeholder="contraseña"
+          id="logpass"
+          autocomplete="off"
+          formControlName="password"
+        />
+        <i class="input-icon uil uil-lock-alt"></i>
+      </div>
+      <!-- logica pw -->
+      <div *ngIf="Password?.errors && Password?.touched">
+        <p *ngIf="Password?.hasError('required')" class="error">
+          La contraseña es requerida.
+        </p>
+        <p *ngIf="Password?.errors?.['minLength']" class="error">
+          La contraseña debe ser de 8 o más caracteres.
+        </p>
+      </div>
+      <br />
+      <!--  -->
+      <input class="btn mt-4" type="submit" value="Continuar" /><br />
     </div>
-  </form>
-  <!-- fin form 1 -->
-
+  </div>
+</form>
+<!-- fin form 1 -->

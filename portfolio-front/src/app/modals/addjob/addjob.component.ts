@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { JobService } from 'src/app/services/job.service';
 
 
 @Component({
@@ -12,7 +13,7 @@ export class AddjobComponent implements OnInit{
   
   form: FormGroup;
   
-  constructor(private formBuilder: FormBuilder){ 
+  constructor(private formBuilder: FormBuilder, private sJob :JobService){ 
   
     this.form= this.formBuilder.group({
 
@@ -26,6 +27,36 @@ export class AddjobComponent implements OnInit{
   }
   
   ngOnInit() {}
+  
+  onCreate(): void {
+    this.sJob.addJob(this.form.value).subscribe((info) => {
+      alert('Datos añadidos');
+      window.location.reload();
+    });
+  }
+  refresh() {
+    window.location.reload();
+  }
+
+  clear(): void {
+    this.form.reset();
+  }
+
+  onSubmit(event: Event) {
+    // detiene la propagacion o ejecucion del submit
+    event.preventDefault;
+    if (this.form.valid) {
+      // llamar al servicio para enviar datos al server
+      // logica extra
+      this.onCreate();
+      alert('El formulario ha sido enviado con exito!');
+    } else {
+      this.form.markAllAsTouched();
+      alert(
+        'Se produjo un error al enviar el formulario! Revise los datos ingresados.'
+      );
+    }
+  }
 
 // methods
   
@@ -70,21 +101,6 @@ export class AddjobComponent implements OnInit{
     return this.End?.touched && !this.End.valid;
 
   }
-
-  
-  onSubmit(event: Event){
-    // detiene la propagacion o ejecucion del submit
-    event.preventDefault;
-    if(this.form.valid){
-      // llamar al servicio para enviar datos al server
-      // logica extra
-      alert("El formulario ha sido enviado con exito!")
-    }else{
-      this.form.markAllAsTouched();
-      alert("Se produjo un error al enviar el formulario! Revise los datos ingresados.")
-    }
-  }
-  
   
   }
   

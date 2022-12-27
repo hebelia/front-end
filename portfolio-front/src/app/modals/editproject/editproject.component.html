@@ -24,6 +24,10 @@
             aria-label="project-url"
             aria-describedby="project-url"
             formControlName="url"
+            [ngClass]="{
+              'border-danger': Url.errors && Url.touched,
+              'border-good': !Url.errors && Url.touched
+            }"
           />
         </div>
         <!-- logica dato -->
@@ -42,6 +46,10 @@
             aria-label="project-title"
             aria-describedby="project-title"
             formControlName="title"
+            [ngClass]="{
+              'border-danger': Title.errors && Title.touched,
+              'border-good': !Title.errors && Title.touched
+            }"
           />
         </div>
         <!-- logica dato -->
@@ -52,6 +60,28 @@
         </div>
         <br />
         <!--  -->
+
+        <div class="input-group">
+          <span class="input-group-text">descripcion del proyecto</span>
+          <textarea
+            class="form-control"
+            aria-label="With textarea"
+            formControlName="description"
+            [ngClass]="{
+              'border-danger': Description.errors && Description.touched,
+              'border-good': !Description.errors && Description.touched
+            }"
+          ></textarea>
+        </div>
+        <!-- logica dato -->
+        <div *ngIf="Description?.errors && Description?.touched">
+          <p *ngIf="Description?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
+        <!--  -->
         <div class="input-group mb-3">
           <span class="input-group-text">fecha de inicio del proyecto</span>
           <input
@@ -61,6 +91,10 @@
             aria-label="project-start"
             aria-describedby="project-start"
             formControlName="start"
+            [ngClass]="{
+              'border-danger': Start.errors && Start.touched,
+              'border-good': !Start.errors && Start.touched
+            }"
           />
         </div>
         <!-- logica dato -->
@@ -82,6 +116,10 @@
             aria-label="project-end"
             aria-describedby="project-end"
             formControlName="end"
+            [ngClass]="{
+              'border-danger': End.errors && End.touched,
+              'border-good': !End.errors && End.touched
+            }"
           />
         </div>
         <!-- logica dato -->
@@ -91,20 +129,6 @@
           </p>
         </div>
         <br />
-        <!--  -->
-
-        <div class="input-group">
-          <span class="input-group-text">descripcion del proyecto</span>
-          <textarea class="form-control" aria-label="With textarea"></textarea>
-        </div>
-        <!-- logica dato -->
-        <div *ngIf="Description?.errors && Description?.touched">
-          <p *ngIf="Description?.hasError('required')" class="error">
-            El dato es requerido.
-          </p>
-        </div>
-        <br />
-        <!--  -->
 
         <!-- footer -->
         <div class="modal-footer">
@@ -119,6 +143,7 @@
             type="submit"
             class="btn btn-primary"
             value="guardar cambios"
+            (click)="refresh()"
           />
         </div>
       </div>

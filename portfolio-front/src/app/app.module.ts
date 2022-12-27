@@ -37,6 +37,8 @@ import { AddprojectComponent } from './modals/addproject/addproject.component';
 import { SocialsComponent } from './components/socials/socials.component';
 import { EditsocialComponent } from './modals/editsocial/editsocial.component';
 import { EditprofileComponent } from './modals/editprofile/editprofile.component';
+import { DeleteComponent } from './modals/delete/delete.component';
+
 
 
 @NgModule({
@@ -58,6 +60,7 @@ import { EditprofileComponent } from './modals/editprofile/editprofile.component
     LoginComponent,
     LogoutComponent,
     // modals
+    DeleteComponent,
     LoginmodalComponent,
     EditskillComponent,
     EditprojectComponent,
@@ -71,7 +74,7 @@ import { EditprofileComponent } from './modals/editprofile/editprofile.component
     AddprojectComponent,
     SocialsComponent,
     EditsocialComponent,
-    EditprofileComponent
+    EditprofileComponent,
   ],
 
 

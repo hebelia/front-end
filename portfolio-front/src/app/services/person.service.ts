@@ -18,9 +18,9 @@ export class PersonService {
     return this.httpClient.get<Person[]>(this.url +'list');
   }
 
-  public viewPerson(id:number): Observable<Person[]> {
+  public viewPerson(id:number): Observable<Person> {
     // dynamic data `...` IMP!!!
-    return this.httpClient.get<Person[]>(this.url + `view/${id}`);
+    return this.httpClient.get<Person>(this.url + `view/${id}`);
   }
 
   public addPerson(person:Person): Observable<any>{

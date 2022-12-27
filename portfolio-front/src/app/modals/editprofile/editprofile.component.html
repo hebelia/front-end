@@ -1,4 +1,5 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit($event)">
+  <!-- remove "modal class" -->
   <div class="modal" tabindex="-1" id="editprofile">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -23,6 +24,10 @@
               aria-label="profile-name"
               aria-describedby="profile-name"
               formControlName="fullname"
+              [ngClass]="{
+                'border-danger': Fullname.errors && Fullname.touched,
+                'border-good': !Fullname.errors && Fullname.touched
+              }"
             />
           </div>
           <!-- logica dato -->
@@ -42,6 +47,10 @@
               aria-label="profile-title"
               aria-describedby="profile-title"
               formControlName="title"
+              [ngClass]="{
+                'border-danger': Title.errors && Title.touched,
+                'border-good': !Title.errors && Title.touched
+              }"
             />
           </div>
           <!-- logica dato -->
@@ -59,6 +68,10 @@
               class="form-control"
               id="inputGroupPfp"
               formControlName="pfp"
+              [ngClass]="{
+                'border-danger': Pfp.errors && Pfp.touched,
+                'border-good': !Pfp.errors && Pfp.touched
+              }"
             />
           </div>
           <!-- logica dato -->
@@ -69,62 +82,76 @@
           </div>
           <br />
           <!--  -->
-        </div>
-        <!-- about -->
-        <div class="input-group">
-          <span class="input-group-text">sobre mi ⊳</span>
-          <textarea
-            class="form-control"
-            aria-label="With textarea"
-            formControlName="about"
-          ></textarea>
-        </div>
-        <!-- logica dato -->
-        <div *ngIf="About?.errors && About?.touched">
-          <p *ngIf="About?.hasError('required')" class="error">
-            El dato es requerido.
-          </p>
-        </div>
-        <br />
+          <!-- about -->
+          <div class="input-group">
+            <span class="input-group-text">sobre mi ⊳</span>
+            <textarea
+              class="form-control"
+              aria-label="With textarea"
+              formControlName="about"
+              [ngClass]="{
+                'border-danger': About.errors && About.touched,
+                'border-good': !About.errors && About.touched
+              }"
+            ></textarea>
+          </div>
+          <!-- logica dato -->
+          <div *ngIf="About?.errors && About?.touched">
+            <p *ngIf="About?.hasError('required')" class="error">
+              El dato es requerido.
+            </p>
+          </div>
+          <br />
 
-        <!-- banner -->
-        <div class="input-group mb-3">
-          <label class="input-group-text" for="inputGroupBanner">portada ⊳</label>
-          <input
-            type="file"
-            class="form-control"
-            id="inputGroupBanner"
-            formControlName="banner"
-          />
-        </div>
-        <!-- logica dato -->
-        <div *ngIf="Banner?.errors && Banner?.touched">
-          <p *ngIf="Banner?.hasError('required')" class="error">
-            El dato es requerido.
-          </p>
-        </div>
-        <br />
+          <!-- banner -->
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupBanner"
+              >portada ⊳</label
+            >
+            <input
+              type="file"
+              class="form-control"
+              id="inputGroupBanner"
+              formControlName="banner"
+              [ngClass]="{
+                'border-danger': Banner.errors && Banner.touched,
+                'border-good': !Banner.errors && Banner.touched
+              }"
+            />
+          </div>
+          <!-- logica dato -->
+          <div *ngIf="Banner?.errors && Banner?.touched">
+            <p *ngIf="Banner?.hasError('required')" class="error">
+              El dato es requerido.
+            </p>
+          </div>
+          <br />
 
-        <!-- license  -->
+          <!-- license  -->
 
-        <div class="input-group mb-3">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="licencia"
-            aria-label="license"
-            aria-describedby="license"
-            formControlName="license"
-          />
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="licencia"
+              aria-label="license"
+              aria-describedby="license"
+              formControlName="license"
+              [ngClass]="{
+                'border-danger': License.errors && License.touched,
+                'border-good': !License.errors && License.touched
+              }"
+            />
+          </div>
+          <!-- logica dato -->
+          <div *ngIf="License?.errors && License?.touched">
+            <p *ngIf="License?.hasError('required')" class="error">
+              El dato es requerido.
+            </p>
+          </div>
+          <br />
+          <!--  -->
         </div>
-        <!-- logica dato -->
-        <div *ngIf="License?.errors && License?.touched">
-          <p *ngIf="License?.hasError('required')" class="error">
-            El dato es requerido.
-          </p>
-        </div>
-        <br />
-        <!--  -->
 
         <!-- footer -->
         <div class="modal-footer">
@@ -139,6 +166,7 @@
             type="submit"
             class="btn btn-primary"
             value="guardar cambios"
+            (click)="refresh()"
           />
         </div>
       </div>
