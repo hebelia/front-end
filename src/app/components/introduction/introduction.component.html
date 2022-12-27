@@ -1,0 +1,42 @@
+<section *ngFor="let person of people" class="introduction" id="home" [ngStyle]="{'background-image': ' url(' + person.banner + ')'}">
+
+  <!-- left side -->
+  <div class="left" >
+    <h1 class="section__title section__title--intro center">Hola, me llamo</h1>
+    <h1 class="section__title section__title--intro center">
+      <strong>{{ person.fullname }}</strong>
+    </h1>
+    <p class="section__subtitle section__subtitle--intro">
+      <i>&lt; {{ person.title }} &gt;</i>
+    </p>
+  </div>
+  <!-- profile picture -->
+
+  <!-- right side -->
+  <div class="right">
+    <img [src]="person.pfp" alt="pfp" class="intro__img" />
+    <div class="right-bottom">
+      <h1>
+        <i class="fa-solid fa-laptop-code icon-body introduction__icon"></i>
+      </h1>
+      <!-- modal -->
+      <div class="col-1 admin-btn">
+        <!-- edit -modal trigger button -->
+        <button
+          type="button"
+          class="btn edit-btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#editprofile"
+        >
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </button>
+      </div>
+      <!-- ------- -->
+    </div>
+
+    <!-- ICON -->
+  </div>
+
+</section>
+
+<app-editprofile></app-editprofile>

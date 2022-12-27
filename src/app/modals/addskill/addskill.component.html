@@ -1,0 +1,88 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit($event)">
+  <div class="modal" tabindex="-1" id="addskill">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- header -->
+        <div class="modal-header">
+          <h3 class="modal-title">
+            &lt; ingrese nombre y valor de la nueva habilidad &gt;
+          </h3>
+          <button
+            type="button"
+            class="btn-close btn-close-white"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+            (click)="clear()"
+          ></button>
+        </div>
+        <!-- body -->
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="nombre habilidad"
+            aria-label="skill-name"
+            aria-describedby="skill-name"
+            formControlName="name"
+            [ngClass]="{
+              'border-danger': Name.errors && Name.touched,
+              'border-good': !Name.errors && Name.touched
+            }"
+          />
+        </div>
+        <!-- logica dato -->
+        <div *ngIf="Name?.errors && Name?.touched">
+          <p *ngIf="Name?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
+        <div class="input-group mb-3">
+          <input
+            type="number"
+            class="form-control"
+            aria-label="percentage number"
+            placeholder="porcentaje de dominio de la habilidad"
+            formControlName="percentage"
+            [ngClass]="{
+              'border-danger': Percentage.errors && Percentage.touched,
+              'border-good': !Percentage.errors && Percentage.touched
+            }"
+          />
+          <span class="input-group-text">%</span>
+        </div>
+        <!-- logica dato -->
+        <div *ngIf="Percentage?.errors && Percentage?.touched">
+          <p *ngIf="Percentage?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+
+          <p *ngIf="Percentage?.errors?.['Max']" class="error">
+            El valor exede el maximo.
+          </p>
+        </div>
+        <br />
+
+        <!--  -->
+        <!-- footer -->
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+            (click)="clear()"
+          >
+            cerrar
+          </button>
+          <input
+            type="submit"
+            class="btn btn-primary"
+            value="guardar cambios"
+            (click)="clear(); refresh()"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

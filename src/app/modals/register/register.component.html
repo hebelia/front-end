@@ -1,0 +1,82 @@
+
+  <!-- form2  -->
+  <form [formGroup]="form" (ngSubmit)="onSubmit($event)">
+    <div class="center-wrap">
+      <div class="section text-center">
+        <h4 class="mb-4 pb-3">Registrarme</h4>
+        <!-- campo 1 -->
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-style"
+            placeholder="nombre"
+            id="logname"
+            autocomplete="off"
+            formControlName="name"
+          />
+          <i class="input-icon uil uil-user"></i>
+        </div>
+        <!-- logica nombre -->
+        <div *ngIf="Name?.errors && Name?.touched">
+          <p *ngIf="Name?.hasError('required')" class="error">
+            El nombre es requerido.
+          </p>
+          <p *ngIf="Name?.errors?.['Maxlength']" class="error">
+            El nombre es demasiado largo.
+          </p>
+        </div>
+        <br />
+        <!--  -->
+
+        <!-- campo 2 -->
+        <div class="form-group mt-2">
+          <input
+            type="email"
+            class="form-style"
+            placeholder="email"
+            id="logemail"
+            autocomplete="off"
+            formControlName="email"
+          />
+          <i class="input-icon uil uil-at"></i>
+        </div>
+        <!-- logica email -->
+        <div *ngIf="Mail?.errors && Mail?.touched">
+          <p *ngIf="Mail?.hasError('required')" class="error">
+            El e-mail es requerido.
+          </p>
+          <p *ngIf="Mail?.hasError('email')" class="error">
+            El formato del e-mail debe ser válido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
+        <!-- campo 3-->
+        <div class="form-group mt-2">
+          <input
+            type="password"
+            class="form-style"
+            placeholder="contraseña"
+            id="logpass"
+            autocomplete="off"
+            formControlName="password"
+          />
+          <i class="input-icon uil uil-lock-alt"></i>
+        </div>
+        <!-- logica pw -->
+        <div *ngIf="Password?.errors && Password?.touched">
+          <p *ngIf="Password?.hasError('required')" class="error">
+            La contraseña es requerida.
+          </p>
+          <p *ngIf="Password?.errors?.['minlength']" class="error">
+            La contraseña debe ser de 8 o más caracteres.
+          </p>
+        </div>
+        <br />
+        <!--  -->
+        <input class="btn mt-4" type="submit" value="Continuar" /><br />
+      </div>
+    </div>
+  </form>
+  <!-- Fin form 2  -->
+

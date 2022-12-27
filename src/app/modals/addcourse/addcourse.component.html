@@ -1,0 +1,130 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit($event)" name="addcourse">
+  <div class="modal" tabindex="-1" id="addcourse">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- header -->
+        <div class="modal-header">
+          <h3 class="modal-title">
+            &lt; ingrese nombre y datos del nuevo título &gt;
+          </h3>
+          <button
+            type="button"
+            class="btn-close btn-close-white"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+            (click)="clear()"
+          ></button>
+        </div>
+        <!-- body -->
+
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="nombre del titulo"
+            aria-label="course-title"
+            aria-describedby="course-title"
+            formControlName="title"
+            [ngClass]="{
+              'border-danger': Title.errors && Title.touched,
+              'border-good': !Title.errors && Title.touched
+            }"
+          />
+        </div>
+        <!-- logica dato -->
+        <div *ngIf="Title?.errors && Title?.touched">
+          <p *ngIf="Title?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="nombre de la institucion donde se realizo"
+            aria-label="course-institution"
+            aria-describedby="course-institution"
+            formControlName="institution"
+            [ngClass]="{
+              'border-danger': Institution.errors && Institution.touched,
+              'border-good': !Institution.errors && Institution.touched
+            }"
+          />
+        </div>
+        <!-- logica dato -->
+        <div *ngIf="Institution?.errors && Institution?.touched">
+          <p *ngIf="Institution?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
+        <div class="input-group mb-3">
+          <span class="input-group-text">fecha de inicio</span>
+          <input
+            type="date"
+            class="form-control"
+            placeholder="fecha de duracion del proyecto"
+            aria-label="course-start"
+            aria-describedby="course-start"
+            formControlName="start"
+            [ngClass]="{
+              'border-danger': Start.errors && Start.touched,
+              'border-good': !Start.errors && Start.touched
+            }"
+          />
+        </div>
+        <!-- logica dato -->
+        <div *ngIf="Start?.errors && Start?.touched">
+          <p *ngIf="Start?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
+        <div class="input-group mb-3">
+          <span class="input-group-text">fecha de finalizacion </span>
+          <input
+            type="date"
+            class="form-control"
+            placeholder="fecha de duracion del proyecto"
+            aria-label="course-end"
+            aria-describedby="course-end"
+            formControlName="end"
+            [ngClass]="{
+              'border-danger': End.errors && End.touched,
+              'border-good': !End.errors && End.touched
+            }"
+          />
+        </div>
+        <!-- logica dato -->
+        <div *ngIf="End?.errors && End?.touched">
+          <p *ngIf="End?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
+        <!-- footer -->
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+            (click)="clear()"
+          >
+            cerrar
+          </button>
+          <input
+            type="submit"
+            class="btn btn-primary"
+            value="guardar cambios"
+            (click)="clear(); refresh()"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

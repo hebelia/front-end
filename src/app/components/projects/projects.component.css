@@ -1,0 +1,50 @@
+.projects {
+  display: flex;
+  flex-direction: grid;
+  flex-wrap: wrap;
+}
+.project {
+  padding: 1em;
+  margin: 2%;
+  background-color: #2a2b38;
+  border-radius: 10px;
+  border-width: 1em;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 10px 3px 35px -25px var(--clr-light);
+  transition: 1s;
+}
+.project:hover {
+  transform: scale(1.07);
+  box-shadow: none;
+}
+.project h2 {
+  padding: 4%;
+}
+.project h3,
+.project p {
+  padding: 2%;
+}
+.button-icon {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.button-icon i {
+  transition: 1s;
+}
+
+.project h2 i:hover {
+  padding: 0.5em;
+  color: white;
+  background-color: #009188;
+  border-radius: 1em;
+  transition: 0.8s;
+}

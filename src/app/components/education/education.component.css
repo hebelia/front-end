@@ -1,0 +1,42 @@
+.education {
+  margin: 2%;
+}
+.course {
+  padding: 1rem;
+  display: flex;
+  flex-grow: 1;
+  flex-flow: wrap;
+  flex-direction: column;
+  flex-wrap: wrap;
+  transition: 1s;
+  justify-content: space-between;
+}
+.course:hover {
+  transform: scale(1.07);
+  border-bottom: solid;
+}
+.course h2 i {
+  border-top: solid;
+  border-left: solid;
+  border-color: var(--clr-light);
+  padding: 1rem;
+}
+h3 {
+  display: flex;
+  flex-grow: 1;
+  margin: 2%;
+}
+
+.institution {
+  color: #009188;
+}
+
+.project__date {
+  margin-top: 2rem;
+}
+.date-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: right;
+}

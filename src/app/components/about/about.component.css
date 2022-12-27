@@ -1,0 +1,36 @@
+.about-me{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10px;
+    
+  }
+  .section__subtitle--about{
+    height: .20em;
+    border-radius: 2em;
+    /* colored line */
+  
+  }
+  
+  .about-me__body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+  
+  }
+  .about-me p{
+    word-wrap: break-word;    /* IMPORTANT */
+  padding: 1em;
+    font-size: 1em;
+    font-weight: 300;
+  }
+  .about-me .com-1{
+    display: flex;
+    position: absolute;
+    flex-direction: row-reverse;
+  
+  }
+  
