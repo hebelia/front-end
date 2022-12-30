@@ -32,6 +32,12 @@ export class SocialsComponent implements OnInit {
       });
     }
   }
+    // method to obtain a specific id and send the information on that id to the edit modal
+    viewSocial(id: number) {
+      this.sSocial.viewSocial(id).subscribe(info => {
+        this.sSocial.editsocial = info;
+      })
+    }
 
   ngOnInit(): void {
     this.list();

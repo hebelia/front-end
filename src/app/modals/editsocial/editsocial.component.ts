@@ -1,58 +1,51 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { SocialService } from 'src/app/services/social.service';
 @Component({
   selector: 'app-editsocial',
   templateUrl: './editsocial.component.html',
-  styleUrls: ['./editsocial.component.css']
+  styleUrls: ['./editsocial.component.css'],
 })
-export class EditsocialComponent implements OnInit{
+export class EditsocialComponent implements OnInit {
   form: FormGroup;
-  
-  constructor(private formBuilder: FormBuilder){ 
-  
-    this.form= this.formBuilder.group({
 
-      url: ['',[Validators.required]],
-      icon:['',[Validators.required],Validators.max(30)],
-    
-      
-    })
-  }
-  
-  ngOnInit() {}
+  constructor(public formBuilder: FormBuilder, public sSocial: SocialService) {
 
-// methods
-  
-  get Url(){
-    return this.form.get("url")
+    // this.form = this.formBuilder.group({
+    //   url: ['', [Validators.required]],
+    //   icon: ['', [Validators.required], Validators.max(30)],
+    // });
   }
-  get Icon(){
-    return this.form.get("icon")
+  // methods
+  ngOnInit(): void {}
+
+  refresh() {
+    window.location.reload();
+  }
+  onUpdate(): void {
+    this.sSocial.updateSocial(this.sSocial.editsocial).subscribe((info) => {
+      this.sSocial.editsocial = info;
+      alert('Se realizo la modificacion con exito');
+    });
   }
 
-  get UrlValid(){
-
-    return this.Url?.touched && !this.Url.valid;
-
-  }
-  get IconValid(){
-
-    return this.Icon?.touched && !this.Icon.valid;
-
-  }
-  
-  onSubmit(event: Event){
+  onSubmit(event: Event) {
     // detiene la propagacion o ejecucion del submit
-    event.preventDefault;
-    if(this.form.valid){
-      // llamar al servicio para enviar datos al server
-      // logica extra
-      alert("El formulario ha sido enviado con exito!")
-    }else{
-      this.form.markAllAsTouched();
-      alert("Se produjo un error al enviar el formulario! Revise los datos ingresados.")
-    }
+    this.onUpdate();
+    alert('El formulario ha sido enviado con exito!');
   }
-  }
-  
+  // get Url() {
+  //   return this.form.get('url');
+  // }
+  // get Icon() {
+  //   return this.form.get('icon');
+  // }
+
+  // get UrlValid() {
+  //   return this.Url?.touched && !this.Url.valid;
+  // }
+  // get IconValid() {
+  //   return this.Icon?.touched && !this.Icon.valid;
+  // }
+}

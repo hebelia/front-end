@@ -30,7 +30,6 @@ export class AddprojectComponent implements OnInit{
   onCreate(): void {
     this.sProject.addProject(this.form.value).subscribe((info) => {
       alert('Datos añadidos');
-      window.location.reload();
     });
   }
   refresh() {

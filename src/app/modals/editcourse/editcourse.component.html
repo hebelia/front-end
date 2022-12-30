@@ -1,4 +1,4 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit($event)" name="editcourse">
+
   <div class="modal" tabindex="-1" id="editcourse">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -15,7 +15,8 @@
           ></button>
         </div>
         <!-- body -->
-        <input type="hidden" formControlName="id" id="id" />
+        <form (ngSubmit)="onSubmit($event)"  #form="ngForm" name="editcourse">
+        <!-- <input type="hidden" formControlName="id" id="id" [ngModel]="cou.id" /> -->
         <div class="input-group mb-3">
           <input
             type="text"
@@ -23,21 +24,12 @@
             placeholder="nombre del titulo"
             aria-label="course-title"
             aria-describedby="course-title"
-            formControlName="title"
-            [ngClass]="{
-              'border-danger': Title.errors && Title.touched,
-              'border-good': !Title.errors && Title.touched
-            }"
+            name="title"
+            [(ngModel)]="sCourse.editcourse.title"
+
           />
         </div>
-        <!-- logica dato -->
-        <div *ngIf="Title?.errors && Title?.touched">
-          <p *ngIf="Title?.hasError('required')" class="error">
-            El dato es requerido.
-          </p>
-        </div>
-        <br />
-        <!--  -->
+
         <div class="input-group mb-3">
           <input
             type="text"
@@ -45,21 +37,12 @@
             placeholder="nombre de la institucion donde se realizo"
             aria-label="course-institution"
             aria-describedby="course-institution"
-            formControlName="institution"
-            [ngClass]="{
-              'border-danger': Institution.errors && Institution.touched,
-              'border-good': !Institution.errors && Institution.touched
-            }"
+            name="institution"
+            [(ngModel)]="sCourse.editcourse.institution"
+
           />
         </div>
-        <!-- logica dato -->
-        <div *ngIf="Institution?.errors && Institution?.touched">
-          <p class="error">
-            El dato es requerido.
-          </p>
-        </div>
-        <br />
-        <!--  -->
+
         <div class="input-group mb-3">
           <span class="input-group-text">fecha de inicio</span>
           <input
@@ -68,21 +51,12 @@
             placeholder="fecha de duracion del proyecto"
             aria-label="course-start"
             aria-describedby="course-start"
-            formControlName="start"
-            [ngClass]="{
-              'border-danger': Start.errors && Start.touched,
-              'border-good': !Start.errors && Start.touched
-            }"
+            name="start"
+            [(ngModel)]="sCourse.editcourse.start"
+
           />
         </div>
-        <!-- logica dato -->
-        <div *ngIf="Start?.errors && Start?.touched">
-          <p *ngIf="Start?.hasError('required')" class="error">
-            El dato es requerido.
-          </p>
-        </div>
-        <br />
-        <!--  -->
+
         <div class="input-group mb-3">
           <span class="input-group-text">fecha de finalizacion </span>
           <input
@@ -91,21 +65,12 @@
             placeholder="fecha de duracion del proyecto"
             aria-label="course-end"
             aria-describedby="course-end"
-            formControlName="end"
-            [ngClass]="{
-              'border-danger': End.errors && End.touched,
-              'border-good': !End.errors && End.touched
-            }"
+            name="end"
+            [(ngModel)]="sCourse.editcourse.end"
+
           />
         </div>
-        <!-- logica dato -->
-        <div *ngIf="End?.errors && End?.touched">
-          <p *ngIf="End?.hasError('required')" class="error">
-            El dato es requerido.
-          </p>
-        </div>
-        <br />
-        <!--  -->
+
         <!-- footer -->
         <div class="modal-footer">
           <button
@@ -122,7 +87,8 @@
             (click)="refresh()"
           />
         </div>
+      </form>
       </div>
     </div>
   </div>
-</form>
+

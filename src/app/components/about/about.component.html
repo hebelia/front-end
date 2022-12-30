@@ -10,18 +10,20 @@
           {{ person.about }}
         </p>
       </h3>
+      <div class="col-1 admin-btn">
+        <button
+          type="button"
+          class="btn edit-btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#editprofile" 
+          (click)="viewPerson(person.id)"
+        >
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </button>
+      </div>
     </div>
 
-    <div class="col-1 admin-btn">
-      <button
-        type="button"
-        class="btn edit-btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#editprofile"
-      >
-        <i class="fa-solid fa-wand-magic-sparkles"></i>
-      </button>
-    </div>
+    
   </div>
 
   <div class="about-me__footer">

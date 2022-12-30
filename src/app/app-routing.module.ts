@@ -24,12 +24,7 @@ const routes: Routes = [
 {path: '', component : IndexComponent},
 
 // review
-// {path: 'loginmodal', component: LoginmodalComponent},
-// {path: 'editprofile/:id', canActivate:[GuardGuard], component: EditprofileComponent},
-// {path: 'editjob/:id', canActivate: [GuardGuard],  component: EditjobComponent},
-// {path: 'editcourse/:id', canActivate: [GuardGuard], component: EditcourseComponent},
-// {path: 'editskill/:id', canActivate: [GuardGuard], component: EditskillComponent},
-// {path: 'editproject/:id', canActivate: [GuardGuard], component: EditprojectComponent},
+{path: 'loginmodal', component: LoginmodalComponent},
 
 //   la ultima ruta debe ser la de error  !orden)
 {path: '**', component : Page404Component },

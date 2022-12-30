@@ -1,21 +1,21 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit($event)">
-  <div class="modal" tabindex="-1" id="addskill">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <!-- header -->
-        <div class="modal-header">
-          <h3 class="modal-title">
-            &lt; ingrese nombre y valor de la nueva habilidad &gt;
-          </h3>
-          <button
-            type="button"
-            class="btn-close btn-close-white"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-            (click)="clear()"
-          ></button>
-        </div>
-        <!-- body -->
+<div class="modal" tabindex="-1" id="addskill">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- header -->
+      <div class="modal-header">
+        <h3 class="modal-title">
+          &lt; ingrese nombre y valor de la nueva habilidad &gt;
+        </h3>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          (click)="clear()"
+        ></button>
+      </div>
+      <!-- body -->
+      <form [formGroup]="form" (ngSubmit)="onSubmit($event)">
         <div class="input-group mb-3">
           <input
             type="text"
@@ -58,9 +58,6 @@
             El dato es requerido.
           </p>
 
-          <p *ngIf="Percentage?.errors?.['Max']" class="error">
-            El valor exede el maximo.
-          </p>
         </div>
         <br />
 
@@ -72,6 +69,9 @@
             class="btn btn-secondary"
             data-bs-dismiss="modal"
             (click)="clear()"
+            [disabled]="
+              Name?.hasError('required') || Percentage?.hasError('required')
+            "
           >
             cerrar
           </button>
@@ -79,10 +79,10 @@
             type="submit"
             class="btn btn-primary"
             value="guardar cambios"
-            (click)="clear(); refresh()"
+            (click)="refresh()"
           />
         </div>
-      </div>
+      </form>
     </div>
   </div>
-</form>
+</div>

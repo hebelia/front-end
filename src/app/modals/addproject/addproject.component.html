@@ -1,21 +1,21 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit($event)">
-  <div class="modal" tabindex="-1" id="addproject">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <!-- header -->
-        <div class="modal-header">
-          <h3 class="modal-title">
-            &lt; ingrese nombre y datos del nuevo proyecto &gt;
-          </h3>
-          <button
-            type="button"
-            class="btn-close btn-close-white"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-            (click)="clear()"
-          ></button>
-        </div>
-        <!-- body -->
+<div class="modal" tabindex="-1" id="addproject">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- header -->
+      <div class="modal-header">
+        <h3 class="modal-title">
+          &lt; ingrese nombre y datos del nuevo proyecto &gt;
+        </h3>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          (click)="clear()"
+        ></button>
+      </div>
+      <!-- body -->
+      <form [formGroup]="form" (ngSubmit)="onSubmit($event)" name="addproject">
         <div class="input-group mb-3">
           <span class="input-group-text" id="project-url">link de github</span>
           <input
@@ -130,6 +130,13 @@
             class="btn btn-secondary"
             data-bs-dismiss="modal"
             (click)="clear()"
+            [disabled]="
+              Url?.hasError('required') ||
+              Title?.hasError('required') ||
+              Start?.hasError('required') ||
+              End?.hasError('required') ||
+              Description?.hasError('required')
+            "
           >
             cerrar
           </button>
@@ -137,10 +144,10 @@
             type="submit"
             class="btn btn-primary"
             value="guardar cambios"
-            (click)="clear(); refresh()"
+            (click)="refresh()"
           />
         </div>
-      </div>
+      </form>
     </div>
   </div>
-</form>
+</div>

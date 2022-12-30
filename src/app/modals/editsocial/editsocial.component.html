@@ -1,20 +1,20 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit($event)">
-  <div class="modal" tabindex="-1" id="editsocial">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <!-- header -->
-        <div class="modal-header">
-          <h3 class="modal-title">
-            &lt; ingrese el url e icono de la red social &gt;
-          </h3>
-          <button
-            type="button"
-            class="btn-close btn-close-white"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-        <!-- body -->
+<div class="modal" tabindex="-1" id="editsocial">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- header -->
+      <div class="modal-header">
+        <h3 class="modal-title">
+          &lt; ingrese el url e icono de la red social &gt;
+        </h3>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <!-- body -->
+      <form (ngSubmit)="onSubmit($event)" #form="ngForm" name="editsocial">
         <div class="input-group mb-3">
           <input
             type="text"
@@ -22,21 +22,12 @@
             placeholder="url"
             aria-label="social-url"
             aria-describedby="social-url"
-            formControlName="url"
-            [ngClass]="{
-              'border-danger': Url.errors && Url.touched,
-              'border-good': !Url.errors && Url.touched
-            }"
+            name="url"
+            [(ngModel)]="sSocial.editsocial.url"
+
           />
         </div>
-        <!-- logica dato -->
-        <div *ngIf="Url?.errors && Url?.touched">
-          <p *ngIf="Url?.hasError('required')" class="error">
-            El dato es requerido.
-          </p>
-        </div>
-        <br />
-        <!--  -->
+
         <div class="input-group mb-3">
           <input
             type="text"
@@ -44,26 +35,12 @@
             aria-label="icon"
             placeholder="clase del icono (fontawesome)"
             aria-describedby="social-icon"
-            formControlName="icon"
-            [ngClass]="{
-              'border-danger': Icon.errors && Icon.touched,
-              'border-good': !Icon.errors && Icon.touched
-            }"
+            name="icon"
+            [(ngModel)]="sSocial.editsocial.icon"
+
           />
         </div>
-        <!-- logica dato -->
-        <div *ngIf="Icon?.errors && Icon?.touched">
-          <p *ngIf="Icon?.hasError('required')" class="error">
-            El dato es requerido.
-          </p>
 
-          <p *ngIf="Icon?.errors?.['Max']" class="error">
-            El valor exede el maximo de caracteres.
-          </p>
-        </div>
-        <br />
-
-        <!--  -->
         <!-- footer -->
         <div class="modal-footer">
           <button
@@ -80,7 +57,8 @@
             (click)="refresh()"
           />
         </div>
-      </div>
+        <!--  -->
+      </form>
     </div>
   </div>
-</form>
+</div>

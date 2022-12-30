@@ -1,21 +1,20 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit($event)">
-  <!-- remove "modal class" -->
-  <div class="modal" tabindex="-1" id="editprofile">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <!-- header -->
-          <h3 class="modal-title">&lt; editar perfil &gt;</h3>
-          <button
-            type="button"
-            class="btn-close btn-close-white"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="modal-body">
-          <!-- contenido -->
-          <!-- nombre -->
+<div class="modal" tabindex="-1" id="editprofile">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- header -->
+        <h3 class="modal-title">&lt; editar perfil &gt;</h3>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <!-- Body-->
+        <form (ngSubmit)="onSubmit($event)" #form="ngForm" name="editprofile">
+          <!-- name -->
           <div class="input-group mb-3">
             <input
               type="text"
@@ -23,22 +22,13 @@
               placeholder="nombre y apellido"
               aria-label="profile-name"
               aria-describedby="profile-name"
-              formControlName="fullname"
-              [ngClass]="{
-                'border-danger': Fullname.errors && Fullname.touched,
-                'border-good': !Fullname.errors && Fullname.touched
-              }"
+              name="fullname"
+              [(ngModel)]="sPerson.editprofile.fullname"
+
             />
           </div>
-          <!-- logica dato -->
-          <div *ngIf="Fullname?.errors && Fullname?.touched">
-            <p *ngIf="Fullname?.hasError('required')" class="error">
-              El dato es requerido.
-            </p>
-          </div>
-          <br />
-          <!--  -->
-          <!-- titulo del perfil -->
+
+          <!-- title/occupation -->
           <div class="input-group mb-3">
             <input
               type="text"
@@ -46,62 +36,36 @@
               placeholder="título"
               aria-label="profile-title"
               aria-describedby="profile-title"
-              formControlName="title"
-              [ngClass]="{
-                'border-danger': Title.errors && Title.touched,
-                'border-good': !Title.errors && Title.touched
-              }"
+              name="title"
+              [(ngModel)]="sPerson.editprofile.title"
+
             />
           </div>
-          <!-- logica dato -->
-          <div *ngIf="Title?.errors && Title?.touched">
-            <p *ngIf="Title?.hasError('required')" class="error">
-              El dato es requerido.
-            </p>
-          </div>
-          <br />
-          <!--  -->
+
           <div class="input-group mb-3">
             <span class="input-group-text">imagen de perfil ⊳</span>
             <input
               type="file"
               class="form-control"
               id="inputGroupPfp"
-              formControlName="pfp"
-              [ngClass]="{
-                'border-danger': Pfp.errors && Pfp.touched,
-                'border-good': !Pfp.errors && Pfp.touched
-              }"
+              name="pfp"
+              [(ngModel)]="sPerson.editprofile.pfp"
+
             />
           </div>
-          <!-- logica dato -->
-          <div *ngIf="Pfp?.errors && Pfp?.touched">
-            <p *ngIf="Pfp?.hasError('required')" class="error">
-              El dato es requerido.
-            </p>
-          </div>
-          <br />
-          <!--  -->
+
           <!-- about -->
-          <div class="input-group">
+          <div class="input-group mb-3">
             <span class="input-group-text">sobre mi ⊳</span>
             <textarea
               class="form-control"
               aria-label="With textarea"
-              formControlName="about"
-              [ngClass]="{
-                'border-danger': About.errors && About.touched,
-                'border-good': !About.errors && About.touched
-              }"
+              name="about"
+              [(ngModel)]="sPerson.editprofile.about"
+
             ></textarea>
           </div>
-          <!-- logica dato -->
-          <div *ngIf="About?.errors && About?.touched">
-            <p *ngIf="About?.hasError('required')" class="error">
-              El dato es requerido.
-            </p>
-          </div>
-          <br />
+          
 
           <!-- banner -->
           <div class="input-group mb-3">
@@ -112,20 +76,12 @@
               type="file"
               class="form-control"
               id="inputGroupBanner"
-              formControlName="banner"
-              [ngClass]="{
-                'border-danger': Banner.errors && Banner.touched,
-                'border-good': !Banner.errors && Banner.touched
-              }"
+              name="banner"
+              [(ngModel)]="sPerson.editprofile.banner"
+
             />
           </div>
-          <!-- logica dato -->
-          <div *ngIf="Banner?.errors && Banner?.touched">
-            <p *ngIf="Banner?.hasError('required')" class="error">
-              El dato es requerido.
-            </p>
-          </div>
-          <br />
+
 
           <!-- license  -->
 
@@ -136,40 +92,31 @@
               placeholder="licencia"
               aria-label="license"
               aria-describedby="license"
-              formControlName="license"
-              [ngClass]="{
-                'border-danger': License.errors && License.touched,
-                'border-good': !License.errors && License.touched
-              }"
+              name="license"
+              [(ngModel)]="sPerson.editprofile.license"
+
             />
           </div>
-          <!-- logica dato -->
-          <div *ngIf="License?.errors && License?.touched">
-            <p *ngIf="License?.hasError('required')" class="error">
-              El dato es requerido.
-            </p>
-          </div>
-          <br />
-          <!--  -->
-        </div>
 
-        <!-- footer -->
-        <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-          >
-            cerrar
-          </button>
-          <input
-            type="submit"
-            class="btn btn-primary"
-            value="guardar cambios"
-            (click)="refresh()"
-          />
-        </div>
+
+          <!-- footer -->
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              cerrar
+            </button>
+            <input
+              type="submit"
+              class="btn btn-primary"
+              value="guardar cambios"
+              (click)="refresh()"
+            />
+          </div>
+        </form>
       </div>
     </div>
   </div>
-</form>
+</div>

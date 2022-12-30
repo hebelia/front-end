@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Job } from 'src/app/model/job';
 import { JobService } from 'src/app/services/job.service';
 
-import { ServiceService } from 'src/app/services/service.service';
+
 
 @Component({
   selector: 'app-experience',
@@ -32,6 +32,12 @@ export class ExperienceComponent implements OnInit {
         this.refresh();
       });
     }
+  }
+  // method to obtain a specific id and send the information on that id to the edit modal
+  viewJob(id: number) {
+    this.sJob.viewJob(id).subscribe(info => {
+      this.sJob.editjob = info;
+    })
   }
 
   ngOnInit(): void {

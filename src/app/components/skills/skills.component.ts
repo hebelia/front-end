@@ -30,6 +30,12 @@ export class SkillsComponent implements OnInit {
       });
     }
   }
+    // method to obtain a specific id and send the information on that id to the edit modal
+    viewSkill(id: number) {
+      this.sSkill.viewSkill(id).subscribe(info => {
+        this.sSkill.editskill = info;
+      })
+    }
 
   ngOnInit(): void {
     this.list();

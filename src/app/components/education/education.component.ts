@@ -31,6 +31,12 @@ export class EducationComponent implements OnInit {
       });
     }
   }
+  // method to obtain a specific id and send the information on that id to the edit modal
+  viewCourse(id: number) {
+    this.sCourse.viewCourse(id).subscribe(info => {
+      this.sCourse.editcourse = info;
+    })
+  }
 
   ngOnInit(): void {
     this.list();

@@ -9,8 +9,7 @@ import { PersonService } from 'src/app/services/person.service';
 export class AboutComponent  implements OnInit{
 
 people: Person[]=[];
-// idPerson:any;
-// isTrue= false;
+
 
 constructor (private sPerson: PersonService){
 
@@ -20,14 +19,12 @@ list():void{
   this.sPerson.list().subscribe(info => {this.people=info});
 }
 
-// idEdit(id:any){
-//   this.isTrue = true;
-//   this.idPerson= id;
-
-// }
-
-// viewPerson(id:number):void{
-// }
+  // method to obtain a specific id and send the information on that id to the edit modal
+  viewPerson(id: number) {
+    this.sPerson.viewPerson(id).subscribe(info => {
+      this.sPerson.editprofile = info;
+    })
+  }
 
 ngOnInit(): void {
   this.list();

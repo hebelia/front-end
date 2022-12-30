@@ -44,4 +44,10 @@ export class ProjectsComponent implements OnInit {
       });
     }
   }
+    // method to obtain a specific id and send the information on that id to the edit modal
+    viewProject(id: number) {
+      this.sProject.viewProject(id).subscribe(info => {
+        this.sProject.editproject = info;
+      })
+    }
 }

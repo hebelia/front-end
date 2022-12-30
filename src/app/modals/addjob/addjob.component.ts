@@ -31,7 +31,6 @@ export class AddjobComponent implements OnInit{
   onCreate(): void {
     this.sJob.addJob(this.form.value).subscribe((info) => {
       alert('Datos añadidos');
-      window.location.reload();
     });
   }
   refresh() {

@@ -1,20 +1,20 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit($event)">
-  <div class="modal" tabindex="-1" id="editskill">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <!-- header -->
-        <div class="modal-header">
-          <h3 class="modal-title">
-            &lt; ingrese nombre y valor de la habilidad &gt;
-          </h3>
-          <button
-            type="button"
-            class="btn-close btn-close-white"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-        <!-- body -->
+<div class="modal" tabindex="-1" id="editskill">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- header -->
+      <div class="modal-header">
+        <h3 class="modal-title">
+          &lt; ingrese nombre y valor de la habilidad &gt;
+        </h3>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <!-- body -->
+      <form (ngSubmit)="onSubmit($event)" #form="ngForm" name="editskill">
         <div class="input-group mb-3">
           <input
             type="text"
@@ -22,48 +22,25 @@
             placeholder="nombre habilidad"
             aria-label="skill-name"
             aria-describedby="skill-name"
-            formControlName="name"
-            [ngClass]="{
-              'border-danger': Name.errors && Name.touched,
-              'border-good': !Name.errors && Name.touched
-            }"
+            name="name"
+            [(ngModel)]="sSkill.editskill.name"
+
           />
         </div>
-        <!-- logica dato -->
-        <div *ngIf="Name?.errors && Name?.touched">
-          <p *ngIf="Name?.hasError('required')" class="error">
-            El dato es requerido.
-          </p>
-        </div>
-        <br />
-        <!--  -->
+
         <div class="input-group mb-3">
           <input
             type="number"
             class="form-control"
             aria-label="percentage number"
             placeholder="porcentaje de dominio de la habilidad"
-            formControlName="percentage"
-            [ngClass]="{
-              'border-danger': Percentage.errors && Percentage.touched,
-              'border-good': !Percentage.errors && Percentage.touched
-            }"
+            name="percentage"
+            [(ngModel)]="sSkill.editskill.percentage"
+
           />
           <span class="input-group-text">%</span>
         </div>
-        <!-- logica dato -->
-        <div *ngIf="Percentage?.errors && Percentage?.touched">
-          <p *ngIf="Percentage?.hasError('required')" class="error">
-            El dato es requerido.
-          </p>
 
-          <p *ngIf="Percentage?.errors?.['Max']" class="error">
-            El valor exede el maximo.
-          </p>
-        </div>
-        <br />
-
-        <!--  -->
         <!-- footer -->
         <div class="modal-footer">
           <button
@@ -80,7 +57,7 @@
             (click)="refresh()"
           />
         </div>
-      </div>
+      </form>
     </div>
   </div>
-</form>
+</div>

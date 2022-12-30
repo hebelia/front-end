@@ -1,37 +1,42 @@
 import { Injectable } from '@angular/core';
-import{HttpClient} from '@angular/common/http';
-import{ Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { Skill } from '../model/skill';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SkillService {
- 
-  url='http://localhost:8080/skill/'
+  url = 'http://localhost:8080/skill/';
 
-  constructor(private httpClient:HttpClient) { }
+  editskill: Skill = {
+    id: null,
+    name: '',
+    percentage: null,
+  };
+
+  constructor(private httpClient: HttpClient) {}
 
   public list(): Observable<Skill[]> {
-    return this.httpClient.get<Skill[]>(this.url +'list');
+    return this.httpClient.get<Skill[]>(this.url + 'list');
   }
 
-  public viewSkill(id:number): Observable<Skill[]> {
+  public viewSkill(id: number){
     // dynamic data `...` IMP!!!
-    return this.httpClient.get<Skill[]>(this.url + `view/${id}`);
+    return this.httpClient.get<Skill>(this.url + `view/${id}`);
   }
 
-  public addSkill(skill:Skill): Observable<any>{
+  public addSkill(skill: Skill): Observable<any> {
     return this.httpClient.post<any>(this.url + 'create', skill);
   }
-  
-  public deleteSkill(id:number): Observable<any> {
-    return this.httpClient.delete<any>(this.url +`delete/${id}`);
+
+  public deleteSkill(id: number): Observable<any> {
+    return this.httpClient.delete<any>(this.url + `delete/${id}`);
   }
-  public updateSkill(skill:Skill): Observable<any>{
+  public updateSkill(skill:Skill):Observable<any>{
     return this.httpClient.put<any>(this.url+'edit', skill);
   }
-  public updateSkillById(id:number, skill:Skill): Observable<any>{
+  public updateSkillById(id: number, skill: Skill): Observable<any> {
     return this.httpClient.put<any>(this.url + `edit/${id}`, skill);
   }
 }

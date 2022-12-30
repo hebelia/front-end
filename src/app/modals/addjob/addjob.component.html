@@ -16,137 +16,144 @@
           ></button>
         </div>
         <!-- body -->
+        <form [formGroup]="form" (ngSubmit)="onSubmit($event)" name="addjob">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="lugar de trabajo"
+              aria-label="workplace"
+              aria-describedby="workplace"
+              formControlName="place"
+              [ngClass]="{
+                'border-danger': Place.errors && Place.touched,
+                'border-good': !Place.errors && Place.touched
+              }"
+            />
+          </div>
+          <!-- logica dato -->
+          <div *ngIf="Place?.errors && Place?.touched">
+            <p *ngIf="Place?.hasError('required')" class="error">
+              El dato es requerido.
+            </p>
+          </div>
+          <br />
+          <!--  -->
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="titulo del trabajo"
+              aria-label="job-title"
+              aria-describedby="job-title"
+              formControlName="title"
+              [ngClass]="{
+                'border-danger': Title.errors && Title.touched,
+                'border-good': !Title.errors && Title.touched
+              }"
+            />
+          </div>
+          <!-- logica dato -->
+          <div *ngIf="Title?.errors && Title?.touched">
+            <p *ngIf="Title?.hasError('required')" class="error">
+              El dato es requerido.
+            </p>
+          </div>
+          <br />
+          <!--  -->
 
-        <div class="input-group mb-3">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="lugar de trabajo"
-            aria-label="workplace"
-            aria-describedby="workplace"
-            formControlName="place"
-            [ngClass]="{
-              'border-danger': Place.errors && Place.touched,
-              'border-good': !Place.errors && Place.touched
-            }"
-          />
-        </div>
-        <!-- logica dato -->
-        <div *ngIf="Place?.errors && Place?.touched">
-          <p *ngIf="Place?.hasError('required')" class="error">
-            El dato es requerido.
-          </p>
-        </div>
-        <br />
-        <!--  -->
-        <div class="input-group mb-3">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="titulo del trabajo"
-            aria-label="job-title"
-            aria-describedby="job-title"
-            formControlName="title"
-            [ngClass]="{
-              'border-danger': Title.errors && Title.touched,
-              'border-good': !Title.errors && Title.touched
-            }"
-          />
-        </div>
-        <!-- logica dato -->
-        <div *ngIf="Title?.errors && Title?.touched">
-          <p *ngIf="Title?.hasError('required')" class="error">
-            El dato es requerido.
-          </p>
-        </div>
-        <br />
-        <!--  -->
+          <div class="input-group mb-3">
+            <span class="input-group-text">descripcion del trabajo</span>
+            <textarea
+              class="form-control"
+              aria-label="With textarea"
+              formControlName="description"
+              [ngClass]="{
+                'border-danger': Description.errors && Description.touched,
+                'border-good': !Description.errors && Description.touched
+              }"
+            ></textarea>
+          </div>
+          <!-- logica dato -->
+          <div *ngIf="Description?.errors && Description?.touched">
+            <p *ngIf="Description?.hasError('required')" class="error">
+              El dato es requerido.
+            </p>
+          </div>
+          <br />
+          <!--  -->
 
-        <div class="input-group mb-3">
-          <span class="input-group-text">descripcion del trabajo</span>
-          <textarea
-            class="form-control"
-            aria-label="With textarea"
-            formControlName="description"
-            [ngClass]="{
-              'border-danger': Description.errors && Description.touched,
-              'border-good': !Description.errors && Description.touched
-            }"
-          ></textarea>
-        </div>
-        <!-- logica dato -->
-        <div *ngIf="Description?.errors && Description?.touched">
-          <p *ngIf="Description?.hasError('required')" class="error">
-            El dato es requerido.
-          </p>
-        </div>
-        <br />
-        <!--  -->
+          <div class="input-group mb-3">
+            <span class="input-group-text">fecha de inicio</span>
+            <input
+              type="date"
+              class="form-control"
+              placeholder="fecha de duracion del trabajo"
+              aria-label="job-start"
+              aria-describedby="job-start"
+              formControlName="start"
+              [ngClass]="{
+                'border-danger': Start.errors && Start.touched,
+                'border-good': !Start.errors && Start.touched
+              }"
+            />
+          </div>
+          <!-- logica dato -->
+          <div *ngIf="Start?.errors && Start?.touched">
+            <p *ngIf="Start?.hasError('required')" class="error">
+              El dato es requerido.
+            </p>
+          </div>
+          <br />
+          <!--  -->
+          <div class="input-group mb-3">
+            <span class="input-group-text">fecha de finalizacion</span>
+            <input
+              type="date"
+              class="form-control"
+              placeholder="fecha de duracion del trabajo"
+              aria-label="job-end"
+              aria-describedby="job-end"
+              formControlName="end"
+              [ngClass]="{
+                'border-danger': End.errors && End.touched,
+                'border-good': !End.errors && End.touched
+              }"
+            />
+          </div>
+          <!-- logica dato -->
+          <div *ngIf="End?.errors && End?.touched">
+            <p *ngIf="End?.hasError('required')" class="error">
+              El dato es requerido.
+            </p>
+          </div>
+          <br />
+          <!--  -->
 
-        <div class="input-group mb-3">
-          <span class="input-group-text">fecha de inicio</span>
-          <input
-            type="date"
-            class="form-control"
-            placeholder="fecha de duracion del trabajo"
-            aria-label="job-start"
-            aria-describedby="job-start"
-            formControlName="start"
-            [ngClass]="{
-              'border-danger': Start.errors && Start.touched,
-              'border-good': !Start.errors && Start.touched
-            }"
-          />
-        </div>
-        <!-- logica dato -->
-        <div *ngIf="Start?.errors && Start?.touched">
-          <p *ngIf="Start?.hasError('required')" class="error">
-            El dato es requerido.
-          </p>
-        </div>
-        <br />
-        <!--  -->
-        <div class="input-group mb-3">
-          <span class="input-group-text">fecha de finalizacion</span>
-          <input
-            type="date"
-            class="form-control"
-            placeholder="fecha de duracion del trabajo"
-            aria-label="job-end"
-            aria-describedby="job-end"
-            formControlName="end"
-            [ngClass]="{
-              'border-danger': End.errors && End.touched,
-              'border-good': !End.errors && End.touched
-            }"
-          />
-        </div>
-        <!-- logica dato -->
-        <div *ngIf="End?.errors && End?.touched">
-          <p *ngIf="End?.hasError('required')" class="error">
-            El dato es requerido.
-          </p>
-        </div>
-        <br />
-        <!--  -->
-
-        <!-- footer -->
-        <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-            (click)="clear()"
-          >
-            cerrar
-          </button>
-          <input
-            type="submit"
-            class="btn btn-primary"
-            value="guardar cambios"
-            (click)="clear();refresh()"
-          />
-        </div>
+          <!-- footer -->
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+              [disabled]="
+                Title?.hasError('required') ||
+                Description?.hasError('required') ||
+                Start?.hasError('required') ||
+                End?.hasError('required')
+              "
+              (click)="clear()"
+            >
+              cerrar
+            </button>
+            <input
+              type="submit"
+              class="btn btn-primary"
+              value="guardar cambios"
+              (click)="refresh()"
+            />
+          </div>
+        </form>
       </div>
     </div>
   </div>

@@ -23,12 +23,12 @@ export class AddcourseComponent implements OnInit {
     });
   }
   // methods
+  // reactive form logic
   ngOnInit(): void {}
 
   onCreate(): void {
     this.sCourse.addCourse(this.form.value).subscribe((info) => {
       alert('Datos añadidos');
-      window.location.reload();
     });
   }
   refresh() {
