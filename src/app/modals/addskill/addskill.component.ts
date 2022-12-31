@@ -36,11 +36,8 @@ export class AddskillComponent implements OnInit {
   }
 
   onSubmit(event: Event) {
-    // detiene la propagacion o ejecucion del submit
     event.preventDefault;
     if (this.form.valid) {
-      // llamar al servicio para enviar datos al server
-      // logica extra
       this.onCreate();
       alert('El formulario ha sido enviado con exito!');
     } else {

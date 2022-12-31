@@ -24,9 +24,22 @@
             aria-describedby="workplace"
             name="place"
             [(ngModel)]="sJob.editjob.place"
-
+            required
+            #place="ngModel"
+            [ngClass]="{
+              'border-danger': place.errors && place.touched,
+              'border-good': !place.errors && place.touched
+            }"
           />
         </div>
+        <!-- logic ngmodel -->
+        <div *ngIf="place?.errors && place?.touched">
+          <p *ngIf="place?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
 
         <div class="input-group mb-3">
           <input
@@ -37,10 +50,22 @@
             aria-describedby="job-title"
             name="title"
             [(ngModel)]="sJob.editjob.title"
-
+            required
+            #title="ngModel"
+            [ngClass]="{
+              'border-danger': title.errors && title.touched,
+              'border-good': !title.errors && title.touched
+            }"
           />
         </div>
-
+        <!-- logic ngmodel -->
+        <div *ngIf="title?.errors && title?.touched">
+          <p *ngIf="title?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
 
         <div class="input-group mb-3">
           <span class="input-group-text">descripcion del trabajo</span>
@@ -49,11 +74,24 @@
             aria-label="With textarea"
             name="description"
             [(ngModel)]="sJob.editjob.description"
-
+            required
+            maxlength="150"
+            #description="ngModel"
+            [ngClass]="{
+              'border-danger': description.errors && description.touched,
+              'border-good': !description.errors && description.touched
+            }"
           ></textarea>
         </div>
-
-
+        <!-- logic ngmodel -->
+        <div *ngIf="description?.errors && description?.touched">
+          <p *ngIf="description?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+          <div *ngIf="description.hasError('maxlength')">Mucho texto!!</div>
+        </div>
+        <br />
+        <!--  -->
         <div class="input-group mb-3">
           <span class="input-group-text">fecha de inicio</span>
           <input
@@ -64,9 +102,22 @@
             aria-describedby="job-start"
             name="start"
             [(ngModel)]="sJob.editjob.start"
-
+            required
+            #start="ngModel"
+            [ngClass]="{
+              'border-danger': start.errors && start.touched,
+              'border-good': !start.errors && start.touched
+            }"
           />
         </div>
+        <!-- logic ngmodel -->
+        <div *ngIf="start?.errors && start?.touched">
+          <p *ngIf="start?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
 
         <div class="input-group mb-3">
           <span class="input-group-text">fecha de finalizacion</span>
@@ -78,10 +129,22 @@
             aria-describedby="job-end"
             name="end"
             [(ngModel)]="sJob.editjob.end"
-
+            required
+            #end="ngModel"
+            [ngClass]="{
+              'border-danger': end.errors && end.touched,
+              'border-good': !end.errors && end.touched
+            }"
           />
         </div>
-
+        <!-- logic ngmodel -->
+        <div *ngIf="end?.errors && end?.touched">
+          <p *ngIf="end?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
 
         <!-- footer -->
         <div class="modal-footer">
@@ -97,6 +160,12 @@
             class="btn btn-primary"
             value="guardar cambios"
             (click)="refresh()"
+            [disabled]="
+              title?.hasError('required') ||
+              description?.hasError('required') ||
+              start?.hasError('required') ||
+              end?.hasError('required')
+            "
           />
         </div>
       </form>

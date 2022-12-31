@@ -24,10 +24,22 @@
             aria-describedby="skill-name"
             name="name"
             [(ngModel)]="sSkill.editskill.name"
-
+            required
+            #name="ngModel"
+            [ngClass]="{
+              'border-danger': name.errors && name.touched,
+              'border-good': !name.errors && name.touched
+            }"
           />
         </div>
-
+        <!-- logic ngmodel -->
+        <div *ngIf="name?.errors && name?.touched">
+          <p *ngIf="name?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
         <div class="input-group mb-3">
           <input
             type="number"
@@ -36,10 +48,25 @@
             placeholder="porcentaje de dominio de la habilidad"
             name="percentage"
             [(ngModel)]="sSkill.editskill.percentage"
-
+            required
+            max="100"
+            #percentage="ngModel"
+            [ngClass]="{
+              'border-danger': percentage.errors && percentage.touched,
+              'border-good': !percentage.errors && percentage.touched
+            }"
           />
           <span class="input-group-text">%</span>
         </div>
+        <!-- logic ngmodel -->
+        <div *ngIf="percentage?.errors && percentage?.touched">
+          <p *ngIf="percentage?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+          <div *ngIf="percentage.hasError('max')">Valor maximo: 100</div>
+        </div>
+        <br />
+        <!--  -->
 
         <!-- footer -->
         <div class="modal-footer">
@@ -55,6 +82,11 @@
             class="btn btn-primary"
             value="guardar cambios"
             (click)="refresh()"
+            [disabled]="
+              name?.hasError('required') ||
+              percentage?.hasError('required') ||
+              percentage?.hasError('max')
+            "
           />
         </div>
       </form>

@@ -24,10 +24,22 @@
             aria-describedby="social-url"
             name="url"
             [(ngModel)]="sSocial.editsocial.url"
-
+            required
+            #url="ngModel"
+            [ngClass]="{
+              'border-danger': url.errors && url.touched,
+              'border-good': !url.errors && url.touched
+            }"
           />
         </div>
-
+        <!-- logic ngmodel -->
+        <div *ngIf="url?.errors && url?.touched">
+          <p *ngIf="url?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
         <div class="input-group mb-3">
           <input
             type="text"
@@ -37,9 +49,22 @@
             aria-describedby="social-icon"
             name="icon"
             [(ngModel)]="sSocial.editsocial.icon"
-
+            required
+            #icon="ngModel"
+            [ngClass]="{
+              'border-danger': icon.errors && icon.touched,
+              'border-good': !icon.errors && icon.touched
+            }"
           />
         </div>
+        <!-- logic ngmodel -->
+        <div *ngIf="icon?.errors && icon?.touched">
+          <p *ngIf="icon?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
 
         <!-- footer -->
         <div class="modal-footer">
@@ -55,6 +80,7 @@
             class="btn btn-primary"
             value="guardar cambios"
             (click)="refresh()"
+            [disabled]="url?.hasError('required') || icon?.hasError('required')"
           />
         </div>
         <!--  -->

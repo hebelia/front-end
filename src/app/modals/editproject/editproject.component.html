@@ -25,9 +25,22 @@
             aria-describedby="project-url"
             name="url"
             [(ngModel)]="sProject.editproject.url"
-
+            required
+            #url="ngModel"
+            [ngClass]="{
+              'border-danger': url.errors && url.touched,
+              'border-good': !url.errors && url.touched
+            }"
           />
         </div>
+        <!-- logic ngmodel -->
+        <div *ngIf="url?.errors && url?.touched">
+          <p *ngIf="url?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
 
         <div class="input-group mb-3">
           <input
@@ -38,10 +51,22 @@
             aria-describedby="project-title"
             name="title"
             [(ngModel)]="sProject.editproject.title"
-
+            required
+            #title="ngModel"
+            [ngClass]="{
+              'border-danger': title.errors && title.touched,
+              'border-good': !title.errors && title.touched
+            }"
           />
         </div>
-
+        <!-- logic ngmodel -->
+        <div *ngIf="title?.errors && title?.touched">
+          <p *ngIf="title?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
 
         <div class="input-group">
           <span class="input-group-text">descripcion del proyecto</span>
@@ -50,10 +75,23 @@
             aria-label="With textarea"
             name="description"
             [(ngModel)]="sProject.editproject.description"
-
+            required
+            maxlength="1000"
+            #description="ngModel"
+            [ngClass]="{
+              'border-danger': description.errors && description.touched,
+              'border-good': !description.errors && description.touched
+            }"
           ></textarea>
         </div>
-
+        <!-- logic ngmodel -->
+        <div *ngIf="description?.errors && description?.touched">
+          <p *ngIf="description?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+          <div *ngIf="description.hasError('maxlength')">Mucho texto!!</div>
+        </div>
+        <br />
         <!--  -->
         <div class="input-group mb-3">
           <span class="input-group-text">fecha de inicio del proyecto</span>
@@ -65,9 +103,22 @@
             aria-describedby="project-start"
             name="start"
             [(ngModel)]="sProject.editproject.start"
-
+            required
+            #start="ngModel"
+            [ngClass]="{
+              'border-danger': start.errors && start.touched,
+              'border-good': !start.errors && start.touched
+            }"
           />
         </div>
+        <!-- logic ngmodel -->
+        <div *ngIf="start?.errors && start?.touched">
+          <p *ngIf="start?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
 
         <div class="input-group mb-3">
           <span class="input-group-text"
@@ -81,10 +132,22 @@
             aria-describedby="project-end"
             name="end"
             [(ngModel)]="sProject.editproject.end"
-
+            required
+            #end="ngModel"
+            [ngClass]="{
+              'border-danger': end.errors && end.touched,
+              'border-good': !end.errors && end.touched
+            }"
           />
         </div>
-
+        <!-- logic ngmodel -->
+        <div *ngIf="end?.errors && end?.touched">
+          <p *ngIf="end?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
 
         <!-- footer -->
         <div class="modal-footer">
@@ -100,6 +163,13 @@
             class="btn btn-primary"
             value="guardar cambios"
             (click)="refresh()"
+            [disabled]="
+            url?.hasError('required') ||
+            title?.hasError('required') ||
+            start?.hasError('required') ||
+            end?.hasError('required') ||
+            description?.hasError('required')
+          "
           />
         </div>
       </form>

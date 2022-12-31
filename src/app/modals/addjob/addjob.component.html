@@ -136,17 +136,17 @@
               type="button"
               class="btn btn-secondary"
               data-bs-dismiss="modal"
+              (click)="clear()"
+            >
+              cerrar
+            </button>
+            <input
               [disabled]="
                 Title?.hasError('required') ||
                 Description?.hasError('required') ||
                 Start?.hasError('required') ||
                 End?.hasError('required')
               "
-              (click)="clear()"
-            >
-              cerrar
-            </button>
-            <input
               type="submit"
               class="btn btn-primary"
               value="guardar cambios"

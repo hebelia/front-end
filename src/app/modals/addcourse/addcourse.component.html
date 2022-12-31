@@ -1,22 +1,23 @@
-
-  <div class="modal" tabindex="-1" id="addcourse">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <!-- header -->
-        <div class="modal-header">
-          <h3 class="modal-title">
-            &lt; ingrese nombre y datos del nuevo título &gt;
-          </h3>
-          <button
-            type="button"
-            class="btn-close btn-close-white"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-            (click)="clear()"
-          ></button>
-        </div>
-        <!-- body -->
-        <form [formGroup]="form" (ngSubmit)="onSubmit($event)" name="addcourse">
+<!-- I used reactive forms for the add feature -->
+<!-- whereas on the edit feature I used template driven forms because the use of formGroups and ngModel in the same tag is deprecated in my angular version -->
+<div class="modal" tabindex="-1" id="addcourse">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- header -->
+      <div class="modal-header">
+        <h3 class="modal-title">
+          &lt; ingrese nombre y datos del nuevo título &gt;
+        </h3>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          (click)="clear()"
+        ></button>
+      </div>
+      <!-- body -->
+      <form [formGroup]="form" (ngSubmit)="onSubmit($event)" name="addcourse">
         <div class="input-group mb-3">
           <input
             type="text"
@@ -122,15 +123,15 @@
             class="btn btn-primary"
             value="guardar cambios"
             [disabled]="
-            Title?.hasError('required') ||
-            Institution?.hasError('required') ||
-            Start?.hasError('required') ||
-            End?.hasError('required')"
+              Title?.hasError('required') ||
+              Institution?.hasError('required') ||
+              Start?.hasError('required') ||
+              End?.hasError('required')
+            "
             (click)="refresh()"
           />
         </div>
       </form>
-      </div>
     </div>
   </div>
-
+</div>

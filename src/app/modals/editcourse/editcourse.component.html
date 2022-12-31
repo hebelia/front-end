@@ -1,21 +1,20 @@
-
-  <div class="modal" tabindex="-1" id="editcourse">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <!-- header -->
-        <div class="modal-header">
-          <h3 class="modal-title">
-            &lt; ingrese nombre y datos del título &gt;
-          </h3>
-          <button
-            type="button"
-            class="btn-close btn-close-white"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-        <!-- body -->
-        <form (ngSubmit)="onSubmit($event)"  #form="ngForm" name="editcourse">
+<!-- I used reactive forms for the add feature -->
+<!-- whereas on the edit feature I used template driven forms because the use of formGroups and ngModel in the same tag is deprecated in my angular version -->
+<div class="modal" tabindex="-1" id="editcourse">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- header -->
+      <div class="modal-header">
+        <h3 class="modal-title">&lt; ingrese nombre y datos del título &gt;</h3>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <!-- body -->
+      <form (ngSubmit)="onSubmit($event)" #form="ngForm" name="editcourse">
         <!-- <input type="hidden" formControlName="id" id="id" [ngModel]="cou.id" /> -->
         <div class="input-group mb-3">
           <input
@@ -26,9 +25,22 @@
             aria-describedby="course-title"
             name="title"
             [(ngModel)]="sCourse.editcourse.title"
-
+            required
+            #title="ngModel"
+            [ngClass]="{
+              'border-danger': title.errors && title.touched,
+              'border-good': !title.errors && title.touched
+            }"
           />
         </div>
+        <!-- logic ngmodel -->
+        <div *ngIf="title?.errors && title?.touched">
+          <p *ngIf="title?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
 
         <div class="input-group mb-3">
           <input
@@ -39,9 +51,22 @@
             aria-describedby="course-institution"
             name="institution"
             [(ngModel)]="sCourse.editcourse.institution"
-
+            required
+            #institution="ngModel"
+            [ngClass]="{
+              'border-danger': institution.errors && institution.touched,
+              'border-good': !institution.errors && institution.touched
+            }"
           />
         </div>
+        <!-- logic ngmodel -->
+        <div *ngIf="institution?.errors && institution?.touched">
+          <p *ngIf="institution?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
 
         <div class="input-group mb-3">
           <span class="input-group-text">fecha de inicio</span>
@@ -53,9 +78,22 @@
             aria-describedby="course-start"
             name="start"
             [(ngModel)]="sCourse.editcourse.start"
-
+            required
+            #start="ngModel"
+            [ngClass]="{
+              'border-danger': start.errors && start.touched,
+              'border-good': !start.errors && start.touched
+            }"
           />
         </div>
+        <!-- logic ngmodel -->
+        <div *ngIf="start?.errors && start?.touched">
+          <p *ngIf="start?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
 
         <div class="input-group mb-3">
           <span class="input-group-text">fecha de finalizacion </span>
@@ -67,9 +105,22 @@
             aria-describedby="course-end"
             name="end"
             [(ngModel)]="sCourse.editcourse.end"
-
+            required
+            #end="ngModel"
+            [ngClass]="{
+              'border-danger': end.errors && end.touched,
+              'border-good': !end.errors && end.touched
+            }"
           />
         </div>
+        <!-- logic ngmodel -->
+        <div *ngIf="end?.errors && end?.touched">
+          <p *ngIf="end?.hasError('required')" class="error">
+            El dato es requerido.
+          </p>
+        </div>
+        <br />
+        <!--  -->
 
         <!-- footer -->
         <div class="modal-footer">
@@ -85,10 +136,15 @@
             class="btn btn-primary"
             value="guardar cambios"
             (click)="refresh()"
+            [disabled]="
+              title?.hasError('required') ||
+              institution?.hasError('required') ||
+              start?.hasError('required') ||
+              end?.hasError('required')
+            "
           />
         </div>
       </form>
-      </div>
     </div>
   </div>
-
+</div>

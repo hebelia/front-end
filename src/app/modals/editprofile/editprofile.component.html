@@ -24,9 +24,22 @@
               aria-describedby="profile-name"
               name="fullname"
               [(ngModel)]="sPerson.editprofile.fullname"
-
+              required
+              #fullname="ngModel"
+              [ngClass]="{
+                'border-danger': fullname.errors && fullname.touched,
+                'border-good': !fullname.errors && fullname.touched
+              }"
             />
           </div>
+          <!-- logic ngmodel -->
+          <div *ngIf="fullname?.errors && fullname?.touched">
+            <p *ngIf="fullname?.hasError('required')" class="error">
+              El dato es requerido.
+            </p>
+          </div>
+          <br />
+          <!--  -->
 
           <!-- title/occupation -->
           <div class="input-group mb-3">
@@ -38,22 +51,49 @@
               aria-describedby="profile-title"
               name="title"
               [(ngModel)]="sPerson.editprofile.title"
-
+              required
+              #title="ngModel"
+              [ngClass]="{
+                'border-danger': title.errors && title.touched,
+                'border-good': !title.errors && title.touched
+              }"
             />
           </div>
+          <!-- logic ngmodel -->
+          <div *ngIf="title?.errors && title?.touched">
+            <p *ngIf="title?.hasError('required')" class="error">
+              El dato es requerido.
+            </p>
+          </div>
+          <br />
+          <!--  -->
 
           <div class="input-group mb-3">
             <span class="input-group-text">imagen de perfil ⊳</span>
             <input
-              type="file"
+              type="text"
               class="form-control"
-              id="inputGroupPfp"
+              placeholder="url de la imagen de perfil"
+              aria-label="profile-pfp"
+              aria-describedby="profile-pfp"
               name="pfp"
               [(ngModel)]="sPerson.editprofile.pfp"
-
+              required
+              #pfp="ngModel"
+              [ngClass]="{
+                'border-danger': pfp.errors && pfp.touched,
+                'border-good': !pfp.errors && pfp.touched
+              }"
             />
           </div>
-
+          <!-- logic ngmodel -->
+          <div *ngIf="pfp?.errors && pfp?.touched">
+            <p *ngIf="pfp?.hasError('required')" class="error">
+              El dato es requerido.
+            </p>
+          </div>
+          <br />
+          <!--  -->
           <!-- about -->
           <div class="input-group mb-3">
             <span class="input-group-text">sobre mi ⊳</span>
@@ -62,10 +102,23 @@
               aria-label="With textarea"
               name="about"
               [(ngModel)]="sPerson.editprofile.about"
-
+              required
+              maxlength="1000"
+              #about="ngModel"
+              [ngClass]="{
+                'border-danger': about.errors && about.touched,
+                'border-good': !about.errors && about.touched
+              }"
             ></textarea>
           </div>
-          
+          <!-- logic ngmodel -->
+          <div *ngIf="about?.errors && about?.touched">
+            <p *ngIf="about?.hasError('required')" class="error">
+              El dato es requerido.
+            </p>
+          </div>
+          <br />
+          <!--  -->
 
           <!-- banner -->
           <div class="input-group mb-3">
@@ -73,15 +126,29 @@
               >portada ⊳</label
             >
             <input
-              type="file"
+              type="text"
               class="form-control"
-              id="inputGroupBanner"
+              placeholder="url del banner"
+              aria-label="banner"
+              aria-describedby="banner"
               name="banner"
               [(ngModel)]="sPerson.editprofile.banner"
-
+              required
+              #banner="ngModel"
+              [ngClass]="{
+                'border-danger': banner.errors && banner.touched,
+                'border-good': !banner.errors && banner.touched
+              }"
             />
           </div>
-
+          <!-- logic ngmodel -->
+          <div *ngIf="banner?.errors && banner?.touched">
+            <p *ngIf="banner?.hasError('required')" class="error">
+              El dato es requerido.
+            </p>
+          </div>
+          <br />
+          <!--  -->
 
           <!-- license  -->
 
@@ -94,10 +161,22 @@
               aria-describedby="license"
               name="license"
               [(ngModel)]="sPerson.editprofile.license"
-
+              required
+              #license="ngModel"
+              [ngClass]="{
+                'border-danger': license.errors && license.touched,
+                'border-good': !license.errors && license.touched
+              }"
             />
           </div>
-
+          <!-- logic ngmodel -->
+          <div *ngIf="license?.errors && license?.touched">
+            <p *ngIf="license?.hasError('required')" class="error">
+              El dato es requerido.
+            </p>
+          </div>
+          <br />
+          <!--  -->
 
           <!-- footer -->
           <div class="modal-footer">
@@ -113,6 +192,14 @@
               class="btn btn-primary"
               value="guardar cambios"
               (click)="refresh()"
+              [disabled]="
+                fullname?.hasError('required') ||
+                title?.hasError('required') ||
+                pfp?.hasError('required') ||
+                about?.hasError('required') ||
+                banner?.hasError('required') ||
+                license?.hasError('required')
+              "
             />
           </div>
         </form>

@@ -40,11 +40,11 @@ export class AddcourseComponent implements OnInit {
   }
 
   onSubmit(event: Event) {
-    // detiene la propagacion o ejecucion del submit
+    // stops the propagation or execution of the submit
     event.preventDefault;
     if (this.form.valid) {
-      // llamar al servicio para enviar datos al server
-      // logica extra
+      // call service to send data to server
+      // extra logic
       this.onCreate();
       alert('El formulario ha sido enviado con exito!');
     } else {
