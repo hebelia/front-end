@@ -1,6 +1,8 @@
 <nav id="return" class="navbar navbar-expand-lg bg-transparent">
   <div class="container-fluid justify-content-center">
-    <a><img class="logo" src="assets/img/logo.png" alt="logoArgProg" /></a>
+    <div>
+      <a><img class="logo" src="assets/img/logo.png" alt="logoArgProg" /></a>
+    </div>
     <button
       class="navbar-toggler"
       type="button"
@@ -15,16 +17,16 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <div class="flex-container justify-content-center flex-row-reverse">
         <!-- login button component -->
-
         <!-- make it appear and disappear -->
-        <!-- <app-login *ngIf="!visible"></app-login>
-        <app-logout *ngIf="visible"></app-logout> -->
 
-        <app-login></app-login>
-        <app-logout></app-logout>
+        <app-login *ngIf="!isLogged"></app-login>
+        <app-logout *ngIf="isLogged"></app-logout>
         <!-- social links -->
         <app-socials></app-socials>
-
+        <!-- edit mode on/off visualiser -->
+        <div class="column pt-3 m-1" *ngIf="isLogged">
+          <span> &lt; sesion de administrador &gt; </span>
+        </div>
         <!-- fin socials -->
       </div>
     </div>

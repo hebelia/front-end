@@ -1,7 +1,7 @@
 <!-- I used reactive forms for the add feature -->
 <!-- whereas on the edit feature I used template driven forms because the use of formGroups and ngModel in the same tag is deprecated in my angular version -->
 <div class="modal" tabindex="-1" id="editcourse">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <!-- header -->
       <div class="modal-header">
@@ -131,7 +131,7 @@
           >
             cerrar
           </button>
-          <input
+          <button
             type="submit"
             class="btn btn-primary"
             value="guardar cambios"
@@ -142,7 +142,7 @@
               start?.hasError('required') ||
               end?.hasError('required')
             "
-          />
+          >guardar cambios</button>
         </div>
       </form>
     </div>

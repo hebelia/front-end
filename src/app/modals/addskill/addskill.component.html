@@ -1,5 +1,5 @@
 <div class="modal" tabindex="-1" id="addskill">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <!-- header -->
       <div class="modal-header">
@@ -73,7 +73,7 @@
           >
             cerrar
           </button>
-          <input
+          <button
             type="submit"
             class="btn btn-primary"
             value="guardar cambios"
@@ -83,7 +83,7 @@
               Percentage?.hasError('max')
             "
             (click)="refresh()"
-          />
+          >guardar cambios</button>
         </div>
       </form>
     </div>

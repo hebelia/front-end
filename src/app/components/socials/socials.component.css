@@ -11,5 +11,10 @@
     display: flex;
 
 }
-
+.social{
+    margin:0.5em;
+}
+.edit-btn{
+    margin:none;
+}
 

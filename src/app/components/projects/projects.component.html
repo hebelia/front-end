@@ -3,6 +3,7 @@
     <strong> &lt; mis proyectos &gt; </strong>
     <!-- add button -->
     <button
+      *ngIf="isLogged"
       type="button"
       class="btn add-btn btn-primary"
       data-bs-toggle="modal"
@@ -24,8 +25,8 @@
         </h2>
 
         <!-- modal -->
-        <!-- agregar *ngIf con funcion para cambiar visibilidad si esta logeado -->
-        <div class="col-1 admin-btn">
+        <!-- changes visibility -->
+        <div class="col-1 admin-btn" *ngIf="isLogged">
           <!-- edit -modal trigger button -->
           <button
             type="button"
@@ -34,14 +35,9 @@
             data-bs-target="#editproject"
             (click)="viewProject(project.id)"
           >
-            <!-- (click)="idEdit(project.id)" -->
-
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <i class="fa-solid fa-pencil"></i>
           </button>
-
           <!--delete trigger button -->
-          <!-- agregar *ngIf con funcion para cambiar visibilidad si esta logeado -->
-
           <button
             type="submit"
             class="btn del-btn"

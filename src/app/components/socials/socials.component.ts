@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Social } from 'src/app/model/social';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 import { SocialService } from 'src/app/services/social.service';
 @Component({
   selector: 'app-socials',
@@ -7,11 +8,11 @@ import { SocialService } from 'src/app/services/social.service';
   styleUrls: ['./socials.component.css'],
 })
 export class SocialsComponent implements OnInit {
-  show: boolean = false;
+  isLogged: boolean;
 
   socials: Social[] = [];
 
-  constructor(private sSocial: SocialService) {}
+  constructor(private sSocial: SocialService, private auth: AuthenticationService) {}
   // methods -> services
   list(): void {
     this.sSocial.list().subscribe((info) => {
@@ -39,12 +40,20 @@ export class SocialsComponent implements OnInit {
       })
     }
 
+  // ngOnInit(): void {
+  //   this.list();
+  // }
+
   ngOnInit(): void {
     this.list();
+    // method to hide and show the login button
+    if(sessionStorage.getItem('currentUser')=="null")
+      { this.isLogged = false; }
+    else if(sessionStorage.getItem('currentUser')==null)
+      { this.isLogged = false; }
+    else 
+      { this.isLogged = true; }
   }
-  // funcion para que se muestre o se esconda
-  // la funcion no retorna nada por el :void
-  // visible():void{
-  //   this.show=!this.show;
-  //    }
+
 }
+

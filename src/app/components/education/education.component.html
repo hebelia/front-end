@@ -2,7 +2,7 @@
   <h2 class="section__title section__title--education">
     <strong> &lt; formación académica &gt; </strong>
     <!-- add button -->
-    <button
+    <button *ngIf="isLogged"
       type="button"
       class="btn add-btn btn-primary"
       data-bs-toggle="modal"
@@ -27,7 +27,7 @@
 
         <div class="date-buttons">
           <p class="project__date">{{ course.start | date:"dd-MM-yyy"}} / {{ course.end | date:"dd-MM-yyy" }}</p>
-          <div class="col-1 admin-btn">
+          <div class="col-1 admin-btn" *ngIf="isLogged">
             <!-- edit -modal trigger button -->
             <button
               (click)="viewCourse(course.id)"
@@ -36,7 +36,7 @@
               data-bs-toggle="modal"
               data-bs-target="#editcourse"
             >
-              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              <i class="fa-solid fa-pencil"></i>
             </button>
     
             <!--del- modal trigger button -->

@@ -1,6 +1,6 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit($event)">
   <div class="modal" tabindex="-1" id="addjob">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <!-- header -->
         <div class="modal-header">
@@ -140,7 +140,7 @@
             >
               cerrar
             </button>
-            <input
+            <button
               [disabled]="
                 Title?.hasError('required') ||
                 Description?.hasError('required') ||
@@ -151,7 +151,7 @@
               class="btn btn-primary"
               value="guardar cambios"
               (click)="refresh()"
-            />
+            >guardar cambios</button>
           </div>
         </form>
       </div>

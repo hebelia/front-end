@@ -3,6 +3,7 @@
     <strong> &lt; experiencia &gt; </strong>
     <!-- add button -->
     <button
+      *ngIf="isLogged"
       type="button"
       class="btn add-btn btn-primary"
       data-bs-toggle="modal"
@@ -27,7 +28,7 @@
             {{ job.start | date : "dd-MM-yyy" }} /
             {{ job.end | date : "dd-MM-yyy" }}
           </p>
-          <div class="col-1 admin-btn">
+          <div class="col-1 admin-btn" *ngIf="isLogged">
             <!-- edit -modal trigger button -->
             <button
               type="button"
@@ -36,7 +37,7 @@
               data-bs-target="#editjob"
               (click)="viewJob(job.id)"
             >
-              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              <i class="fa-solid fa-pencil"></i>
             </button>
 
             <!--del- modal trigger button -->

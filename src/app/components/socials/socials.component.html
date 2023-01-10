@@ -15,15 +15,15 @@
     </button>
 
     <!-- modal edit add and delete -->
-    <button
+    <button *ngIf="isLogged"
       type="button"
       class="btn edit-btn btn-primary"
       data-bs-toggle="modal"
       data-bs-target="#editsocial"
       (click)="viewSocial(social.id)"
     >
-      <i class="fa-solid fa-wand-magic-sparkles"></i>
+      <i class="fa-solid fa-pencil"></i>
     </button>
-    <app-editsocial></app-editsocial>
+    <app-editsocial *ngIf="isLogged"></app-editsocial>
   </div>
 </div>

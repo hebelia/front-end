@@ -48,14 +48,11 @@
   display: flex;
   flex-grow: 1;
   margin: 1rem;
-  padding: 0.5em 1em;
+  padding: 1em;
   flex-direction: column;
   max-width: var(--default);
-
-  /* review */
   border-style: var(--border);
   border-color: white;
-
   border-left: none;
   border-bottom: none;
 }

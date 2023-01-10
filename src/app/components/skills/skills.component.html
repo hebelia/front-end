@@ -2,7 +2,7 @@
   <h2 class="section__title section__title--skills">
     <strong> &lt; mis habilidades &gt; </strong>
     <!-- add button -->
-    <button
+    <button *ngIf="isLogged"
       type="button"
       class="btn add-btn btn-primary"
       data-bs-toggle="modal"
@@ -26,7 +26,8 @@
           [innerStrokeColor]="'#fff'"
           [animation]="true"
           [title]="skill.name"
-          [animationDuration]="1500"
+          [animateTitle]="true"
+          [animationDuration]="1000"
           [titleColor]="'#fff'"
           [subtitleColor]="'#fff'"
           [animateSubtitle]="true"
@@ -35,7 +36,7 @@
       </div>
 
       <!-- modal -->
-      <div class="col-1 admin-btn">
+      <div class="admin-btn" *ngIf="isLogged">
         <!-- edit -modal trigger button -->
         <button
           type="button"
@@ -44,7 +45,7 @@
           data-bs-target="#editskill"
           (click)="viewSkill(skill.id)"
         >
-          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <i class="fa-solid fa-pencil"></i>
         </button>
 
         <!--del- modal trigger button -->

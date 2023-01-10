@@ -9,6 +9,7 @@ import { CourseService } from 'src/app/services/course.service';
 })
 export class EducationComponent implements OnInit {
   education: Course[] = [];
+  isLogged: boolean;
 
   constructor(private sCourse: CourseService) {}
   // methods -> services
@@ -33,12 +34,20 @@ export class EducationComponent implements OnInit {
   }
   // method to obtain a specific id and send the information on that id to the edit modal
   viewCourse(id: number) {
-    this.sCourse.viewCourse(id).subscribe(info => {
+    this.sCourse.viewCourse(id).subscribe((info) => {
       this.sCourse.editcourse = info;
-    })
+    });
   }
 
   ngOnInit(): void {
     this.list();
+    // method to hide and show the login button
+    if (sessionStorage.getItem('currentUser') == 'null') {
+      this.isLogged = false;
+    } else if (sessionStorage.getItem('currentUser') == null) {
+      this.isLogged = false;
+    } else {
+      this.isLogged = true;
+    }
   }
 }

@@ -1,25 +1,28 @@
-import{Component, OnInit} from '@angular/core';
-
-import { ServiceService } from 'src/app/services/service.service';
+import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
-export class LoginComponent implements OnInit{
-  show: boolean =false;
+export class LoginComponent implements OnInit {
 
-  ngOnInit():void {
-    // completar
+  isLogged: boolean;
+
+  constructor(
+    private auth: AuthenticationService
+  ) {}
+
+  ngOnInit(): void {
+    // method to hide and show the login button
+    if(sessionStorage.getItem('currentUser')=="null")
+      { this.isLogged = false; }
+    else if(sessionStorage.getItem('currentUser')==null)
+      { this.isLogged = false; }
+    else 
+      { this.isLogged = true; }
   }
-
-  
-    // funcion para que se muestre o se esconda
-  // la funcion no retorna nada por el :void
-  visible():void{
-    this.show=!this.show;
-     }
 
 }

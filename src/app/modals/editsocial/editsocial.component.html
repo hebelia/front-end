@@ -1,11 +1,9 @@
 <div class="modal" tabindex="-1" id="editsocial">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <!-- header -->
       <div class="modal-header">
-        <h3 class="modal-title">
-          &lt; ingrese el url e icono de la red social &gt;
-        </h3>
+        <h3 class="modal-title">&lt; editar red &gt;</h3>
         <button
           type="button"
           class="btn-close btn-close-white"
@@ -75,13 +73,15 @@
           >
             cerrar
           </button>
-          <input
+          <button
             type="submit"
             class="btn btn-primary"
             value="guardar cambios"
             (click)="refresh()"
             [disabled]="url?.hasError('required') || icon?.hasError('required')"
-          />
+          >
+            guardar cambios
+          </button>
         </div>
         <!--  -->
       </form>

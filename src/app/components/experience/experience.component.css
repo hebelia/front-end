@@ -1,3 +1,4 @@
+
 .job {
   padding: 1em;
   margin: 2%;
@@ -14,7 +15,6 @@
   justify-content: center;
   padding: 1em;
   display: flex;
-  flex-grow: 1;
   flex-direction: row;
 
   transition: 1s;

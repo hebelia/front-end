@@ -1,23 +1,35 @@
-import{Component, OnInit} from '@angular/core';
-
-import { ServiceService } from 'src/app/services/service.service';
-
+import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
   selector: 'app-logout',
   templateUrl: './logout.component.html',
-  styleUrls: ['./logout.component.css']
+  styleUrls: ['./logout.component.css'],
 })
-export class LogoutComponent implements OnInit{
-  show: boolean =false;
+export class LogoutComponent implements OnInit {
 
-  ngOnInit():void {
-    // completar
+  isLogged: boolean;
+
+  constructor(
+    private auth: AuthenticationService
+  ) {}
+
+  ngOnInit(): void {
+    // method to hide and show the login button
+    if(sessionStorage.getItem('currentUser')=="null")
+      { this.isLogged = false; }
+    else if(sessionStorage.getItem('currentUser')==null)
+      { this.isLogged = false; }
+    else 
+      { this.isLogged = true; }
   }
-    // funcion para que se muestre o se esconda
-  // la funcion no retorna nada por el :void
-  visible():void{
-    this.show=!this.show;
-     }
-  
+
+  logOut(){
+    sessionStorage.setItem('currentUser',"null");
+    this.isLogged = false;
+    alert("Sesion finalizada");
+    window.location.reload();
+    return this.isLogged;
+  }
+
 }

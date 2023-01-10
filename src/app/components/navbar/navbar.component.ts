@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Social } from 'src/app/model/social';
+import { AuthenticationService } from 'src/app/services/authentication.service';
+
 
 
 
@@ -11,11 +12,21 @@ import { Social } from 'src/app/model/social';
 
  export class NavbarComponent implements OnInit{
 
-  socials:Social[]=[]
+  isLogged: boolean;
+
+  constructor(
+    private auth: AuthenticationService
+  ) {}
 
   ngOnInit(): void {
-
+    // method to hide and show the login button
+    if(sessionStorage.getItem('currentUser')=="null")
+      { this.isLogged = false; }
+    else if(sessionStorage.getItem('currentUser')==null)
+      { this.isLogged = false; }
+    else 
+      { this.isLogged = true; }
   }
 
- }
+}
 

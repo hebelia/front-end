@@ -29,9 +29,12 @@
 
   --default: 100%;
   --border: none;
-  /* crear variables nuevas para tamaño de margen segun tamaño de la pantalla */
+  --pad: 0.5em;
+  --d: column;
+  --fg: none;
+  --maxwidth: 165px;
 }
-/* review */
+
 @media (min-width: 965px) {
   :root {
     /* --fs-h1: 3.5rem;
@@ -41,10 +44,32 @@
 
     --default: 50%;
     --border: solid;
+    --pad: 10%;
+    --d: row;
+    --fg: 1;
+    --maxwidth: 250px;
   }
 }
 
 /* general styles */
+
+section #about,
+.experience,
+.education,
+.skills,
+.projects {
+  padding-left: var(--pad);
+  padding-right: var(--pad);
+}
+
+section #about,
+#experience,
+#education,
+#skills,
+#projects {
+  padding-left: var(--pad);
+  padding-right: var(--pad);
+}
 
 body {
   background-color: var(--clr-dark);
@@ -162,6 +187,7 @@ a i:hover {
   padding: 1rem;
   width: 5%;
   height: 0.1rem;
+  max-width: 32px;
   font-style: italic;
   color: rgb(255, 255, 255);
   box-shadow: #fff;
@@ -191,15 +217,15 @@ a i:hover {
 .btn-close {
   color: var(--clr-light);
 }
-button[disabled]:active, button[disabled],
+button[disabled]:active,
+button[disabled],
 input[type="button"][disabled]:active,
 input[type="button"][disabled],
 input[type="submit"][disabled]:active,
-input[type="submit"][disabled] ,
+input[type="submit"][disabled],
 button[disabled]:hover,
 input[type="button"][disabled]:hover,
-input[type="submit"][disabled]:hover
-{
+input[type="submit"][disabled]:hover {
   border: 2px outset ButtonFace;
   color: GrayText;
   cursor: inherit;
@@ -256,18 +282,73 @@ h3 {
 /* modals */
 
 .modal-content {
+  position: center;
   padding: 1em;
   border-width: 0.1%;
-
+  border-radius: 2em;
   border-color: transparent;
   background-color: var(--clr-dark);
+}
+.modal-header {
+  margin-bottom: 1em;
+}
+.modal-title {
+  text-align: center;
 }
 .modal-header,
 .modal-footer {
   border: none;
 }
+.modal-content {
+  background-color: #2a2b38;
+}
+input {
+  background-color: var(--clr-dark);
+}
+input:hover,
+textarea:hover {
+  -webkit-box-shadow: inset 1px 1px 40px 1px #121212;
+  box-shadow: inset 1px 1px 40px 1px #121212;
+}
 
-/* project-date is used for all dates in every category */
+.form-group {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.form-control {
+  padding: 13px 20px;
+  height: 48px;
+  width: 100%;
+  font-weight: 500;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  outline: none;
+  color: var(--clr-light);
+  background-color: #1f2029;
+  border: none;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  box-shadow: 0 4px 8px 0 rgba(21, 21, 21, 0.2);
+}
+.form-control:focus,
+.form-control:active {
+  color: var(--clr-light);
+  background-color: #1f2029;
+  outline: none;
+  box-shadow: 0 4px 8px 0 rgba(21, 21, 21, 0.2);
+}
+.input-group-text {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  border: none;
+}
+/* ********* */
+
+/* project-date is used for all dates in many categories */
 .project__date {
   display: flex;
   flex-direction: row-reverse;
@@ -280,7 +361,7 @@ h3 {
 .my-education__footer,
 .my-skills__footer,
 .my-projects__footer {
-  padding: 2em;
+  padding: 1em;
   display: flex;
   flex-direction: row-reverse;
 
@@ -291,10 +372,12 @@ h3 {
 }
 
 .border-danger {
+  border: solid;
   border-width: 2px;
   border-color: rgb(160, 57, 57);
 }
 .border-good {
+  border: solid;
   border-width: 2px;
-  border-color: rgb(1, 160, 1);
+  border-color: rgb(61, 132, 61);
 }

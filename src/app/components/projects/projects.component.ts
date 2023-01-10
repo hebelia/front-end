@@ -15,14 +15,17 @@ export class ProjectsComponent implements OnInit {
   constructor(private sProject: ProjectService) {}
 
   // methods -> services
+  isLogged: boolean;
   ngOnInit(): void {
     this.list();
-
-    // if(this.tokenService.getToken())
-    //   { this.isLogged = true; }
-    // else
-    //   { this,isLogged = false; }
-    // }
+    // method to hide and show the login button
+    if (sessionStorage.getItem('currentUser') == 'null') {
+      this.isLogged = false;
+    } else if (sessionStorage.getItem('currentUser') == null) {
+      this.isLogged = false;
+    } else {
+      this.isLogged = true;
+    }
   }
 
   list(): void {

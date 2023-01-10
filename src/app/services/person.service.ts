@@ -18,6 +18,8 @@ export class PersonService {
     about: '',
     banner: '',
     license: '',
+    email: '',
+    password: '',
   };
   constructor(private httpClient: HttpClient) {}
 
@@ -25,7 +27,7 @@ export class PersonService {
     return this.httpClient.get<Person[]>(this.url + 'list');
   }
 
-  public viewPerson(id: number){
+  public viewPerson(id: number) {
     // dynamic data `...` IMP!!!
     return this.httpClient.get<Person>(this.url + `view/${id}`);
   }
@@ -43,4 +45,6 @@ export class PersonService {
   public updatePersonById(id: number, person: Person): Observable<any> {
     return this.httpClient.put<any>(this.url + `edit/${id}`, person);
   }
+  // authorization method
+  // public login()
 }

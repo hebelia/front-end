@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 // services
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-// created components imports 
+// created components imports
 import { AppComponent } from './app.component';
 import { IndexComponent } from './components/index/index.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -30,22 +30,19 @@ import { EditcourseComponent } from './modals/editcourse/editcourse.component';
 import { EditjobComponent } from './modals/editjob/editjob.component';
 import { AddjobComponent } from './modals/addjob/addjob.component';
 import { AddskillComponent } from './modals/addskill/addskill.component';
-import { LogComponent } from './modals/log/log.component';
-import { RegisterComponent } from './modals/register/register.component';
 import { AddcourseComponent } from './modals/addcourse/addcourse.component';
 import { AddprojectComponent } from './modals/addproject/addproject.component';
 import { SocialsComponent } from './components/socials/socials.component';
 import { EditsocialComponent } from './modals/editsocial/editsocial.component';
 import { EditprofileComponent } from './modals/editprofile/editprofile.component';
 import { DeleteComponent } from './modals/delete/delete.component';
-
-
+import { InterceptorService } from './services/interceptor.service';
+import { PersonService } from './services/person.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-
-    // imported components
+    //components
     IndexComponent,
     NavbarComponent,
     NavigationComponent,
@@ -68,8 +65,6 @@ import { DeleteComponent } from './modals/delete/delete.component';
     EditjobComponent,
     AddjobComponent,
     AddskillComponent,
-    LogComponent,
-    RegisterComponent,
     AddcourseComponent,
     AddprojectComponent,
     SocialsComponent,
@@ -77,37 +72,39 @@ import { DeleteComponent } from './modals/delete/delete.component';
     EditprofileComponent,
   ],
 
-
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-
     NgCircleProgressModule.forRoot({
-      "backgroundPadding": 2,
-      "radius": 38,
-      "space": -2,
-      "maxPercent": 100,
-      "unitsColor": "#919191",
-      "outerStrokeWidth": 2,
-      "outerStrokeColor": "#009188",
-      "innerStrokeColor": "#f3f4f7",
-      "innerStrokeWidth": 2,
-      
-      "titleColor": "#ffffff",
-      "subtitleColor": "#ffffff",
-      "subtitleFontSize": "20",
-      "animationDuration": 300,
-      "showSubtitle": false,
-      "showUnits": false,
-      "showBackground": false,
-      "clockwise": false,
-      "responsive": true})
+      backgroundPadding: 2,
+      radius: 38,
+      space: -2,
+      maxPercent: 100,
+      unitsColor: '#919191',
+      outerStrokeWidth: 2,
+      outerStrokeColor: '#009188',
+      innerStrokeColor: '#f3f4f7',
+      innerStrokeWidth: 2,
+
+      titleColor: '#ffffff',
+      subtitleColor: '#ffffff',
+      subtitleFontSize: '20',
+      animationDuration: 300,
+      showSubtitle: false,
+      showUnits: false,
+      showBackground: false,
+      clockwise: false,
+      responsive: true,
+    }),
   ],
-  
-  providers: [],
-  bootstrap: [AppComponent]
+
+  providers: [
+    PersonService,
+    { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

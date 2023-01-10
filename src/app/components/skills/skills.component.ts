@@ -36,8 +36,16 @@ export class SkillsComponent implements OnInit {
         this.sSkill.editskill = info;
       })
     }
-
-  ngOnInit(): void {
-    this.list();
-  }
+    isLogged: boolean;
+    ngOnInit(): void {
+      this.list();
+      // method to hide and show the login button
+      if (sessionStorage.getItem('currentUser') == 'null') {
+        this.isLogged = false;
+      } else if (sessionStorage.getItem('currentUser') == null) {
+        this.isLogged = false;
+      } else {
+        this.isLogged = true;
+      }
+    }
 }
