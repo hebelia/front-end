@@ -7,7 +7,7 @@ import { Social } from '../model/social';
   providedIn: 'root',
 })
 export class SocialService {
-  url = 'http://localhost:8080/social/';
+  url = 'https://backend-zgct.onrender.com/social/';
 
   editsocial: Social = {
     id: null,

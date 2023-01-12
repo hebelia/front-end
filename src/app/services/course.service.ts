@@ -8,7 +8,7 @@ import { Course } from '../model/course';
   providedIn: 'root',
 })
 export class CourseService {
-  url = 'http://localhost:8080/course/';
+  url = 'https://backend-zgct.onrender.com/course/';
   
 
   editcourse: Course = {

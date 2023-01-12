@@ -7,7 +7,7 @@ import { Job } from '../model/job';
   providedIn: 'root',
 })
 export class JobService {
-  url = 'http://localhost:8080/job/';
+  url = 'https://backend-zgct.onrender.com/job/';
 
   editjob: Job = {
     id: null,

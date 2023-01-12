@@ -6,7 +6,7 @@ import { Project } from '../model/project';
   providedIn: 'root',
 })
 export class ProjectService {
-  url = 'http://localhost:8080/project/';
+  url = 'https://backend-zgct.onrender.com/project/';
 
   editproject: Project = {
     id: null,
