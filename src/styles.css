@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also impot other style files */
 
 @import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
 
@@ -22,19 +22,19 @@
   --clr-dark: #1f2029;
   --clr-accent: #009188;
 
-  --fs-h1: 2.75rem;
-  --fs-h2: 2.25rem;
-  --fs-h3: 1.25rem;
-  --fs-body: 1rem;
+  --fs-h1: 2.25rem;
+  --fs-h2: 1.75rem;
+  --fs-h3: 1rem;
+  --fs-body: 0.8rem;
 
   --default: 100%;
   --border: none;
-  --pad: 0.5em;
+  --pad: 0.8em;
   --d: column;
   --fg: none;
   --maxwidth: 165px;
 }
-
+/* Global variables that change depending on the screen size */
 @media (min-width: 965px) {
   :root {
     /* --fs-h1: 3.5rem;
@@ -42,18 +42,30 @@
     --fs-h3:1.5rem;
     --fs-body:1.25rem; */
 
+    /* font size */
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    /* introduction left and right size */
     --default: 50%;
+    /* border for introduction left and right */
     --border: solid;
+    /* padding in all sections*/
     --pad: 10%;
+    /* display change from column to row */
     --d: row;
+    /*  */
     --fg: 1;
+    /* max width depending on screen size */
     --maxwidth: 250px;
   }
 }
 
 /* general styles */
 
-section #about,
+.about-me,
 .experience,
 .education,
 .skills,
