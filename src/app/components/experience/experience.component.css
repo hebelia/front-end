@@ -42,8 +42,7 @@ h3 {
   text-align: center;
   padding: 0.5em;
 }
-h3 i {
-
+.job h3 i {
   margin-bottom: 5%;
   color: var(--clr-accent);
 }

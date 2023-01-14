@@ -17,4 +17,9 @@
 .edit-btn{
     margin:none;
 }
-
+i .fa-brands{
+    max-width: 20px;
+}
+button.btn.btn-primary.social, button{
+    padding: none;
+}

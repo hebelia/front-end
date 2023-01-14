@@ -1,21 +1,22 @@
 <div class="socials">
   <div *ngFor="let social of socials">
     <button class="btn btn-primary social" type="button">
-      <h3>
-        <i [ngClass]="social.icon">
-          <a
-            style="color: #009188; text-decoration: none; text-align: center"
-            [href]="social.url"
-            alt="social.alt"
-            target="_blank"
-          >
-          </a>
-        </i>
-      </h3>
+      <a
+        class="btn-primary social"
+        style="color: #009188; text-decoration: none; text-align: center"
+        [href]="social.url"
+        alt="social.alt"
+        target="_blank"
+      >
+        <h3>
+          <i [ngClass]="social.icon"> </i>
+        </h3>
+      </a>
     </button>
 
     <!-- modal edit add and delete -->
-    <button *ngIf="isLogged"
+    <button
+      *ngIf="isLogged"
       type="button"
       class="btn edit-btn btn-primary"
       data-bs-toggle="modal"

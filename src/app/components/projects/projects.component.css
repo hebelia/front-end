@@ -48,3 +48,8 @@
   border-radius: 1em;
   transition: 0.8s;
 }
+h3 {
+  justify-content: center;
+  text-align: center;
+  padding: 0.5em;
+}

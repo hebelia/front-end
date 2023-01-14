@@ -117,7 +117,6 @@ a:hover {
 p {
   font-weight: 500;
   word-wrap: break-word;
-  word-break: break-all;
   color: var(--clr-light);
   margin: 0;
   font-family: var(--ff-primary);
@@ -193,7 +192,10 @@ a i:hover {
   background-color: var(--clr-light);
   color: #009188;
 }
-
+.col-1 {
+  padding: 0em;
+  margin: 1em;
+}
 .add-btn {
   border-radius: 1rem;
   padding: 1rem;
@@ -243,6 +245,9 @@ input[type="submit"][disabled]:hover {
   cursor: inherit;
   background-color: #ddd;
   background: #ddd;
+}
+.back-to-top h3 {
+  justify-content: center;
 }
 /* ------------------------------------------ */
 

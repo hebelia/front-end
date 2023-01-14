@@ -40,3 +40,9 @@ h3 {
   flex-wrap: wrap;
   justify-content: right;
 }
+
+h3 {
+  justify-content: center;
+  text-align: center;
+  padding: 0.5em;
+}

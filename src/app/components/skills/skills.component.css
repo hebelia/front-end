@@ -38,3 +38,8 @@
   display: flex;
   justify-content: center;
 }
+h3 {
+  justify-content: center;
+  text-align: center;
+  padding: 0.5em;
+}
