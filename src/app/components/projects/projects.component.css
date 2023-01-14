@@ -43,8 +43,8 @@
 
 .project h2 i:hover {
   padding: 0.5em;
-  color: white;
-  background-color: #009188;
+  color: var(--clr-light);
+  background-color: var(--clr-accent);
   border-radius: 1em;
   transition: 0.8s;
 }

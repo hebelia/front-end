@@ -1,18 +1,18 @@
 <div class="socials">
   <div *ngFor="let social of socials">
-    <button class="btn btn-primary social" type="button">
+    <div class="btn btn-primary social" type="button">
       <a
-        class="btn-primary social"
+        
         style="color: #009188; text-decoration: none; text-align: center"
         [href]="social.url"
-        alt="social.alt"
+        alt="social media link"
         target="_blank"
       >
         <h3>
           <i [ngClass]="social.icon"> </i>
         </h3>
       </a>
-    </button>
+    </div>
 
     <!-- modal edit add and delete -->
     <button
