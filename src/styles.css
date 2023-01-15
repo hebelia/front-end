@@ -21,8 +21,8 @@
   --clr-light: #fff;
   --clr-dark: #1f2029;
   --clr-accent: #009188;
-  
-/* font size */
+
+  /* font size */
   --fs-h1: 2.25rem;
   --fs-h2: 1.75rem;
   --fs-h3: 1rem;
@@ -38,7 +38,6 @@
 /* Global variables that change depending on the screen size */
 @media (min-width: 965px) {
   :root {
-
     /* font size */
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -61,6 +60,9 @@
 }
 
 /* general styles */
+html {
+  scroll-behavior: smooth;
+}
 
 .about-me,
 .experience,
