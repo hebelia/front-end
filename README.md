@@ -1,5 +1,4 @@
 <a id="readme-top"></a>
-
 <!-- PROJECT SHIELDS -->
 <!--
 I'm using markdown "reference style" links for readability.
@@ -21,7 +20,7 @@ I'm using markdown "reference style" links for readability.
     <img src="src/assets/img/logo.png" alt="Logo">
   </a>
 
-<h3 align="center">< Portfolio Web ></h3>
+<h2 align="center">< Portfolio Web ></h2>
 
   <p align="center">
     Desarrollo de una aplicacion portfolio web full stack que muestra los datos personales, estudios, experiencia laboral, habilidades blandas y duras y proyectos, permitiendo editar los datos que ya existen y agregar nuevos.
