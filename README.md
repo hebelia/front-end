@@ -79,7 +79,7 @@ Link del back-end del proyecto: [⋄ click aca ⋄](https://github.com/hebelia/b
 
 <!-- gif del proyecto -->
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
 <p align="right">(<a href="#readme-top"> ▲ </a>)</p>
 
@@ -181,11 +181,13 @@ Para obtener una copia local en funcionamiento, seguí estos pasos :
 
 - Instalar el Administrador de paquetes de nodos. Node Package Manager (npm) es un repositorio de software para paquetes de JavaScript. Podes descargarlo [⋄ aca ⋄](https://nodejs.org/es/download/)
 
-- Istalar angular CLI version 15 \* npm
-  `sh
-$ npm install -g @angular/cli
-`
-  <br />
+- Istalar angular CLI version 15 
+
+    * npm
+    ```sh
+    $ npm install -g @angular/cli
+    ```
+<br />
 
 <h2 id="instalacion"> <strong>:heavy_check_mark: Instalación </strong></h2>
 <br />
@@ -202,7 +204,7 @@ $ npm install -g @angular/cli
   npm install
   ```
 
-  - Si encuentra algún informe de vulnerabilidad, corríjalo con:
+- Si encuentra algún informe de vulnerabilidad, corríjalo con:
     ```sh
     npm audit fix
     ```
@@ -217,8 +219,8 @@ $ npm install -g @angular/cli
 <p align="right">(<a href="#readme-top"> ▲ </a>)</p>
 
 <!-- ROADMAP -->
+<h2 id="roadmap">:bookmark: Roadmap </h2>
 
-## Roadmap :bookmark:
 
 - [x] Mostrar información traida desde la base de datos
 - [x] Ingresar con usuario/mail y contraseña para poder acceder al modo edición
