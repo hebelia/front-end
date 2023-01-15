@@ -69,9 +69,9 @@ I'm using markdown "reference style" links for readability.
 
 Este portfolio es el proyecto integrador de "Argentina Programa: Segunda Etapa #YoProgramo" que tenia como objetivo formar programadxres capaces de desarrollar una aplicación web full stack, que mostrará: tus datos personales, estudios cursados, experiencia laboral, conocimiento de las tecnologías y habilidades que posea. Es decir, crear un portfolio web. Esta aplicación tiene una arquitectura distribuida y contiene un diseño de interfaz de usuario (front end) que muestra la información, una base de datos que almacena la información ingresada y cuenta con las APIs necesarias para proveer a través de internet la información (back end).
 
-<h3 align="center">
+<h3 align="center" width="50">
 
-![logo-arg-prog](assets/img/logo.png)
+<img src="src/assets/img/logo.png" alt="Logo" width="200">
 
 </h3>
 
