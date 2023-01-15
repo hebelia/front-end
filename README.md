@@ -126,13 +126,13 @@ Fue un curso completamente auto gestionado seguí la maquetación que fue dada e
 <details>
   <summary> <a> Vista normal :mag_right: </a></summary>
 
-![Visualización1](media-files/portfolio-frontend-hlr.web.app_.png)
+![Visualización1](src/assets/img/pc-view.png)
 
 </details>
 <details>
   <summary> <a> Vista desde un movil :mag_right:</a></summary>
 
-![Visualización2](<media-files/portfolio-frontend-hlr.web.app_(iPhone-SE).png>)
+![Visualización2](/src/assets/img/mobile-view.png)
 
 </details>
 <details>
