@@ -101,6 +101,24 @@ Link del back-end del proyecto: [⋄ click aca ⋄](https://github.com/hebelia/b
 
 Este portfolio fue el primer proyecto que realice en programación, se trata de un portfolio web SPA(Single Page Aplication), consumiendo una API que cree utilizando Java para poder modificar, agregar, traer y eliminar información de la base de datos.
 
+<div align="center">
+
+  ![Arquitectura Web del Portfolio](src/assets/img/arquitectura-web.png)
+
+<i> ∆ nota: en este repositorio se encuentra desarrollada la parte resaltada</i>
+
+<details>
+  <summary> <a>Diagrama Entidad-Relacion :mag_right: </a></summary>
+
+  ![Diagrama Entidad Relación](/src/assets/img/DER.png)
+
+  <i> ∆ nota: este diagrama lo realice inicialmente como parte de los desafios de modulo propuestos por el propgrama, mas adelante agregue los campos "email" y  "password" a la tabla "person" para crear los métodos de login.</i>
+</details>
+
+  ------------------------------------------------
+
+</div>
+
 Link del front-end del proyecto: [⋄ click aca ⋄](https://github.com/hebelia/front-end)
 
 Link del back-end del proyecto: [⋄ click aca ⋄](https://github.com/hebelia/back-end)
@@ -117,6 +135,7 @@ Fue un curso completamente auto gestionado seguí la maquetación que fue dada e
 - <b>< proyectos ></b> En esta sección tenemos toda la información de proyectos realizados por mi
 - <b>< footer ></b> En esta sección tenemos la licencia
   <br />
+  
 
 ## Imágenes del portfolio web:
 
