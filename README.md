@@ -1,4 +1,4 @@
-<a name="readme-top"></a>
+<a id="readme-top"></a>
 
 <!-- PROJECT SHIELDS -->
 <!--
@@ -222,15 +222,15 @@ Para obtener una copia local en funcionamiento, seguí estos pasos :
 <h2 id="roadmap">:bookmark: Roadmap </h2>
 
 
-- [x] Mostrar información traida desde la base de datos
-- [x] Ingresar con usuario/mail y contraseña para poder acceder al modo edición
-- [x] Editar la información de las distintas secciones
-- [x] Agregar nuevos apartados
-- [x] Uso de formularios reactivos
-  - [x] Verificación de datos
-- [x] Eliminar la información
-- [x] Botones para redirigir al inicio
-- [x] Diseño responsive
+<br />:heavy_check_mark: Mostrar información traida desde la base de datos
+<br />:heavy_check_mark: Ingresar con usuario/mail y contraseña para poder acceder al modo edición
+<br />:heavy_check_mark:Editar la información de las distintas secciones
+<br />:heavy_check_mark:Agregar nuevos apartados
+<br />:heavy_check_mark:Uso de formularios reactivos
+<br />:heavy_check_mark:Verificación de datos
+<br />:heavy_check_mark:Eliminar la información
+<br />:heavy_check_mark:Botones para redirigir al inicio
+<br />:heavy_check_mark:Diseño responsive
 
 ### Funciones que planeo agregar en el futuro
 
@@ -241,8 +241,7 @@ Para obtener una copia local en funcionamiento, seguí estos pasos :
 <p align="right">(<a href="#readme-top"> ▲ </a>)</p>
 
 <!-- CONTRIBUTING -->
-
-## Contribuciones :bulb:
+<h2 id="contribuciones">:bulb: Contribuciones </h2>
 
 Las contribuciones y sugerencias son lo que hace que la comunidad de código abierto sea un lugar increíble para aprender, inspirar y crear. Al estar comenzando mi camino en la programación cualquier contribución que hagas es **apreciada enormemente** :smile:
 <br />
@@ -253,16 +252,12 @@ Sugerencias: [⋄ click aca ⋄](https://github.com/hebelia/front-end/issues) ve
 <p align="right">(<a href="#readme-top"> ▲ </a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
+<h2 id="agradecimientos">:small_blue_diamond: Agradecimientos :small_blue_diamond:</h2>
 
-## Agradecimientos :small_blue_diamond:
+- <img src="src/assets/img/logo.png" alt="Logo" width="150">
+- [Compañeros de programa TK](https://www.programa.tk)
+- [Comunidades de discord]() 
 
-:trollface:
-
-<img src="assets/img/logo.png" alt="Logo" width="80" height="80">
-
-- []()
-- []()
-- []()
 
 <p align="right">(<a href="#readme-top"> ▲ </a>)</p>
 
