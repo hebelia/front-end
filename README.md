@@ -92,7 +92,15 @@ Link del back-end del proyecto: [⋄ click aca ⋄](https://github.com/hebelia/b
 
 - [![GitHub][github.com]][github-url]
 
-  - para el versionado de la aplicación
+  - para el versionado de la aplicación 
+  <br />
+  <br />
+
+- [![Firebase][firebase.com]][github-url]
+
+  - para el **deployment** 
+
+
 
 <p align="right">(<a href="#readme-top"> ▲ </a>)</p>
 
@@ -329,6 +337,10 @@ hebeliaromeu@gmail.com
 [angular-url]: https://angular.io/
 [bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [bootstrap-url]: https://getbootstrap.com
+[firebase.com]: https://img.shields.io/badge/Firebase-35495E?style=for-the-badge&logo=firebase&logoColor=yellow
+[firebase-url]: https://firebase.google.com
+
+
 
 <!--  -->
 
