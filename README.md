@@ -152,7 +152,7 @@ Fue un curso completamente auto gestionado seguí la maquetación que fue dada e
 <details>
   <summary> <a> Vista normal :mag_right: </a></summary>
 
-![Visualización1](src/assets/img/pc-view.png)
+![Visualización1](src/assets/img/portfolio.png)
 
 </details>
 <details>
@@ -167,6 +167,8 @@ Fue un curso completamente auto gestionado seguí la maquetación que fue dada e
 </details>
 <details>
   <summary> <a> Gif - vista con acceso a edición :mag_right:</a></summary>
+
+  ![Visualización4](/src/assets/img/edit-view.png)
 
 </details>
 <br />
